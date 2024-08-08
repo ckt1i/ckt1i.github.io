@@ -166,16 +166,16 @@ CKT1i's blog = 张前的小屋</title>
 <h2 id="mia的分类和相关研究"><a class="markdownIt-Anchor" href="#mia的分类和相关研究">#</a> MIA 的分类和相关研究</h2>
 <h3 id="黑盒攻击和白盒攻击"><a class="markdownIt-Anchor" href="#黑盒攻击和白盒攻击">#</a> 黑盒攻击和白盒攻击</h3>
 <p>针对 MIA 的目标模型性质，可将 MIA 攻击分为以下两种，具体可以参见下图:<br>
-<a href="/source/_posts/Introduction%20of%20MIA/B&amp;W%20attacks.png"> 两种攻击额的差异</a></p>
+<img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/B%26W_attacks.png" alt="两种攻击的差异"></p>
 <p><em><strong>白盒攻击</strong></em>：攻击者可以获取模型的所有信息，包括数据分布，训练方式以及相关变量<br>
 <em><strong>黑盒攻击</strong></em>：攻击者只能进行黑盒访问，获取受限的数据分布，训练方式等中间信息</p>
 <p>相较于白盒攻击，黑盒攻击由于可获取的信息较少，因此实现难度较大，但攻击成功造成的影响也更大，现今主要的研究方向也集中于黑盒攻击，根据提供的预测向量，可以分为：Full confidence scores 、Top-K confidence scores、Prediction label only 三种方式，具体介绍见下图：<br>
-<a href="/source/_posts/Introduction%20of%20MIA/Prediction%20vectors.png">预测向量</a></p>
+<img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/Prediction%20vectors.png" alt="预测向量"></p>
 <h3 id="根据攻击模型分类"><a class="markdownIt-Anchor" href="#根据攻击模型分类">#</a> 根据攻击模型分类</h3>
 <p>机器学习模型通常会造成过拟合，这种过拟合为 MIA 提供了便利，根据所攻击的模型，可以将 MIA 分为以下两类：</p>
 <p>*** 基于二元分类器的 MIA （Binary Classifier Based Membership Inference Attacks.） ***<br>
  通过训练二元分类器的 MIA 可以将目标模型的训练模型与非成员区分开来，在现有的研究中，Shokri 等人提出了一种称为影子训练 (<a href="/https://arxiv.org/abs/1610.05820">shadow traing</a>) 的有效技术，其表示如下图所示：<br>
-<a href="/source/_posts/Introduction%20of%20MIA/Shadow%20model.png">影子训练的图示</a></p>
+<img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/Shadow%20model.png" alt="影子训练的图示"></p>
 <p>攻击者首先使用影子训练数据集和学习算法来训练这些影子模型，使它们的行为尽可能接近目标模型。具体的训练方法如下：</p>
 <ol>
 <li>*** 训练影子模型 *** : 攻击者使用多个与目标训练集分布相同影子训练数据集和学习算法训练影子模型</li>
@@ -241,7 +241,7 @@ CKT1i's blog = 张前的小屋</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-08-07 22:25:34" itemprop="dateModified" datetime="2024-08-07T22:25:34+08:00">2024-08-07</time>
+    <time title="修改时间：2024-08-08 17:22:09" itemprop="dateModified" datetime="2024-08-08T17:22:09+08:00">2024-08-08</time>
   </span>
   <span id="2024/08/02/Paper-Reading/Introduction of MIA_CN/" class="item leancloud_visitors" data-flag-title="成员推理攻击介绍" title="阅读次数">
       <span class="icon">
@@ -314,7 +314,7 @@ CKT1i's blog = 张前的小屋</title>
     <div class="item right">
       
 
-  <a href="/2024/08/04/Paper-Reading/Introduction%20of%20MIA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic16.jpg" title="Introduction of Membership Interface Attack">
+  <a href="/2024/08/04/Paper-Reading/Introduction%20of%20MIA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic22.jpg" title="Introduction of Membership Interface Attack">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 阅读笔记</span>
   <h3>Introduction of Membership Interface Attack</h3>
@@ -421,19 +421,19 @@ CKT1i's blog = 张前的小屋</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Paper-Reading/" title="分类于 阅读笔记">阅读笔记</a>
 </div>
 
-    <span><a href="/2024/08/04/Paper-Reading/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+    <span><a href="/2024/08/01/About%20me/" title="About me">About me</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/Paper-Reading/" title="分类于 阅读笔记">阅读笔记</a>
 </div>
 
-    <span><a href="/2024/08/01/About%20me/" title="About me">About me</a></span>
+    <span><a href="/2024/08/04/Paper-Reading/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
   </li>
 
       
