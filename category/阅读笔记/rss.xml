@@ -9,9 +9,9 @@
         <lastBuildDate>Sun, 04 Aug 2024 21:28:25 +0800</lastBuildDate>
         <category>未完成</category>
         <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/</guid>
+            <guid isPermalink="true">https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</guid>
             <title>Introduction of Membership Interface Attack</title>
-            <link>https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/</link>
+            <link>https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</link>
             <pubDate>Sun, 04 Aug 2024 21:28:25 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
 &lt;h1 id=&#34;prelimaries-defination-and-classification&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-defination-and-classification&#34;&gt;#&lt;/a&gt; Prelimaries ,Defination and classification&lt;/h1&gt;
@@ -124,9 +124,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/02/Paper-Reading/Introduction%20of%20MIA_CN/</guid>
+            <guid isPermalink="true">https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</guid>
             <title>成员推理攻击介绍</title>
-            <link>https://ckti.github.io/2024/08/02/Paper-Reading/Introduction%20of%20MIA_CN/</link>
+            <link>https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</link>
             <pubDate>Fri, 02 Aug 2024 23:48:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
 标题: Membership Inference Attacks on Machine Learning: A Survey&lt;/p&gt;

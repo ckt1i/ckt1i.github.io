@@ -6,18 +6,18 @@
     <updated>2024-08-22T00:57:17.634Z</updated>
     <category term="未完成" />
     <entry>
-        <id>https://ckti.github.io/2024/08/22/drum-tabs/November/</id>
+        <id>https://ckti.github.io/2024/08/22/November/</id>
         <title>November</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/22/drum-tabs/November/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/22/November/"/>
         <content type="html">&lt;p&gt;之前乐队打的曲子，当时觉得不难就凭感觉打了，前一阵子心血来潮想说扒一下谱，发现细节还挺多的&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/November.pdf&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
         <updated>2024-08-22T00:57:17.634Z</updated>
     </entry>
     <entry>
-        <id>https://ckti.github.io/2024/08/11/misc/resume/</id>
+        <id>https://ckti.github.io/2024/08/11/resume/</id>
         <title>resume</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/11/misc/resume/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/11/resume/"/>
         <content type="html">&lt;h2 id=&#34;real-name-zheng-changqian-郑昌乾&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#real-name-zheng-changqian-郑昌乾&#34;&gt;#&lt;/a&gt; Real name: Zheng ChangQian （郑昌乾）&lt;/h2&gt;
 &lt;h2 id=&#34;contact-information&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#contact-information&#34;&gt;#&lt;/a&gt; Contact Information&lt;/h2&gt;
 &lt;ul&gt;
@@ -99,9 +99,9 @@
         <updated>2024-08-11T14:33:57.665Z</updated>
     </entry>
     <entry>
-        <id>https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/</id>
+        <id>https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</id>
         <title>Introduction of Membership Interface Attack</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/"/>
         <content type="html">&lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
 &lt;h1 id=&#34;prelimaries-defination-and-classification&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-defination-and-classification&#34;&gt;#&lt;/a&gt; Prelimaries ,Defination and classification&lt;/h1&gt;
 &lt;h2 id=&#34;prelimaries-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-machine-learning&#34;&gt;#&lt;/a&gt; Prelimaries-- Machine learning&lt;/h2&gt;
@@ -214,9 +214,9 @@
         <updated>2024-08-04T13:28:25.989Z</updated>
     </entry>
     <entry>
-        <id>https://ckti.github.io/2024/08/02/Paper-Reading/Introduction%20of%20MIA_CN/</id>
+        <id>https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</id>
         <title>成员推理攻击介绍</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/02/Paper-Reading/Introduction%20of%20MIA_CN/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/"/>
         <content type="html">&lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
 标题: Membership Inference Attacks on Machine Learning: A Survey&lt;/p&gt;
 &lt;h1 id=&#34;mia-的前置知识和定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的前置知识和定义&#34;&gt;#&lt;/a&gt; MIA 的前置知识和定义&lt;/h1&gt;
@@ -332,5 +332,18 @@
 &lt;p&gt;（未完，针对未来的方向目前有些想法，后面会单开一章简单介绍）&lt;/p&gt;
 </content>
         <updated>2024-08-02T15:48:24.123Z</updated>
+    </entry>
+    <entry>
+        <id>https://ckti.github.io/2024/08/01/About%20me/</id>
+        <title>About me</title>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/01/About%20me/"/>
+        <content type="html">&lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; Hello!&lt;/h1&gt;
+&lt;p&gt;Hi! I’m CKTi. A college student. Here is my blog, you can find something I have done.&lt;/p&gt;
+&lt;p&gt;My major now is cyber security and I’m now intrested in privacy and deep learning and so on, here are some articles about some &lt;a href=&#34;/https://ckt1i.github.io/categories/Reading%20Notes/&#34;&gt;notes&lt;/a&gt; in learning.&lt;/p&gt;
+&lt;p&gt;I’m also an amartar drummer in a band playing J-Pop and anime songs, you can see our band’s live record in our &lt;a href=&#34;/https://space.bilibili.com/3493081542298207&#34;&gt;bilibili&lt;/a&gt; page. In the future, I will publish some drum tabs in my blog (If I have time).&lt;/p&gt;
+&lt;p&gt;If you have any suggestions or anything want to say to me, you can submit comments in each of the articles, or just contact me in email. Have a nice day!&lt;/p&gt;
+</content>
+        <category term="未完成" />
+        <updated>2024-08-01T02:58:29.176Z</updated>
     </entry>
 </feed>

@@ -6,9 +6,9 @@
     <updated>2024-08-04T13:28:25.989Z</updated>
     <category term="未完成" />
     <entry>
-        <id>https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/</id>
+        <id>https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</id>
         <title>Introduction of Membership Interface Attack</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/"/>
         <content type="html">&lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
 &lt;h1 id=&#34;prelimaries-defination-and-classification&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-defination-and-classification&#34;&gt;#&lt;/a&gt; Prelimaries ,Defination and classification&lt;/h1&gt;
 &lt;h2 id=&#34;prelimaries-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-machine-learning&#34;&gt;#&lt;/a&gt; Prelimaries-- Machine learning&lt;/h2&gt;
@@ -121,9 +121,9 @@
         <updated>2024-08-04T13:28:25.989Z</updated>
     </entry>
     <entry>
-        <id>https://ckti.github.io/2024/08/02/Paper-Reading/Introduction%20of%20MIA_CN/</id>
+        <id>https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</id>
         <title>成员推理攻击介绍</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/02/Paper-Reading/Introduction%20of%20MIA_CN/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/"/>
         <content type="html">&lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
 标题: Membership Inference Attacks on Machine Learning: A Survey&lt;/p&gt;
 &lt;h1 id=&#34;mia-的前置知识和定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的前置知识和定义&#34;&gt;#&lt;/a&gt; MIA 的前置知识和定义&lt;/h1&gt;
