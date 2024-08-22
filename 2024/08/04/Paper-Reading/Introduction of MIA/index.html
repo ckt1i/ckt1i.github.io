@@ -74,7 +74,7 @@ CKT1i's blog = 张前的小屋</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>138</span>
+    <span>16k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -82,7 +82,7 @@ CKT1i's blog = 张前的小屋</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>1 mins.</span>
+    <span>14 mins.</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@ CKT1i's blog = 张前的小屋</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic16.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic2.jpg"></li>
           <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic18.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic7.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic1.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic4.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic12.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic14.jpg"></li>
           <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic5.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic15.jpg"></li>
         </ul>
       </div>
     </header>
@@ -167,7 +167,113 @@ CKT1i's blog = 张前的小屋</title>
     
 
     <p>This is the English version of <a href="/public/2024/08/02/Introduction%20of%20MIA_CN/index.html">this</a> blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.</p>
-<p>(Unfinished)</p>
+<h1 id="prelimaries-defination-and-classification"><a class="markdownIt-Anchor" href="#prelimaries-defination-and-classification">#</a> Prelimaries ,Defination and classification</h1>
+<h2 id="prelimaries-machine-learning"><a class="markdownIt-Anchor" href="#prelimaries-machine-learning">#</a> Prelimaries-- Machine learning</h2>
+<p>Machine learning (ML) is the study of computer algorithms that improve automatically through experience and by learning from data. Generally, it can be  be divided into these two categories</p>
+<p><strong>Supervised Learning</strong> :Uses labeled data where input-output pairs are known to train models. It aims to predict or classify new data based on learned patterns, minimizing the error between predicted and actual outcomes.</p>
+<p><strong>Unsupervised Learning</strong> :Works with unlabeled data to identify hidden patterns or structures. It clusters or finds relationships within the data without predefined labels.</p>
+<h2 id="membership-interface-attackdefination"><a class="markdownIt-Anchor" href="#membership-interface-attackdefination">#</a> Membership Interface Attack–Defination</h2>
+<p>Membership interface attack (MIA) is a method of obtaining the data being trained in the targeted ML models byThe main thought of MIA is forming a models that can repersents the membership of the target models. training similar model called shadow model and training a classifier to check whether a data is being trained in the targeted ML model.</p>
+<h3 id="shadow-models"><a class="markdownIt-Anchor" href="#shadow-models">#</a> Shadow models</h3>
+<p>The main thought of MIA is forming a models that can repersents the membership of the target models.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/Shadow%20model.png" alt="shadow models and training"></p>
+<h2 id="basic-taxonomy-of-mia"><a class="markdownIt-Anchor" href="#basic-taxonomy-of-mia">#</a> Basic Taxonomy of MIA</h2>
+<h3 id="based-on-informations"><a class="markdownIt-Anchor" href="#based-on-informations">#</a> based on informations</h3>
+<p>Based on the informations of the target model attackers can get, the MIA can be divided into these two categories:</p>
+<p><strong>White-box attack</strong>: Attackers can obtain all the information about the ML model, including the data distributions, training methods and relevant  parameters</p>
+<p><strong>Black-box attack</strong>: Attackers can only get restricted informations, including restricted data distributions, training methods and parameters.</p>
+<p>Compared with white-box attack, black-box attacks gets fewer informations, which leads it harder to achieve. However, the influence of a successful attacks can be  larger than it. Today , the mainstream of the research is also focusing on the black-box attacks.</p>
+<h3 id="based-on-prediction-vectors"><a class="markdownIt-Anchor" href="#based-on-prediction-vectors">#</a> based on Prediction vectors</h3>
+<p>The prediction vectors is a parameter for judging whether a data is in the models. Today, the main research of MIA can also be categorized based on prediction vectors in the following graph:</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/Prediction%20vectors.png" alt="Taxonomy of Prediction vectors"></p>
+<h3 id="based-on-the-judgement-methods"><a class="markdownIt-Anchor" href="#based-on-the-judgement-methods">#</a> Based on the judgement methods</h3>
+<h4 id="binary-classifier-based-mia"><a class="markdownIt-Anchor" href="#binary-classifier-based-mia">#</a> Binary Classifier Based MIA.</h4>
+<p>The data can be classified as members or non-members by training a binary classifier for classify the models. the main method is as followed:</p>
+<p><strong>Training the shadow models</strong>: Attackers use multiple shadow models that have the same or similar distributions of the target training sets to learn and training the shadow models.</p>
+<p><strong>Collecting prediction models</strong>: Attackers will make search for the shadow training sets and get the prediction vectors of each data records. Each data of the vectors in shadow training data sets can be labeled as “Member” and the data in test data sets are labled “Non-member”</p>
+<p><strong>Training the attack models</strong>: Form the “member”and “non-member”data sets based on the labeled datas , and training a binary classifier to form it.</p>
+<p>By this, Identifying the complex problem of recognizing the member and non-member of the model is converted into the binary classifier problem.</p>
+<h4 id="metric-based-membership-inference-attacks"><a class="markdownIt-Anchor" href="#metric-based-membership-inference-attacks">#</a> Metric Based Membership Inference Attacks</h4>
+<p>Metric Based MIA obtain the relative metrics by collecting and analysing the prediction vectors and make analyzations by comparing the metrics and thresold values.</p>
+<p>Compare with training the binary classifier, it is more simple and consume less computational resources. The next page will show the recent research realms of the analyse and settings.</p>
+<p>Currently, the research on metric based MIA have these categories:</p>
+<p><strong>Prediction Correctness Based MIA</strong>: If the target models predict the input data x correctly, then attackers recognized it as a member. The inituation of it is that if a data is in the real data, then the target model will predict the input data x correctly.</p>
+<p><strong>Loss rate Based MIA</strong>: If the difference of the loss rate correspond to the target models and the lossrate of the origin data is less than a thresold, then attackers recognize it as a member. The inituation of it is that if the input data is in the true datas, then the loss rate of the target models is near to the total loss rate.</p>
+<p><strong>Prediction Confidence Based MIA</strong>: If the prediction confidence of some records is larger than some thresold, then recognize it as a member. The inituation of it is that the target models will minimize the difference between it and the real models, so the prediction confidence will close to 1.</p>
+<p><strong>Prediction Entropy Based MIA</strong>: If the prediction entropy of input a records is lower than a thresold, then recognize it as a member. The inituation is that the target model’s prediction entropy of the training data is larger than the prediction of entropy of the test data.</p>
+<p><strong>Modified prediction Entropy Based MIA</strong>: Some opinion suggest that current prediction loss didn’t think of the ground truth label, so it may make some misjudgement of some datas, so in some papers, the algorithm of the prediction entropy is modified.</p>
+<h1 id="relavant-research"><a class="markdownIt-Anchor" href="#relavant-research">#</a> Relavant research</h1>
+<h2 id="research-on-the-classification-models"><a class="markdownIt-Anchor" href="#research-on-the-classification-models">#</a> Research on the classification models</h2>
+<p>Since Shokri et al. introduced this attack method, there has been a growing body of research focused on this direction. Salem et al. discussed the assumptions of Membership Inference Attacks (MIA) and attempted to relax the implementation conditions, demonstrating that two of the shadow model assumptions are not necessary and proposing an indicator-based MIA approach. Yeom et al. also proposed two indicator-based MIA methods; Long et al. achieved MIA attacks on certain data by focusing on data with unique effects on the target model, enabling accurate inference in generalized models with similar training and testing accuracy.</p>
+<p>Additionally, existing research has also targeted more restricted MIAs. Li and Zhang proposed transfer-based and perturbation-based MIAs. Transfer-based MIAs construct shadow models to simulate the target model, using the shadow model’s confidence to determine membership; perturbation-based MIAs introduce noise to create adversarial examples and distinguish members based on the severity of the perturbation. Choquette et al. introduced data augmentation-based MIAs and decision boundary distance-based MIAs. Data augmentation attacks target common data augmentation phenomena in machine learning systems, creating additional records through different augmentation strategies to query the target model for predictions. Decision boundary attacks estimate the distance of records to the model boundary, similar to Li and Zhang’s attacks. Successful MIA cases suggest that machine learning models may be more vulnerable to MIA than previously anticipated.</p>
+<p>Aside from black-box MIA attacks, Nasir et al. introduced white-box MIA, which can be seen as an extension of black-box MIA, enhancing attack efficiency by leveraging additional information. They use the gradient of the target model’s prediction loss for inference and train a model to distinguish between members and non-members using the SGD algorithm. However, Leino and Fredrikson pointed out that the assumptions of this method are too stringent, requiring attackers to know the approximate distribution of the target dataset. They proposed a Bayes-optimal attack-based MIA method, enabling MIA without background knowledge of the target model.</p>
+<h2 id="research-on-generative-models"><a class="markdownIt-Anchor" href="#research-on-generative-models">#</a> Research on Generative Models</h2>
+<p>Corrent research on generative models are focusing on the generative adversarial network, whose models can be shown as follows:</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/GAN_architecture.png" alt=""></p>
+<p>Hayes et al. were the first to propose Membership Inference Attacks (MIA) against generative models. For white-box attacks, attackers collect all records and compute confidence scores to make inferences; for black-box attacks, attackers collect records from the generator to train a local GAN that mimics the target GAN, and then use the local GAN discriminator for inference. Hilprecht et al. introduced two additional attacks: a Monte Carlo-based black-box attack and a VAE-based white-box attack. Hilprecht et al. proposed a set-based attack to determine whether a data point belongs to a set, while Liu et al. introduced a similar co-membership inference attack, determining dataset membership by analyzing the distance of a data point to the target data. Chen et al. proposed a general method where attackers continuously reconstruct the attack model through optimization, calculate the distance between the generated results of the attack model and the target model, and estimate the probability of data membership based on this distance.</p>
+<h2 id="research-on-embedding-models"><a class="markdownIt-Anchor" href="#research-on-embedding-models">#</a> Research on Embedding Models：</h2>
+<p>Current research primarily focuses on text and image embedding models. For text embedding models, attacks aim to infer membership of words or sentence pairs within a sliding window, using similarity scores to determine if they belong to a predefined set. For graph embedding models, attack methods involve using shadow models and confidence scores to infer whether nodes in the graph belong to specific categories, addressing node classification issues.</p>
+<h2 id="research-on-regression-models"><a class="markdownIt-Anchor" href="#research-on-regression-models">#</a> Research on Regression Models：</h2>
+<p>Gupta et al. were the first to conduct MIA (Membership Inference Attack) research on regression models for age prediction, achieving attacks through the construction of a white-box binary classification model.</p>
+<h2 id="research-in-federated-learning"><a class="markdownIt-Anchor" href="#research-in-federated-learning">#</a> Research in Federated Learning：</h2>
+<p>In federated learning, attackers can be either the central server or some of the participating clients. They can implement MIA by determining whether certain data was used in training the global model. Melis was the first to propose a gradient-based MIA by analyzing the update mechanism of the RNN training embeddings. Turex introduced heterogeneous FL (Federated Learning), which involves analyzing differences in aggregated parameters from different clients. Nasr et al. discussed how gradient ascent attacks can actively interfere with FL training. Hu et al. proposed source inference attacks aimed at determining which participants hold training records in FL. They argue that existing MIA attacks in FL overlook the source information of training members, which could lead to further privacy issues.</p>
+<h1 id="factors-for-a-success-mia"><a class="markdownIt-Anchor" href="#factors-for-a-success-mia">#</a> Factors for a success MIA</h1>
+<h2 id="overfitting-of-target-models"><a class="markdownIt-Anchor" href="#overfitting-of-target-models">#</a> Overfitting of Target Models</h2>
+<p>Many studies have pointed out that overfitting of target ML models is a significant factor in the leakage of original datasets. Specifically:Models like DNNs, due to their high parameterization in applications, enhance their ability to handle large datasets but also record a lot of irrelevant information.Training machine learning models often requires many epochs, making them more prone to memorizing the content of the dataset.Machine learning datasets cannot fully represent real-world data.Existing articles indicate that for a classification system overfitting on training data, attackers can achieve an attack success probability higher than 50% based on the correctness of randomly guessed predictions.</p>
+<h2 id="features-of-the-model-itself"><a class="markdownIt-Anchor" href="#features-of-the-model-itself">#</a> Features of the Model Itself：</h2>
+<p>When the decision boundary of the target model is not sensitive to the training data used, the effectiveness of MIA attacks is low. Current research shows that among DNN models, logistic regression models, Naive Bayes models, k-nearest neighbor models, and decision tree models, decision tree models have the highest attack accuracy, while the simple Naive Bayes algorithm has the lowest.</p>
+<h2 id="diversity-of-the-training-dataset"><a class="markdownIt-Anchor" href="#diversity-of-the-training-dataset">#</a> Diversity of the Training Dataset:</h2>
+<p>When the training dataset used by the target model is highly diverse, it helps the model generalize better to test data. Consequently, the impact of MIA on the model will be smaller.</p>
+<h2 id="attackers-knowledge-of-the-target-model"><a class="markdownIt-Anchor" href="#attackers-knowledge-of-the-target-model">#</a> Attacker’s Knowledge of the Target Model:</h2>
+<p>Existing research on MIA generally makes certain assumptions about the attacker: the attacker knows the relevant distribution of the training data and can construct a suitable shadow dataset based on this distribution. High-accuracy shadow models constructed under this assumption are needed for effective attacks.</p>
+<h1 id="research-on-defense-against-mia"><a class="markdownIt-Anchor" href="#research-on-defense-against-mia">#</a> Research on Defense against MIA</h1>
+<h2 id="confidence-score-masking"><a class="markdownIt-Anchor" href="#confidence-score-masking">#</a> Confidence Score Masking</h2>
+<p>This method is mainly used for defending against black-box attacks by returning obfuscated true confidence scores to the classifier. It includes the following three approaches:</p>
+<ol>
+<li>The target classifier does not provide the full prediction vector but only the top few confidence scores.</li>
+<li>The target classifier only provides predicted labels when the attacker provides data input.</li>
+<li>Noise is added to the returned vector.</li>
+</ol>
+<p>These three methods affect the prediction vector but do not result in a loss of prediction accuracy.</p>
+<h2 id="regularization"><a class="markdownIt-Anchor" href="#regularization">#</a> Regularization</h2>
+<p>Regularization mitigates MIA attack strength by reducing model overfitting.</p>
+<p>Existing regularization methods include traditional techniques such as L2-norm regularization, dropout, data augmentation, model stacking, early stopping, and label smoothing. These methods lower overfitting by reducing the impact of different test datasets on samples, thereby also reducing the intensity of MIA attacks.</p>
+<p>Additionally, specially designed regularization systems like adversarial regularization and Mixup + MMD (Maximum Mean Discrepancy) can also defend against MIA by introducing new regularization mechanisms to decrease the differences between members and non-members. Compared to masking techniques, regularization can resist both black-box and white-box attacks and can alter output parameters when modifying the output model.</p>
+<h2 id="knowledge-distallation"><a class="markdownIt-Anchor" href="#knowledge-distallation">#</a> Knowledge Distallation</h2>
+<p>Knowledge distillation refers to the process of training a smaller student model using a larger teacher model to transfer knowledge from the large model to the small one, allowing the smaller model to achieve a similar level of approximation. Based on this, existing research has introduced methods such as DMP, CKD, and PCKD, they are generally called DMP (Distillation For Membership Privacy), whose steps are as followed:</p>
+<ol>
+<li>
+<p>Train an unprotected teacher model to record and label data in an unlabeled dataset.</p>
+</li>
+<li>
+<p>Select data with lower prediction entropy for training, which is used for classification.</p>
+</li>
+<li>
+<p>Train based on the labeled model.</p>
+</li>
+</ol>
+<p>Additionally, There are also some research that proposes Complementary Knowledge Distillation (CKD) and Pseudo Complementary Knowledge Distillation (PCKD) methods. In these methods, the transfer data for knowledge distillation comes from a private training set. CKD and PCKD eliminate the need for public data, which may be difficult to obtain in some applications, making knowledge distillation a more practical defense method for mitigating MIA attacks on machine learning models.</p>
+<h2 id="differencial-privacy"><a class="markdownIt-Anchor" href="#differencial-privacy">#</a> Differencial Privacy</h2>
+<p>Differential privacy refers to protecting the original data by adding relevant noise to the dataset. When a deep learning model is trained with a model that incorporates differential privacy, if the privacy budget is small enough, the trained model will not retain specific user information. Therefore, different privacy models can limit the success rate of MIA attacks based solely on the model. Current research realms are shown in the next page:</p>
+<p>Differential privacy provides theoretical protection for member privacy in training records and can mitigate MIAs in classification and generative models, regardless of whether the attacker is in a black-box or white-box setting. Despite its widespread and effective application, a drawback is its difficulty in providing an acceptable privacy-utility tradeoff in complex learning tasks. Additionally, differential privacy can also mitigate other forms of privacy attacks, such as attribute inference attacks and feature inference attacks, and is related to the robustness of models against adversarial examples.</p>
+<p>Currently , the research realms about differencial privacy is:</p>
+<p><strong>The relationship between differential privacy and MIA</strong>: There are theoretical results and proofs on this, but practical evaluations have not achieved good utility.</p>
+<p><strong>Privacy-Utility Tradeoff</strong>: Existing research shows that current differential privacy performance in this regard is insufficient. Studies indicate that minority groups are more affected by MIAs, and differential privacy reduces model utility for these groups.</p>
+<p><strong>Training Methods</strong>: Current methods primarily include DP-SGD, with new methods like DP-Logits also being proposed.</p>
+<p><strong>Applications in Generative Models</strong>: Research shows that differential privacy can also defend against MIAs in generative models, with defense effectiveness related to generative quality and privacy budget 𝜖. Studies indicate that differential privacy limits overfitting and mitigates MIA.</p>
+<h1 id="possible-future-directions"><a class="markdownIt-Anchor" href="#possible-future-directions">#</a> Possible future directions</h1>
+<h2 id="in-membership-inference-attacks"><a class="markdownIt-Anchor" href="#in-membership-inference-attacks">#</a> In Membership Inference Attacks</h2>
+<p><strong>Attacks on Regularized Models</strong>: MIA systems often rely on the overfitting of machine learning systems, but this assumption is challenged by advancements in regularization techniques; attacks on overfitted models are still largely unexplored.</p>
+<p><strong>Attacks on Self-Supervised Models</strong>: Self-supervised models are becoming widespread in NLP and computer vision, and attacks on these models are still largely unknown.</p>
+<p><strong>Attacks on Adversarial Machine Learning</strong>: Adversarial machine learning shares some similarities and differences with membership inference attacks; combining these approaches could be a potential research direction.</p>
+<p><strong>Attacks on New Machine Learning Models</strong> (e.g., Contrastive Learning and Meta-Learning): These models differ significantly from traditional ones, and many areas for research remain in attacking them.</p>
+<p><strong>Attacks on Federated Learning</strong>: Existing MIAs are mainly applicable to homogeneous federated learning, with limited research on heterogeneous federated learning.</p>
+<p><strong>Applications Related to MIA</strong>: Includes source inference attacks in federated learning and deeper privacy protection studies through MIA audits of data contributions to ML models.</p>
+<h2 id="in-the-defence-of-membership-inference-attacks"><a class="markdownIt-Anchor" href="#in-the-defence-of-membership-inference-attacks">#</a> In the Defence of Membership Inference Attacks</h2>
+<p><strong>Defense Against Unsupervised Learning Models</strong>: Unsupervised learning models struggle with overfitting due to a lack of data labels, and research in this area is limited.</p>
+<p><strong>Defense Against Generative Models</strong>: Possible defenses include methods such as knowledge distillation and reinforcemnt learning to avoid leakage of raw data through the outputs of generative models.</p>
+<p><strong>Balancing Privacy and Utility</strong>: Existing differential privacy protections often add significant noise to classifier gradients, reducing prediction accuracy. Balancing privacy and utility remains an area for research.</p>
+<p><strong>Privacy Defenses in Federated Learning</strong>: With increasing privacy attacks in federated learning, developing defensive technologies is crucial, with differential privacy being a potential future direction.</p>
 
   </div>
 
@@ -179,7 +285,7 @@ CKT1i's blog = 张前的小屋</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2024-08-07 11:23:54" itemprop="dateModified" datetime="2024-08-07T11:23:54+08:00">2024-08-07</time>
+    <time title="Modified: 2024-08-22 09:54:16" itemprop="dateModified" datetime="2024-08-22T09:54:16+08:00">2024-08-22</time>
   </span>
   <span id="2024/08/04/Paper-Reading/Introduction of MIA/" class="item leancloud_visitors" data-flag-title="Introduction of Membership Interface Attack" title="Views">
       <span class="icon">
@@ -250,6 +356,14 @@ CKT1i's blog = 张前的小屋</title>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2024/08/11/misc/resume/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic9.jpg" title="resume">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 杂</span>
+  <h3>resume</h3>
+  </a>
+
     </div>
 </div>
 
@@ -266,6 +380,7 @@ CKT1i's blog = 张前的小屋</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prelimaries-defination-and-classification"><span class="toc-number">1.</span> <span class="toc-text"> Prelimaries ,Defination and classification</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#prelimaries-machine-learning"><span class="toc-number">1.1.</span> <span class="toc-text"> Prelimaries-- Machine learning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#membership-interface-attackdefination"><span class="toc-number">1.2.</span> <span class="toc-text"> Membership Interface Attack–Defination</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#shadow-models"><span class="toc-number">1.2.1.</span> <span class="toc-text"> Shadow models</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#basic-taxonomy-of-mia"><span class="toc-number">1.3.</span> <span class="toc-text"> Basic Taxonomy of MIA</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#based-on-informations"><span class="toc-number">1.3.1.</span> <span class="toc-text"> based on informations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#based-on-prediction-vectors"><span class="toc-number">1.3.2.</span> <span class="toc-text"> based on Prediction vectors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#based-on-the-judgement-methods"><span class="toc-number">1.3.3.</span> <span class="toc-text"> Based on the judgement methods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#binary-classifier-based-mia"><span class="toc-number">1.3.3.1.</span> <span class="toc-text"> Binary Classifier Based MIA.</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#metric-based-membership-inference-attacks"><span class="toc-number">1.3.3.2.</span> <span class="toc-text"> Metric Based Membership Inference Attacks</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#relavant-research"><span class="toc-number">2.</span> <span class="toc-text"> Relavant research</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#research-on-the-classification-models"><span class="toc-number">2.1.</span> <span class="toc-text"> Research on the classification models</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#research-on-generative-models"><span class="toc-number">2.2.</span> <span class="toc-text"> Research on Generative Models</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#research-on-embedding-models"><span class="toc-number">2.3.</span> <span class="toc-text"> Research on Embedding Models：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#research-on-regression-models"><span class="toc-number">2.4.</span> <span class="toc-text"> Research on Regression Models：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#research-in-federated-learning"><span class="toc-number">2.5.</span> <span class="toc-text"> Research in Federated Learning：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#factors-for-a-success-mia"><span class="toc-number">3.</span> <span class="toc-text"> Factors for a success MIA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#overfitting-of-target-models"><span class="toc-number">3.1.</span> <span class="toc-text"> Overfitting of Target Models</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#features-of-the-model-itself"><span class="toc-number">3.2.</span> <span class="toc-text"> Features of the Model Itself：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#diversity-of-the-training-dataset"><span class="toc-number">3.3.</span> <span class="toc-text"> Diversity of the Training Dataset:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#attackers-knowledge-of-the-target-model"><span class="toc-number">3.4.</span> <span class="toc-text"> Attacker’s Knowledge of the Target Model:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#research-on-defense-against-mia"><span class="toc-number">4.</span> <span class="toc-text"> Research on Defense against MIA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#confidence-score-masking"><span class="toc-number">4.1.</span> <span class="toc-text"> Confidence Score Masking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#regularization"><span class="toc-number">4.2.</span> <span class="toc-text"> Regularization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#knowledge-distallation"><span class="toc-number">4.3.</span> <span class="toc-text"> Knowledge Distallation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#differencial-privacy"><span class="toc-number">4.4.</span> <span class="toc-text"> Differencial Privacy</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#possible-future-directions"><span class="toc-number">5.</span> <span class="toc-text"> Possible future directions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#in-membership-inference-attacks"><span class="toc-number">5.1.</span> <span class="toc-text"> In Membership Inference Attacks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in-the-defence-of-membership-inference-attacks"><span class="toc-number">5.2.</span> <span class="toc-text"> In the Defence of Membership Inference Attacks</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -283,14 +398,20 @@ CKT1i's blog = 张前的小屋</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">3</span>
+        <span class="count">4</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">1</span>
+        <span class="count">3</span>
         <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">1</span>
+        <span class="name">tags</span>
       </a>
     </div>
 </nav>
@@ -323,10 +444,12 @@ CKT1i's blog = 张前的小屋</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2024/08/02/Paper-Reading/Introduction%20of%20MIA_CN/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2024/08/11/misc/resume/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -358,6 +481,16 @@ CKT1i's blog = 张前的小屋</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/11/misc/resume/" title="resume">resume</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/Reading-notes/" title="In 阅读笔记">阅读笔记</a>
 </div>
 
@@ -368,9 +501,10 @@ CKT1i's blog = 张前的小屋</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/drum-tabs/" title="In 鼓谱">鼓谱</a>
 </div>
 
-    <span><a href="/2024/08/01/About%20me/" title="About me">About me</a></span>
+    <span><a href="/2024/08/22/drum-tabs/November/" title="November">November</a></span>
   </li>
 
   </ul>
@@ -395,13 +529,13 @@ CKT1i's blog = 张前的小屋</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">7k words</span>
+    <span title="Symbols count total">25k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">6 mins.</span>
+    <span title="Reading time total">22 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

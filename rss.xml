@@ -5,15 +5,215 @@
         <link>https://ckti.github.io</link>
         <description></description>
         <language>en</language>
-        <pubDate>Sun, 04 Aug 2024 21:28:25 +0800</pubDate>
-        <lastBuildDate>Sun, 04 Aug 2024 21:28:25 +0800</lastBuildDate>
+        <pubDate>Thu, 22 Aug 2024 08:57:17 +0800</pubDate>
+        <lastBuildDate>Thu, 22 Aug 2024 08:57:17 +0800</lastBuildDate>
+        <category>未完成</category>
+        <item>
+            <guid isPermalink="true">https://ckti.github.io/2024/08/22/drum-tabs/November/</guid>
+            <title>November</title>
+            <link>https://ckti.github.io/2024/08/22/drum-tabs/November/</link>
+            <pubDate>Thu, 22 Aug 2024 08:57:17 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;之前乐队打的曲子，当时觉得不难就凭感觉打了，前一阵子心血来潮想说扒一下谱，发现细节还挺多的&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/November.pdf&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ckti.github.io/2024/08/11/misc/resume/</guid>
+            <title>resume</title>
+            <link>https://ckti.github.io/2024/08/11/misc/resume/</link>
+            <category>未完成</category>
+            <pubDate>Sun, 11 Aug 2024 22:33:57 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;real-name-zheng-changqian-郑昌乾&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#real-name-zheng-changqian-郑昌乾&#34;&gt;#&lt;/a&gt; Real name: Zheng ChangQian （郑昌乾）&lt;/h2&gt;
+&lt;h2 id=&#34;contact-information&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#contact-information&#34;&gt;#&lt;/a&gt; Contact Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mobile:&lt;/strong&gt; +86 188-1027-7303&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; [domestic] &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOjE3NzQzNDU4M0BxcS5jb20=&#34;&gt;177434583@qq.com&lt;/span&gt; / [international] &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmNoYW5ncWlhbi56aGVuZ0BnbWFpbC5jb20=&#34;&gt;changqian.zheng@gmail.com&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NrdDFp&#34;&gt;ckt1i&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;University:&lt;/strong&gt; Beijing Institute of Technology, School of Cyberspace Security&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Degree:&lt;/strong&gt; Undergraduate, 2nd Year&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;academic-achievements&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#academic-achievements&#34;&gt;#&lt;/a&gt; Academic Achievements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Average Score:&lt;/strong&gt; 88&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPA:&lt;/strong&gt; 3.6/4.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;skills-and-languages&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#skills-and-languages&#34;&gt;#&lt;/a&gt; Skills and Languages&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Operating Systems:&lt;/strong&gt; Linux (Ubuntu)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Programming Languages:&lt;/strong&gt; Python, C, Shell, Java&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools and Environments:&lt;/strong&gt; MacOS, SSH, Git, Remote Linux / Windows VM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Language Proficiency:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;English:&lt;/strong&gt; Reading and Writing (Excellent), Speaking and Listening (Daily Communication)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;computer-related-skills&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#computer-related-skills&#34;&gt;#&lt;/a&gt; Computer-Related Skills&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Proficient in Python and C/C++ programming, with basic knowledge of Java.&lt;/li&gt;
+&lt;li&gt;Experienced in remote programming and project development using Git, with experience in SSH and remote project development.&lt;/li&gt;
+&lt;li&gt;Strong communication and teamwork skills, with good ability to read academic papers and original documents.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;research-and-projects&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-and-projects&#34;&gt;#&lt;/a&gt; Research and Projects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A weak-password checker based on collected malicious passwords&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Collecting weak-password from fake-ssh or the other password phisher, and using the thought of the Levinstein Distance and patterns to evaluate its strength and give user alerts.&lt;/li&gt;
+&lt;li&gt;Project paper: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NrdDFpL2Jsb2dpbWFnZS9tYWluL1Bhc3N3b3JkX1Byb3RlY3Rpb24ucGRm&#34;&gt;https://raw.githubusercontent.com/ckt1i/blogimage/main/Password_Protection.pdf&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenSSH National Secret Modification Based on OpenSSL&lt;/strong&gt; (Ongoing Competition Project)
+&lt;ul&gt;
+&lt;li&gt;Utilized existing national secret SM series algorithms of OpenSSL to modify OpenSSH services. Acted as a team organizer and contributed significantly to project work and programming tasks. &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRsYWIuZWR1eGlqaS5uZXQvVDIwMjQxMDAwNzk5MzE3NC9wcm9qZWN0MjIxMDEzMi0yMzk2MzI=&#34;&gt;Project Link&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Research on Password Security Issues Based on Honeywords&lt;/strong&gt; (Innovation Project, Ongoing)
+&lt;ul&gt;
+&lt;li&gt;Participated in related paper study and other tasks as a team member.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI Backdoor Simulation Attack Based on Badnets&lt;/strong&gt; (Course Project, Completed)
+&lt;ul&gt;
+&lt;li&gt;Replicated image recognition simulation attacks using methods from the &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE3MDguMDY3MzM=&#34;&gt;Badnets paper&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI Voice Synthesis Implementation Based on DDSP-svc&lt;/strong&gt; (Course Project, Completed)
+&lt;ul&gt;
+&lt;li&gt;Configured and applied the DDSP-svc voice synthesis model to understand its principles and achieve voice simulation and synthesis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Anonymous Electronic Voting Process Implementation Based on Paillier Algorithm&lt;/strong&gt; (Course Project, Completed)
+&lt;ul&gt;
+&lt;li&gt;Implemented the Paillier homomorphic encryption algorithm using Python to simulate an electronic voting system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;awards&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#awards&#34;&gt;#&lt;/a&gt; Awards&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2023-2024 First Semester Excellent Academic Performance Scholarship&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2022-2023 Second Semester Excellent Academic Performance Scholarship&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2023 Beijing Institute of Technology Outstanding Communist Youth League Member&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2023 Second Prize in Beijing’s 34th University Mathematics Competition&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2023 Second Prize in the 20th Information Security and Countermeasure Technology Competition&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2023 Excellent Award in Beijing Institute of Technology Mathematical Modeling Competition&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2022 Second Prize in Beijing Institute of Technology Mingli Cup Freshman Mathematics Competition&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2022 Best Courage Award in Lianshan Control Programming Freshman Competition&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/</guid>
             <title>Introduction of Membership Interface Attack</title>
             <link>https://ckti.github.io/2024/08/04/Paper-Reading/Introduction%20of%20MIA/</link>
             <pubDate>Sun, 04 Aug 2024 21:28:25 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
-&lt;p&gt;(Unfinished)&lt;/p&gt;
+&lt;h1 id=&#34;prelimaries-defination-and-classification&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-defination-and-classification&#34;&gt;#&lt;/a&gt; Prelimaries ,Defination and classification&lt;/h1&gt;
+&lt;h2 id=&#34;prelimaries-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-machine-learning&#34;&gt;#&lt;/a&gt; Prelimaries-- Machine learning&lt;/h2&gt;
+&lt;p&gt;Machine learning (ML) is the study of computer algorithms that improve automatically through experience and by learning from data. Generally, it can be  be divided into these two categories&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Supervised Learning&lt;/strong&gt; :Uses labeled data where input-output pairs are known to train models. It aims to predict or classify new data based on learned patterns, minimizing the error between predicted and actual outcomes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Unsupervised Learning&lt;/strong&gt; :Works with unlabeled data to identify hidden patterns or structures. It clusters or finds relationships within the data without predefined labels.&lt;/p&gt;
+&lt;h2 id=&#34;membership-interface-attackdefination&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#membership-interface-attackdefination&#34;&gt;#&lt;/a&gt; Membership Interface Attack–Defination&lt;/h2&gt;
+&lt;p&gt;Membership interface attack (MIA) is a method of obtaining the data being trained in the targeted ML models byThe main thought of MIA is forming a models that can repersents the membership of the target models. training similar model called shadow model and training a classifier to check whether a data is being trained in the targeted ML model.&lt;/p&gt;
+&lt;h3 id=&#34;shadow-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#shadow-models&#34;&gt;#&lt;/a&gt; Shadow models&lt;/h3&gt;
+&lt;p&gt;The main thought of MIA is forming a models that can repersents the membership of the target models.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/Shadow%20model.png&#34; alt=&#34;shadow models and training&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;basic-taxonomy-of-mia&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#basic-taxonomy-of-mia&#34;&gt;#&lt;/a&gt; Basic Taxonomy of MIA&lt;/h2&gt;
+&lt;h3 id=&#34;based-on-informations&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#based-on-informations&#34;&gt;#&lt;/a&gt; based on informations&lt;/h3&gt;
+&lt;p&gt;Based on the informations of the target model attackers can get, the MIA can be divided into these two categories:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;White-box attack&lt;/strong&gt;: Attackers can obtain all the information about the ML model, including the data distributions, training methods and relevant  parameters&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Black-box attack&lt;/strong&gt;: Attackers can only get restricted informations, including restricted data distributions, training methods and parameters.&lt;/p&gt;
+&lt;p&gt;Compared with white-box attack, black-box attacks gets fewer informations, which leads it harder to achieve. However, the influence of a successful attacks can be  larger than it. Today , the mainstream of the research is also focusing on the black-box attacks.&lt;/p&gt;
+&lt;h3 id=&#34;based-on-prediction-vectors&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#based-on-prediction-vectors&#34;&gt;#&lt;/a&gt; based on Prediction vectors&lt;/h3&gt;
+&lt;p&gt;The prediction vectors is a parameter for judging whether a data is in the models. Today, the main research of MIA can also be categorized based on prediction vectors in the following graph:&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/Prediction%20vectors.png&#34; alt=&#34;Taxonomy of Prediction vectors&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;based-on-the-judgement-methods&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#based-on-the-judgement-methods&#34;&gt;#&lt;/a&gt; Based on the judgement methods&lt;/h3&gt;
+&lt;h4 id=&#34;binary-classifier-based-mia&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#binary-classifier-based-mia&#34;&gt;#&lt;/a&gt; Binary Classifier Based MIA.&lt;/h4&gt;
+&lt;p&gt;The data can be classified as members or non-members by training a binary classifier for classify the models. the main method is as followed:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Training the shadow models&lt;/strong&gt;: Attackers use multiple shadow models that have the same or similar distributions of the target training sets to learn and training the shadow models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Collecting prediction models&lt;/strong&gt;: Attackers will make search for the shadow training sets and get the prediction vectors of each data records. Each data of the vectors in shadow training data sets can be labeled as “Member” and the data in test data sets are labled “Non-member”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Training the attack models&lt;/strong&gt;: Form the “member”and “non-member”data sets based on the labeled datas , and training a binary classifier to form it.&lt;/p&gt;
+&lt;p&gt;By this, Identifying the complex problem of recognizing the member and non-member of the model is converted into the binary classifier problem.&lt;/p&gt;
+&lt;h4 id=&#34;metric-based-membership-inference-attacks&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#metric-based-membership-inference-attacks&#34;&gt;#&lt;/a&gt; Metric Based Membership Inference Attacks&lt;/h4&gt;
+&lt;p&gt;Metric Based MIA obtain the relative metrics by collecting and analysing the prediction vectors and make analyzations by comparing the metrics and thresold values.&lt;/p&gt;
+&lt;p&gt;Compare with training the binary classifier, it is more simple and consume less computational resources. The next page will show the recent research realms of the analyse and settings.&lt;/p&gt;
+&lt;p&gt;Currently, the research on metric based MIA have these categories:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prediction Correctness Based MIA&lt;/strong&gt;: If the target models predict the input data x correctly, then attackers recognized it as a member. The inituation of it is that if a data is in the real data, then the target model will predict the input data x correctly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Loss rate Based MIA&lt;/strong&gt;: If the difference of the loss rate correspond to the target models and the lossrate of the origin data is less than a thresold, then attackers recognize it as a member. The inituation of it is that if the input data is in the true datas, then the loss rate of the target models is near to the total loss rate.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prediction Confidence Based MIA&lt;/strong&gt;: If the prediction confidence of some records is larger than some thresold, then recognize it as a member. The inituation of it is that the target models will minimize the difference between it and the real models, so the prediction confidence will close to 1.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prediction Entropy Based MIA&lt;/strong&gt;: If the prediction entropy of input a records is lower than a thresold, then recognize it as a member. The inituation is that the target model’s prediction entropy of the training data is larger than the prediction of entropy of the test data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Modified prediction Entropy Based MIA&lt;/strong&gt;: Some opinion suggest that current prediction loss didn’t think of the ground truth label, so it may make some misjudgement of some datas, so in some papers, the algorithm of the prediction entropy is modified.&lt;/p&gt;
+&lt;h1 id=&#34;relavant-research&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#relavant-research&#34;&gt;#&lt;/a&gt; Relavant research&lt;/h1&gt;
+&lt;h2 id=&#34;research-on-the-classification-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-on-the-classification-models&#34;&gt;#&lt;/a&gt; Research on the classification models&lt;/h2&gt;
+&lt;p&gt;Since Shokri et al. introduced this attack method, there has been a growing body of research focused on this direction. Salem et al. discussed the assumptions of Membership Inference Attacks (MIA) and attempted to relax the implementation conditions, demonstrating that two of the shadow model assumptions are not necessary and proposing an indicator-based MIA approach. Yeom et al. also proposed two indicator-based MIA methods; Long et al. achieved MIA attacks on certain data by focusing on data with unique effects on the target model, enabling accurate inference in generalized models with similar training and testing accuracy.&lt;/p&gt;
+&lt;p&gt;Additionally, existing research has also targeted more restricted MIAs. Li and Zhang proposed transfer-based and perturbation-based MIAs. Transfer-based MIAs construct shadow models to simulate the target model, using the shadow model’s confidence to determine membership; perturbation-based MIAs introduce noise to create adversarial examples and distinguish members based on the severity of the perturbation. Choquette et al. introduced data augmentation-based MIAs and decision boundary distance-based MIAs. Data augmentation attacks target common data augmentation phenomena in machine learning systems, creating additional records through different augmentation strategies to query the target model for predictions. Decision boundary attacks estimate the distance of records to the model boundary, similar to Li and Zhang’s attacks. Successful MIA cases suggest that machine learning models may be more vulnerable to MIA than previously anticipated.&lt;/p&gt;
+&lt;p&gt;Aside from black-box MIA attacks, Nasir et al. introduced white-box MIA, which can be seen as an extension of black-box MIA, enhancing attack efficiency by leveraging additional information. They use the gradient of the target model’s prediction loss for inference and train a model to distinguish between members and non-members using the SGD algorithm. However, Leino and Fredrikson pointed out that the assumptions of this method are too stringent, requiring attackers to know the approximate distribution of the target dataset. They proposed a Bayes-optimal attack-based MIA method, enabling MIA without background knowledge of the target model.&lt;/p&gt;
+&lt;h2 id=&#34;research-on-generative-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-on-generative-models&#34;&gt;#&lt;/a&gt; Research on Generative Models&lt;/h2&gt;
+&lt;p&gt;Corrent research on generative models are focusing on the generative adversarial network, whose models can be shown as follows:&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/GAN_architecture.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Hayes et al. were the first to propose Membership Inference Attacks (MIA) against generative models. For white-box attacks, attackers collect all records and compute confidence scores to make inferences; for black-box attacks, attackers collect records from the generator to train a local GAN that mimics the target GAN, and then use the local GAN discriminator for inference. Hilprecht et al. introduced two additional attacks: a Monte Carlo-based black-box attack and a VAE-based white-box attack. Hilprecht et al. proposed a set-based attack to determine whether a data point belongs to a set, while Liu et al. introduced a similar co-membership inference attack, determining dataset membership by analyzing the distance of a data point to the target data. Chen et al. proposed a general method where attackers continuously reconstruct the attack model through optimization, calculate the distance between the generated results of the attack model and the target model, and estimate the probability of data membership based on this distance.&lt;/p&gt;
+&lt;h2 id=&#34;research-on-embedding-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-on-embedding-models&#34;&gt;#&lt;/a&gt; Research on Embedding Models：&lt;/h2&gt;
+&lt;p&gt;Current research primarily focuses on text and image embedding models. For text embedding models, attacks aim to infer membership of words or sentence pairs within a sliding window, using similarity scores to determine if they belong to a predefined set. For graph embedding models, attack methods involve using shadow models and confidence scores to infer whether nodes in the graph belong to specific categories, addressing node classification issues.&lt;/p&gt;
+&lt;h2 id=&#34;research-on-regression-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-on-regression-models&#34;&gt;#&lt;/a&gt; Research on Regression Models：&lt;/h2&gt;
+&lt;p&gt;Gupta et al. were the first to conduct MIA (Membership Inference Attack) research on regression models for age prediction, achieving attacks through the construction of a white-box binary classification model.&lt;/p&gt;
+&lt;h2 id=&#34;research-in-federated-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-in-federated-learning&#34;&gt;#&lt;/a&gt; Research in Federated Learning：&lt;/h2&gt;
+&lt;p&gt;In federated learning, attackers can be either the central server or some of the participating clients. They can implement MIA by determining whether certain data was used in training the global model. Melis was the first to propose a gradient-based MIA by analyzing the update mechanism of the RNN training embeddings. Turex introduced heterogeneous FL (Federated Learning), which involves analyzing differences in aggregated parameters from different clients. Nasr et al. discussed how gradient ascent attacks can actively interfere with FL training. Hu et al. proposed source inference attacks aimed at determining which participants hold training records in FL. They argue that existing MIA attacks in FL overlook the source information of training members, which could lead to further privacy issues.&lt;/p&gt;
+&lt;h1 id=&#34;factors-for-a-success-mia&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#factors-for-a-success-mia&#34;&gt;#&lt;/a&gt; Factors for a success MIA&lt;/h1&gt;
+&lt;h2 id=&#34;overfitting-of-target-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#overfitting-of-target-models&#34;&gt;#&lt;/a&gt; Overfitting of Target Models&lt;/h2&gt;
+&lt;p&gt;Many studies have pointed out that overfitting of target ML models is a significant factor in the leakage of original datasets. Specifically:Models like DNNs, due to their high parameterization in applications, enhance their ability to handle large datasets but also record a lot of irrelevant information.Training machine learning models often requires many epochs, making them more prone to memorizing the content of the dataset.Machine learning datasets cannot fully represent real-world data.Existing articles indicate that for a classification system overfitting on training data, attackers can achieve an attack success probability higher than 50% based on the correctness of randomly guessed predictions.&lt;/p&gt;
+&lt;h2 id=&#34;features-of-the-model-itself&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#features-of-the-model-itself&#34;&gt;#&lt;/a&gt; Features of the Model Itself：&lt;/h2&gt;
+&lt;p&gt;When the decision boundary of the target model is not sensitive to the training data used, the effectiveness of MIA attacks is low. Current research shows that among DNN models, logistic regression models, Naive Bayes models, k-nearest neighbor models, and decision tree models, decision tree models have the highest attack accuracy, while the simple Naive Bayes algorithm has the lowest.&lt;/p&gt;
+&lt;h2 id=&#34;diversity-of-the-training-dataset&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#diversity-of-the-training-dataset&#34;&gt;#&lt;/a&gt; Diversity of the Training Dataset:&lt;/h2&gt;
+&lt;p&gt;When the training dataset used by the target model is highly diverse, it helps the model generalize better to test data. Consequently, the impact of MIA on the model will be smaller.&lt;/p&gt;
+&lt;h2 id=&#34;attackers-knowledge-of-the-target-model&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#attackers-knowledge-of-the-target-model&#34;&gt;#&lt;/a&gt; Attacker’s Knowledge of the Target Model:&lt;/h2&gt;
+&lt;p&gt;Existing research on MIA generally makes certain assumptions about the attacker: the attacker knows the relevant distribution of the training data and can construct a suitable shadow dataset based on this distribution. High-accuracy shadow models constructed under this assumption are needed for effective attacks.&lt;/p&gt;
+&lt;h1 id=&#34;research-on-defense-against-mia&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-on-defense-against-mia&#34;&gt;#&lt;/a&gt; Research on Defense against MIA&lt;/h1&gt;
+&lt;h2 id=&#34;confidence-score-masking&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#confidence-score-masking&#34;&gt;#&lt;/a&gt; Confidence Score Masking&lt;/h2&gt;
+&lt;p&gt;This method is mainly used for defending against black-box attacks by returning obfuscated true confidence scores to the classifier. It includes the following three approaches:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The target classifier does not provide the full prediction vector but only the top few confidence scores.&lt;/li&gt;
+&lt;li&gt;The target classifier only provides predicted labels when the attacker provides data input.&lt;/li&gt;
+&lt;li&gt;Noise is added to the returned vector.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These three methods affect the prediction vector but do not result in a loss of prediction accuracy.&lt;/p&gt;
+&lt;h2 id=&#34;regularization&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#regularization&#34;&gt;#&lt;/a&gt; Regularization&lt;/h2&gt;
+&lt;p&gt;Regularization mitigates MIA attack strength by reducing model overfitting.&lt;/p&gt;
+&lt;p&gt;Existing regularization methods include traditional techniques such as L2-norm regularization, dropout, data augmentation, model stacking, early stopping, and label smoothing. These methods lower overfitting by reducing the impact of different test datasets on samples, thereby also reducing the intensity of MIA attacks.&lt;/p&gt;
+&lt;p&gt;Additionally, specially designed regularization systems like adversarial regularization and Mixup + MMD (Maximum Mean Discrepancy) can also defend against MIA by introducing new regularization mechanisms to decrease the differences between members and non-members. Compared to masking techniques, regularization can resist both black-box and white-box attacks and can alter output parameters when modifying the output model.&lt;/p&gt;
+&lt;h2 id=&#34;knowledge-distallation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#knowledge-distallation&#34;&gt;#&lt;/a&gt; Knowledge Distallation&lt;/h2&gt;
+&lt;p&gt;Knowledge distillation refers to the process of training a smaller student model using a larger teacher model to transfer knowledge from the large model to the small one, allowing the smaller model to achieve a similar level of approximation. Based on this, existing research has introduced methods such as DMP, CKD, and PCKD, they are generally called DMP (Distillation For Membership Privacy), whose steps are as followed:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Train an unprotected teacher model to record and label data in an unlabeled dataset.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select data with lower prediction entropy for training, which is used for classification.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Train based on the labeled model.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Additionally, There are also some research that proposes Complementary Knowledge Distillation (CKD) and Pseudo Complementary Knowledge Distillation (PCKD) methods. In these methods, the transfer data for knowledge distillation comes from a private training set. CKD and PCKD eliminate the need for public data, which may be difficult to obtain in some applications, making knowledge distillation a more practical defense method for mitigating MIA attacks on machine learning models.&lt;/p&gt;
+&lt;h2 id=&#34;differencial-privacy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#differencial-privacy&#34;&gt;#&lt;/a&gt; Differencial Privacy&lt;/h2&gt;
+&lt;p&gt;Differential privacy refers to protecting the original data by adding relevant noise to the dataset. When a deep learning model is trained with a model that incorporates differential privacy, if the privacy budget is small enough, the trained model will not retain specific user information. Therefore, different privacy models can limit the success rate of MIA attacks based solely on the model. Current research realms are shown in the next page:&lt;/p&gt;
+&lt;p&gt;Differential privacy provides theoretical protection for member privacy in training records and can mitigate MIAs in classification and generative models, regardless of whether the attacker is in a black-box or white-box setting. Despite its widespread and effective application, a drawback is its difficulty in providing an acceptable privacy-utility tradeoff in complex learning tasks. Additionally, differential privacy can also mitigate other forms of privacy attacks, such as attribute inference attacks and feature inference attacks, and is related to the robustness of models against adversarial examples.&lt;/p&gt;
+&lt;p&gt;Currently , the research realms about differencial privacy is:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The relationship between differential privacy and MIA&lt;/strong&gt;: There are theoretical results and proofs on this, but practical evaluations have not achieved good utility.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Privacy-Utility Tradeoff&lt;/strong&gt;: Existing research shows that current differential privacy performance in this regard is insufficient. Studies indicate that minority groups are more affected by MIAs, and differential privacy reduces model utility for these groups.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Training Methods&lt;/strong&gt;: Current methods primarily include DP-SGD, with new methods like DP-Logits also being proposed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Applications in Generative Models&lt;/strong&gt;: Research shows that differential privacy can also defend against MIAs in generative models, with defense effectiveness related to generative quality and privacy budget 𝜖. Studies indicate that differential privacy limits overfitting and mitigates MIA.&lt;/p&gt;
+&lt;h1 id=&#34;possible-future-directions&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#possible-future-directions&#34;&gt;#&lt;/a&gt; Possible future directions&lt;/h1&gt;
+&lt;h2 id=&#34;in-membership-inference-attacks&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#in-membership-inference-attacks&#34;&gt;#&lt;/a&gt; In Membership Inference Attacks&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Attacks on Regularized Models&lt;/strong&gt;: MIA systems often rely on the overfitting of machine learning systems, but this assumption is challenged by advancements in regularization techniques; attacks on overfitted models are still largely unexplored.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attacks on Self-Supervised Models&lt;/strong&gt;: Self-supervised models are becoming widespread in NLP and computer vision, and attacks on these models are still largely unknown.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attacks on Adversarial Machine Learning&lt;/strong&gt;: Adversarial machine learning shares some similarities and differences with membership inference attacks; combining these approaches could be a potential research direction.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attacks on New Machine Learning Models&lt;/strong&gt; (e.g., Contrastive Learning and Meta-Learning): These models differ significantly from traditional ones, and many areas for research remain in attacking them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attacks on Federated Learning&lt;/strong&gt;: Existing MIAs are mainly applicable to homogeneous federated learning, with limited research on heterogeneous federated learning.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Applications Related to MIA&lt;/strong&gt;: Includes source inference attacks in federated learning and deeper privacy protection studies through MIA audits of data contributions to ML models.&lt;/p&gt;
+&lt;h2 id=&#34;in-the-defence-of-membership-inference-attacks&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#in-the-defence-of-membership-inference-attacks&#34;&gt;#&lt;/a&gt; In the Defence of Membership Inference Attacks&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Defense Against Unsupervised Learning Models&lt;/strong&gt;: Unsupervised learning models struggle with overfitting due to a lack of data labels, and research in this area is limited.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Defense Against Generative Models&lt;/strong&gt;: Possible defenses include methods such as knowledge distillation and reinforcemnt learning to avoid leakage of raw data through the outputs of generative models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Balancing Privacy and Utility&lt;/strong&gt;: Existing differential privacy protections often add significant noise to classifier gradients, reducing prediction accuracy. Balancing privacy and utility remains an area for research.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Privacy Defenses in Federated Learning&lt;/strong&gt;: With increasing privacy attacks in federated learning, developing defensive technologies is crucial, with differential privacy being a potential future direction.&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -23,16 +223,20 @@
             <pubDate>Fri, 02 Aug 2024 23:48:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
 标题: Membership Inference Attacks on Machine Learning: A Survey&lt;/p&gt;
-&lt;h1 id=&#34;mia-的定义以及背景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的定义以及背景&#34;&gt;#&lt;/a&gt; MIA 的定义以及背景&lt;/h1&gt;
+&lt;h1 id=&#34;mia-的前置知识和定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的前置知识和定义&#34;&gt;#&lt;/a&gt; MIA 的前置知识和定义&lt;/h1&gt;
+&lt;h2 id=&#34;前置知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前置知识&#34;&gt;#&lt;/a&gt; 前置知识&lt;/h2&gt;
+&lt;h3 id=&#34;机器学习的定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#机器学习的定义&#34;&gt;#&lt;/a&gt; 机器学习的定义&lt;/h3&gt;
+&lt;h3 id=&#34;监督学习和无监督学习的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#监督学习和无监督学习的区别&#34;&gt;#&lt;/a&gt; 监督学习和无监督学习的区别&lt;/h3&gt;
+&lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
 &lt;p&gt;成员推理攻击 (Membership Inference Attacks) 是指对一个人工智能系统，通过猜测其中的数据并训练一个 shadow model 猜测对应数据是否在其中。&lt;/p&gt;
-&lt;h1 id=&#34;mia的攻击特点和相关研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia的攻击特点和相关研究&#34;&gt;#&lt;/a&gt; MIA 的攻击特点和相关研究&lt;/h1&gt;
-&lt;h2 id=&#34;黑盒攻击和白盒攻击&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#黑盒攻击和白盒攻击&#34;&gt;#&lt;/a&gt; 黑盒攻击和白盒攻击&lt;/h2&gt;
+&lt;h2 id=&#34;基本分类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本分类&#34;&gt;#&lt;/a&gt; 基本分类&lt;/h2&gt;
 &lt;p&gt;针对 MIA 的目标模型性质，可将 MIA 攻击分为以下两种，具体可以参见下图:&lt;br&gt;
 &lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/B%26W_attacks.png&#34; alt=&#34;两种攻击的差异&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;白盒攻击&lt;/strong&gt;：攻击者可以获取模型的所有信息，包括数据分布，训练方式以及相关变量&lt;br&gt;
 &lt;strong&gt;黑盒攻击&lt;/strong&gt;：攻击者只能进行黑盒访问，获取受限的数据分布，训练方式等中间信息&lt;/p&gt;
 &lt;p&gt;相较于白盒攻击，黑盒攻击由于可获取的信息较少，因此实现难度较大，但攻击成功造成的影响也更大，现今主要的研究方向也集中于黑盒攻击，根据提供的预测向量，可以分为：Full confidence scores 、Top-K confidence scores、Prediction label only 三种方式，具体介绍见下图：&lt;br&gt;
 &lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/Prediction%20vectors.png&#34; alt=&#34;预测向量&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;mia的攻击特点和相关研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia的攻击特点和相关研究&#34;&gt;#&lt;/a&gt; MIA 的攻击特点和相关研究&lt;/h1&gt;
 &lt;h2 id=&#34;攻击模型的特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#攻击模型的特点&#34;&gt;#&lt;/a&gt; 攻击模型的特点&lt;/h2&gt;
 &lt;p&gt;机器学习模型通常会造成过拟合，这种过拟合为 MIA 提供了便利，根据所使用的攻击模型，可以将 MIA 分为以下两类：&lt;/p&gt;
 &lt;h3 id=&#34;基于二元分类器的mia-binary-classifier-based-membership-inference-attacks&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基于二元分类器的mia-binary-classifier-based-membership-inference-attacks&#34;&gt;#&lt;/a&gt; 基于二元分类器的 MIA （Binary Classifier Based Membership Inference Attacks.）&lt;/h3&gt;
@@ -54,8 +258,8 @@
  5.&lt;strong&gt; 基于修改后的预测熵的攻击（Modified Prediction Entropy Based MIA）&lt;/strong&gt;：有观点认为现有的预测熵未考虑 ground truth label，因而可能造成某些数据被误判。因此在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzIwMDMuMTA1OTU=&#34;&gt;这篇文章&lt;/span&gt;中作者对预测熵的算法进行了一些修改&lt;/p&gt;
 &lt;h2 id=&#34;根据目标模型的相关研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#根据目标模型的相关研究&#34;&gt;#&lt;/a&gt; 根据目标模型的相关研究&lt;/h2&gt;
 &lt;h3 id=&#34;在分类模型方面的研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在分类模型方面的研究&#34;&gt;#&lt;/a&gt; 在分类模型方面的研究&lt;/h3&gt;
-&lt;p&gt;自 Shokri 等人提出了这一攻击方式后，目前有许多针对此方向的研究。Salem 等人讨论了 MIA 的假设并尝试放宽了实现的条件，证明了 shadow model 的两种假设并非必须并提出了基于指标的 MIA 方式。Yeom 等人也提出了两种基于指标的 MIA 方式；Long 等人通过调关注某些对目标模型有独特影响的数据，以此实现对某些数据的 MIA 攻击，实现了在训练和测试准确度相近的情况下，在通用化的模型中正确进行推断。&lt;br&gt;
-此外，现有的研究同样也针对更加受限的 MIA，Li 和 Zhang 提出了基于基于转移的（transfer based）MIA 和基于扰动（perturbation based）的 MIA。基于转移的 MIA 通过构造影子模型模拟目标模型，用阴影模型的置信度判断成员；基于扰动的 MIA 则通过添加噪音，使其变成对抗性的例子，通过扰动的严重程度区分成员。Choquette 等人还提出了基于数据增强的 MIA 和基于决策边界距离的 MIA。基于数据增强的攻击针对机器学习系统中常见的数据增强现象，通过不同的数据增强策略创建额外的数据记录，以此查询目标模型收集预测标签。基于决策边界的攻击策略则估计记录到模型边界的距离，其类似 Li 和 zhang 的攻击。现有的 MIA 成功案例表明，机器学习模型可能比我们预期的更容易收到 MIA 的影响。&lt;/p&gt;
+&lt;p&gt;自 Shokri 等人提出了这一攻击方式后，目前有许多针对此方向的研究。Salem 等人讨论了 MIA 的假设并尝试放宽了实现的条件，证明了 shadow model 的两种假设并非必须并提出了基于指标的 MIA 方式。Yeom 等人也提出了两种基于指标的 MIA 方式；Long 等人通过调关注某些对目标模型有独特影响的数据，以此实现对某些数据的 MIA 攻击，实现了在训练和测试准确度相近的情况下，在通用化的模型中正确进行推断。&lt;/p&gt;
+&lt;p&gt;此外，现有的研究同样也针对更加受限的 MIA，Li 和 Zhang 提出了基于基于转移的（transfer based）MIA 和基于扰动（perturbation based）的 MIA。基于转移的 MIA 通过构造影子模型模拟目标模型，用阴影模型的置信度判断成员；基于扰动的 MIA 则通过添加噪音，使其变成对抗性的例子，通过扰动的严重程度区分成员。Choquette 等人还提出了基于数据增强的 MIA 和基于决策边界距离的 MIA。基于数据增强的攻击针对机器学习系统中常见的数据增强现象，通过不同的数据增强策略创建额外的数据记录，以此查询目标模型收集预测标签。基于决策边界的攻击策略则估计记录到模型边界的距离，其类似 Li 和 zhang 的攻击。现有的 MIA 成功案例表明，机器学习模型可能比我们预期的更容易收到 MIA 的影响。&lt;/p&gt;
 &lt;p&gt;除去针对 MIA 的黑盒攻击，Nasir 等人首次提出了白盒 MIA，其可看作是基于黑盒 MIA 在进行的的拓展，通过获取的更多信息提升攻击效率。他们采用目标模型预测损失的梯度进行推断，以此通过 SGD 算法训练区分成员与非成员。但 Leino and Fredrikson 指出其方法的假设过于严格，其需要攻击者知道目标数据集的大致分布，因此他们提出了一种基于贝叶斯最佳攻击（Bayes-optimal attack）的 MIA 方法，从而实现无须目标模型背景知识的 MIA。&lt;/p&gt;
 &lt;h3 id=&#34;在生成模型上的研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在生成模型上的研究&#34;&gt;#&lt;/a&gt; 在生成模型上的研究&lt;/h3&gt;
 &lt;p&gt;现有的研究主要集中于生成式对抗神经网络上 (generative adversarial network). 其模型大致如下图可见&lt;br&gt;
@@ -68,8 +272,6 @@
 &lt;h3 id=&#34;在联邦学习的研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在联邦学习的研究&#34;&gt;#&lt;/a&gt; 在联邦学习的研究&lt;/h3&gt;
 &lt;p&gt;在联邦学习中，攻击者可以是中心服务器或者其中的某些分机，通过判断某些数据是否用于全局模型的训练以实现 MIA。Melis 通过分析 RNN 训练师嵌入层的更新机制，首次提出了基于梯度的 MIA。Turex 则提出了异构 FL（heterogeneous FL），通过分析不同分机汇总参数的差异进行判断。Nasr 等人讨论了如何通过梯度上升攻击主动干预 FL 训练。Hu 等人则提出了源推断攻击，旨在确定哪个参与方拥有 FL 中的训练记录。他们认为现有的 FL 中的成员推断攻击忽视了训练成员的来源信息，而这些信息的泄露可能导致进一步的隐私问题。&lt;/p&gt;
 &lt;h1 id=&#34;mia-攻击成功的因素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-攻击成功的因素&#34;&gt;#&lt;/a&gt; MIA 攻击成功的因素&lt;/h1&gt;
-&lt;h2 id=&#34;攻击者对目标模型的了解程度&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#攻击者对目标模型的了解程度&#34;&gt;#&lt;/a&gt; 攻击者对目标模型的了解程度&lt;/h2&gt;
-&lt;p&gt;现有的针对 MIA 的研究基本对攻击者都有一定的假设： 攻击者知道训练数据的相关分布，并且可以根据相关的分布构造出适合的影子数据集。基于这一假设构造的高精确度的影子模型才可以有效地实现攻击。&lt;/p&gt;
 &lt;h2 id=&#34;目标模型对原始数据集的过拟合&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#目标模型对原始数据集的过拟合&#34;&gt;#&lt;/a&gt; 目标模型对原始数据集的过拟合&lt;/h2&gt;
 &lt;p&gt;该综述表明，目前已有许多研究指出 target ML models 对目标的过拟合是造成原始数据集泄漏的重要因素，具体有如下原因：&lt;/p&gt;
 &lt;ol&gt;
@@ -82,6 +284,8 @@
 &lt;p&gt;当目标模型的决策边界对于所使用的训练数据并不敏感的时候，MIA 攻击的有效性不高。&lt;a href=&#34;/https://ieeexplore.ieee.org/document/8962136&#34;&gt;这篇文章&lt;/a&gt;实验数据表明，在 DNN models, logistic regression models, Naive Bayes models, k-nearest neighbor models, and decision tree models 对决策树模型具有最高的攻击精度，而简单贝叶斯算法 (Naive Bayes) 具有最低的攻击精度&lt;/p&gt;
 &lt;h2 id=&#34;训练数据集的多样性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#训练数据集的多样性&#34;&gt;#&lt;/a&gt; 训练数据集的多样性&lt;/h2&gt;
 &lt;p&gt;当目标模型使用的训练数据集具有较强的多样性的时候，训练数据将帮助模型更好的概括测试数据。因此 MIA 对该模型的影响就会越小。&lt;/p&gt;
+&lt;h2 id=&#34;攻击者对目标模型的了解程度&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#攻击者对目标模型的了解程度&#34;&gt;#&lt;/a&gt; 攻击者对目标模型的了解程度&lt;/h2&gt;
+&lt;p&gt;现有的针对 MIA 的研究基本对攻击者都有一定的假设： 攻击者知道训练数据的相关分布，并且可以根据相关的分布构造出适合的影子数据集。基于这一假设构造的高精确度的影子模型才可以有效地实现攻击。&lt;/p&gt;
 &lt;h1 id=&#34;mia-的防御研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的防御研究&#34;&gt;#&lt;/a&gt; MIA 的防御研究&lt;/h1&gt;
 &lt;h2 id=&#34;可信得分掩码confidence-score-masking&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可信得分掩码confidence-score-masking&#34;&gt;#&lt;/a&gt; 可信得分掩码 Confidence Score Masking&lt;/h2&gt;
 &lt;p&gt;此方法主要用于黑盒攻击的防御，通过向分类器返回隐藏后的真实的可信得分以实现防御，具体有以下三种方式：&lt;/p&gt;
@@ -130,18 +334,6 @@
 &lt;li&gt;&lt;strong&gt;针对联邦学习的隐私防御&lt;/strong&gt;： 目前联邦学习面临着越来越多的隐私攻击，需要开发相应的防御技术，差分隐私等技术在联邦学习上的应用是未来可能的一些方向&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;（未完，针对未来的方向目前有些想法，后面会单开一章简单介绍）&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/01/About%20me/</guid>
-            <title>About me</title>
-            <link>https://ckti.github.io/2024/08/01/About%20me/</link>
-            <pubDate>Thu, 01 Aug 2024 10:58:29 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; Hello!&lt;/h1&gt;
-&lt;p&gt;Hi! I’m CKTi. A college student. Here is my blog, you can find something I have done.&lt;/p&gt;
-&lt;p&gt;My major now is cyber security and I’m now intrested in privacy and deep learning and so on, here are some articles about some &lt;a href=&#34;/https://ckt1i.github.io/categories/Reading%20Notes/&#34;&gt;notes&lt;/a&gt; in learning.&lt;/p&gt;
-&lt;p&gt;I’m also an amartar drummer in a band playing J-Pop and anime songs, you can see our band’s live record in our &lt;a href=&#34;/https://space.bilibili.com/3493081542298207&#34;&gt;bilibili&lt;/a&gt; page. In the future, I will publish some drum tabs in my blog (If I have time).&lt;/p&gt;
-&lt;p&gt;If you have any suggestions or anything want to say to me, you can submit comments in each of the articles, or just contact me in email. Have a nice day!&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
