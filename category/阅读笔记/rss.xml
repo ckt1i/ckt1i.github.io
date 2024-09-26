@@ -5,9 +5,194 @@
         <link>https://ckti.github.io</link>
         <description></description>
         <language>en</language>
-        <pubDate>Sun, 04 Aug 2024 21:28:25 +0800</pubDate>
-        <lastBuildDate>Sun, 04 Aug 2024 21:28:25 +0800</lastBuildDate>
+        <pubDate>Thu, 26 Sep 2024 14:05:48 +0800</pubDate>
+        <lastBuildDate>Thu, 26 Sep 2024 14:05:48 +0800</lastBuildDate>
         <category>未完成</category>
+        <item>
+            <guid isPermalink="true">https://ckti.github.io/2024/09/26/MIA_2/</guid>
+            <title>Membership Inference Attacks Against Recommender Systems</title>
+            <link>https://ckti.github.io/2024/09/26/MIA_2/</link>
+            <pubDate>Thu, 26 Sep 2024 14:05:48 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;background-and-problem&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#background-and-problem&#34;&gt;#&lt;/a&gt; Background and Problem&lt;/h1&gt;
+&lt;h2 id=&#34;backgrounds-of-recommend-system&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#backgrounds-of-recommend-system&#34;&gt;#&lt;/a&gt; Backgrounds of recommend system&lt;/h2&gt;
+&lt;p&gt;The recommender system is essentially an information filtering system, relying on machine learning algorithms to predict user preferences for items. There are two main methods in these realm:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;collaborative filtering&lt;/strong&gt;: using traditional methods, combining the history action and similar actions to make decisions&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;content-based recommendation&lt;/strong&gt;:  using meta-data to distinguish the user preferences.&lt;/p&gt;
+&lt;p&gt;The success of recommender systems lies in the large- scale user data. However, the data in many cases contains sensitive information of individuals.&lt;/p&gt;
+&lt;h2 id=&#34;contribution-of-this-paper&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#contribution-of-this-paper&#34;&gt;#&lt;/a&gt; Contribution of this paper&lt;/h2&gt;
+&lt;p&gt;First quantification of privacy risks in recommender systems through user-level membership inference attacks.&lt;/p&gt;
+&lt;p&gt;Overcoming technical challenges by addressing limited access to ranked recommendations without posterior probabilities.&lt;/p&gt;
+&lt;p&gt;Introducing a shadow recommender system to generate labeled data for attack models.&lt;/p&gt;
+&lt;p&gt;Extensive experiments demonstrating strong attack performance across benchmark datasets.&lt;/p&gt;
+&lt;p&gt;Proposing a defense mechanism called “Popularity Randomization” to reduce attack success by adding randomness.&lt;/p&gt;
+&lt;h1 id=&#34;methods&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#methods&#34;&gt;#&lt;/a&gt; Methods&lt;/h1&gt;
+&lt;h2 id=&#34;labeled-data-generation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#labeled-data-generation&#34;&gt;#&lt;/a&gt; Labeled Data Generation&lt;/h2&gt;
+&lt;p&gt;The adversary builds a shadow recommender system to mimic the target recommender system and generate training data. This involves factorizing a user-item rating matrix to project users and items into a shared latent space. The adversary then calculates the center vectors of user interactions and recommendations, and the difference between these vectors forms the user feature vector. Users are labeled as members (1) or non-members (0).&lt;/p&gt;
+&lt;h2 id=&#34;attack-model-establishment&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#attack-model-establishment&#34;&gt;#&lt;/a&gt; Attack Model Establishment&lt;/h2&gt;
+&lt;p&gt;A multi-layer perceptron (MLP) with two hidden layers is used as the attack model to infer membership status. The MLP is trained on the feature vectors generated in the previous step, and outputs probabilities indicating membership.&lt;/p&gt;
+&lt;h2 id=&#34;parameter-optimization&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#parameter-optimization&#34;&gt;#&lt;/a&gt; Parameter Optimization&lt;/h2&gt;
+&lt;p&gt;The MLP is trained using stochastic gradient descent, minimizing a cross-entropy loss function. After training, the attack model uses the test data to infer the membership status of users in the target recommender system.&lt;/p&gt;
+&lt;h2 id=&#34;framework&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#framework&#34;&gt;#&lt;/a&gt; Framework&lt;/h2&gt;
+&lt;p&gt;This method leverages both user interactions and recommendation patterns, and captures the order information from the ranked lists of recommended items, a critical aspect that distinguishes it from previous membership inference attacks .&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/frameworkk_MIA4rec.png&#34; alt=&#34;The framework of the proposed method&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;experiments&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#experiments&#34;&gt;#&lt;/a&gt; Experiments&lt;/h1&gt;
+&lt;h2 id=&#34;experimental-target&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#experimental-target&#34;&gt;#&lt;/a&gt; Experimental target&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Target Models&lt;/strong&gt;: The experiment use three Personalized recommendation algorithms  for members: Latent Factor Model (LFM) and Neural Collaborative Filtering (NCF) ; And use popularity recommendation algorithm for non-members due to the lack of non-members’ data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Data Sets&lt;/strong&gt;: This paper use three real-world datasets that is widely used for experiments of recommend systems, including Amazon Digital Music (ADM) , Lastfm-2k (lf-2k) , and Movielens-1m (ml-1m) .&lt;/p&gt;
+&lt;h2 id=&#34;data-preprocessing&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#data-preprocessing&#34;&gt;#&lt;/a&gt; Data Preprocessing&lt;/h2&gt;
+&lt;p&gt;For each dataset, the paper divide it into three disjoint subsets: shadow dataset, a target dataset and a dataset for extracting item features. Then , the paper processes these to make the data suitable:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;To generate feature vectors for users, the dataset for item feature should contain all items of the target and shadow recommenders.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the shadow or target dataset, the paper further divide it into two disjoint parts, which are used to conduct recommendations to members and non-members, respectively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The paper filtered out the users who have less than 20 interactions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;evaluation-metrics&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#evaluation-metrics&#34;&gt;#&lt;/a&gt; Evaluation Metrics&lt;/h2&gt;
+&lt;p&gt;This paper use AUC (area under the ROC curve) as the metric to evaluate attack performances. Regarding members as positive data points and non-members as negative data points. AUC indicates the proportion of the prediction results being positive to negative.&lt;/p&gt;
+&lt;h2 id=&#34;implementation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#implementation&#34;&gt;#&lt;/a&gt; Implementation&lt;/h2&gt;
+&lt;p&gt;The attack model is a multi-layer perceptron (MLP) with two hidden layers. The first layer has 32 units, and the second has 8 units. Stochastic Gradient Descent (SGD) is used as the optimizer, with a learning rate of 0.01 and a momentum of 0.7. The model is trained for 20 epochs.&lt;/p&gt;
+&lt;h2 id=&#34;data-preprocessing-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#data-preprocessing-2&#34;&gt;#&lt;/a&gt; Data Preprocessing&lt;/h2&gt;
+&lt;p&gt;For each dataset, the paper divide it into three disjoint subsets: shadow dataset, a target dataset and a dataset for extracting item features. Then , the paper processes to make the data suitable:&lt;br&gt;
+To generate feature vectors for users, the dataset for item feature should contain all items of the target and shadow recommenders.&lt;br&gt;
+For the shadow or target dataset, the paper further divide it into two disjoint parts, which are used to conduct recommendations to members and non-members, respectively.&lt;br&gt;
+The paper filtered out the users who have less than 20 interactions.&lt;/p&gt;
+&lt;h2 id=&#34;recommendation-performance&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#recommendation-performance&#34;&gt;#&lt;/a&gt; Recommendation Performance&lt;/h2&gt;
+&lt;p&gt;This paper use HR@100 (HR means hit rate)to evaluate the recommendation performance. The result shows that the Recommendation systems works better on Ml-1m data sets. When using Item methods , the HR is up to about 0.95&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_RecPerf.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;attack-performance&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#attack-performance&#34;&gt;#&lt;/a&gt; Attack Performance&lt;/h2&gt;
+&lt;p&gt;In this part, the paper evaluated three assumptions and evaluate the performance of the attack model for each assumption:&lt;/p&gt;
+&lt;h3 id=&#34;assumption-i&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#assumption-i&#34;&gt;#&lt;/a&gt; Assumption I&lt;/h3&gt;
+&lt;p&gt;the attacker knows both the algorithm and the data distribution of the target recommender system. Under this assumption, the experimental results show very strong attack performance. As the figure in the paper,when the shadow recommender system mirrors the target recommender system’s algorithm and data, the AUC scores are highly accurate.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Assumption1.png&#34; alt=&#34;The result for the attack performance under Assumption I&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;assumption-ii&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#assumption-ii&#34;&gt;#&lt;/a&gt; Assumption II&lt;/h3&gt;
+&lt;p&gt;The attacker only knows the data distribution used to train the target recommender system but does not know the specific recommendation algorithm. Under this assumption, the attack performance decreases but remains strong. For example, in the ADM dataset, when the target system uses the Item algorithm and the shadow system uses the LFM algorithm, the AUC drops from 0.926 to 0.843, showing the impact of data distribution similarity on the attack.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Assumption2.png&#34; alt=&#34;The result for the attack performance under Assumption II&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;assumption-iii&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#assumption-iii&#34;&gt;#&lt;/a&gt; Assumption III&lt;/h3&gt;
+&lt;p&gt;The attacker only knows the data distribution used to train the target recommender system but does not know the specific recommendation algorithm. Under this assumption, the attack performance decreases but remains strong. For example, in the ADM dataset, when the target system uses the Item algorithm and the shadow system uses the LFM algorithm, the AUC drops from 0.926 to 0.843, showing the impact of data distribution similarity on the attack.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Assumption3.png&#34; alt=&#34;The result for the attack performance under Assumption III&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hyperparameters&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hyperparameters&#34;&gt;#&lt;/a&gt; HyperParameters&lt;/h3&gt;
+&lt;p&gt;In this paper, the impact of hyperparameters on the success of the attack is reflected in the following aspects:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Number of recommendations (k)&lt;/strong&gt;: With more recommended items, the attack model gains more information, but performance improvements cease when the number is large enough.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Length of feature vectors (l)&lt;/strong&gt;: Longer feature vectors provide more dimensional information to the model, but after a certain point, further increasing the length no longer significantly boosts performance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Weights of recommended items&lt;/strong&gt;: When considering the order of items in the recommendation list, attack performance significantly improves. Items at the front of the list are more likely to be accepted by users, and assigning higher weights to these items enhances the effectiveness of the attack.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;defence&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#defence&#34;&gt;#&lt;/a&gt; Defence&lt;/h1&gt;
+&lt;h2 id=&#34;popularity-randomization&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#popularity-randomization&#34;&gt;#&lt;/a&gt; Popularity Randomization&lt;/h2&gt;
+&lt;p&gt;non-members are provided with the most popular items. As a result, feature vectors of non-members are extremely similar and easily distinguished from members.  To fix this problems, the paper bring forward the popularity randomization. By selecting candidates from the most popular items randomly to make the target vectors harder to be distinguished.&lt;/p&gt;
+&lt;h2 id=&#34;evaluation-results&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#evaluation-results&#34;&gt;#&lt;/a&gt; Evaluation results&lt;/h2&gt;
+&lt;p&gt;The figure of the test result shows that when using the popularity randomization, the AUC rate was apparently downed for most of the data sets, and some of them even close to 0.5, which is nearly close to random guessing.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Defence.png&#34; alt=&#34;The result of popularity randomization&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;discussion-and-conclusion&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#discussion-and-conclusion&#34;&gt;#&lt;/a&gt; Discussion and conclusion&lt;/h1&gt;
+&lt;h2 id=&#34;the-factors-for-effects-of-attacks&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-factors-for-effects-of-attacks&#34;&gt;#&lt;/a&gt; The Factors for effects of attacks&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The Choice of Datasets&lt;/strong&gt;: The dataset with a denser user-item matrix leads to better attack performances. Attack models works better in the datasets with rich informations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The Selection of Recommendation Algorithms&lt;/strong&gt;: The recommender system with simple model structure is easier to be attacked. Compare with more complex algorithm,LFM has higher model complexity, which makes it harder to attack.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Distributions of Generated User Features&lt;/strong&gt;:  When the distribution of user feature vectors generated by the shadow recommender system closely matches the target system, attack performance improves. The similarity between target data and target data is crucial for boosting attack effectiveness.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#conclusions&#34;&gt;#&lt;/a&gt; Conclusions&lt;/h2&gt;
+&lt;h2 id=&#34;effectiveness-of-the-attack&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#effectiveness-of-the-attack&#34;&gt;#&lt;/a&gt; Effectiveness of the Attack:&lt;/h2&gt;
+&lt;p&gt;The proposed membership inference attack model demonstrates strong performance across various recommender systems and datasets. Even with limited knowledge, the model can effectively infer user membership.&lt;/p&gt;
+&lt;h2 id=&#34;proposed-defense-mechanism&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#proposed-defense-mechanism&#34;&gt;#&lt;/a&gt; Proposed Defense Mechanism&lt;/h2&gt;
+&lt;p&gt;To mitigate the attack, the authors introduce the “Popularity Randomization” defense mechanism. Experiments show that this defense significantly reduces the success rate of the attack, especially in complex models like Neural Collaborative Filtering (NCF).&lt;/p&gt;
+&lt;h2 id=&#34;future-work&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#future-work&#34;&gt;#&lt;/a&gt; Future Work&lt;/h2&gt;
+&lt;p&gt;The paper suggests further exploration of more effective defense mechanisms against such attacks and expanding the application of similar attacks and defenses to other machine learning models.&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ckti.github.io/2024/09/26/MIA_1/</guid>
+            <title>Membership Inference Attacks Against Machine Learning Models</title>
+            <link>https://ckti.github.io/2024/09/26/MIA_1/</link>
+            <pubDate>Thu, 26 Sep 2024 10:24:13 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;introduction-and-background&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-and-background&#34;&gt;#&lt;/a&gt; Introduction and Background&lt;/h1&gt;
+&lt;h2 id=&#34;introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;#&lt;/a&gt; Introduction of the Privacy Problem in Machine Learning&lt;/h2&gt;
+&lt;p&gt;Machine learning is the foundation of popular Internet services such as image and speech recognition and natural language translation and recommend system, with many companies offering machine learning services via APIs (e.g., Google and Amazon).&lt;/p&gt;
+&lt;p&gt;However, these models often learn sensitive user data during training, leading to potential privacy risks. Specifically, machine learning models can inadvertently leak their training data, posing a threat to user privacy. This paper focuses on “membership inference attacks,” where an attacker can infer whether a specific data point was part of the model’s training set based on its outputs.&lt;/p&gt;
+&lt;h2 id=&#34;machine-learning-background&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#machine-learning-background&#34;&gt;#&lt;/a&gt; Machine Learning Background&lt;/h2&gt;
+&lt;p&gt;Machine learning is categorized into supervised and unsupervised learning: Supervised learning uses labeled data to train models to predict outputs from inputs.&lt;/p&gt;
+&lt;p&gt;A common issue in machine learning is overfitting, where the model performs well on training data but poorly on unseen data. Overfitted models are more likely to memorize training data, leading to privacy leaks, as they retain too much information about the data they trained on.&lt;/p&gt;
+&lt;p&gt;Well-regularized models should avoid overfitting, generalizing well to new data without revealing sensitive information from the training data.&lt;/p&gt;
+&lt;h2 id=&#34;privacy-in-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#privacy-in-machine-learning&#34;&gt;#&lt;/a&gt; Privacy in Machine Learning&lt;/h2&gt;
+&lt;p&gt;Machine learning models can unintentionally leak sensitive information about the data they were trained on.&lt;/p&gt;
+&lt;p&gt;Two primary types of privacy risks are:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Population-level inference&lt;/strong&gt;: Inferring general patterns about the population used to train the model, which can reveal sensitive characteristics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Membership inference&lt;/strong&gt;: Determining if a specific individual’s data was included in the training set.&lt;/p&gt;
+&lt;p&gt;This paper focuses on membership inference attacks, as protecting the privacy of training set members is both practical and critical for users.&lt;/p&gt;
+&lt;p&gt;The risk is higher for models trained on private or sensitive data, such as healthcare records.&lt;/p&gt;
+&lt;h2 id=&#34;problem-statements&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#problem-statements&#34;&gt;#&lt;/a&gt; Problem Statements&lt;/h2&gt;
+&lt;p&gt;The core problem studied in this paper is membership inference attacks.&lt;br&gt;
+In a black-box setting, the attacker can query the model to get outputs but does not have access to the model’s structure or parameters.&lt;br&gt;
+The attacker’s goal is to determine if a specific data point was part of the model’s training set based on the model’s output.&lt;br&gt;
+The paper assumes that the attacker might have some background knowledge, such as understanding the input format or statistical distribution of the dataset.&lt;br&gt;
+The attack relies on detecting subtle differences in how the model behaves with data it has seen before (training data) versus new data (non-training data).&lt;/p&gt;
+&lt;h1 id=&#34;methods&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#methods&#34;&gt;#&lt;/a&gt; Methods&lt;/h1&gt;
+&lt;h2 id=&#34;main-steps&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#main-steps&#34;&gt;#&lt;/a&gt; Main steps:&lt;/h2&gt;
+&lt;p&gt;The attacker queries the target model with a data record and obtains the model’s prediction on that record. The prediction is a vector of probabilities, one per class, that the record belongs to a certain class. This prediction vector, along with the label of the target record, is passed to the attack model, which infers whether the record was in or out of the target model’s training dataset.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/Main_step.png&#34; alt=&#34;Main steps of MIA&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;shadow-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#shadow-models&#34;&gt;#&lt;/a&gt; Shadow Models&lt;/h2&gt;
+&lt;p&gt;The attacker uses the input and output data from shadow models to train the attack model. Specifically, the prediction results from the shadow models (confidence vectors or other outputs) are used as training data to train a binary classifier that can predict whether a particular data point was part of the shadow model’s training set.&lt;/p&gt;
+&lt;p&gt;Since the behavior of the shadow model is similar to that of the target model, the attack model can learn from the shadow model’s training to infer which data points were used in the training of the target model.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/Shadow_Models.png&#34; alt=&#34;Shadow Models&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;training-the-attack-model&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#training-the-attack-model&#34;&gt;#&lt;/a&gt; Training the Attack Model&lt;/h2&gt;
+&lt;p&gt;The inputs and outputs of the shadow models are used to train the attack model：&lt;/p&gt;
+&lt;p&gt;The attack model is a binary classifier that learns to distinguish between “training data” (members) and“non-training data” (non-members).&lt;/p&gt;
+&lt;p&gt;It uses the prediction vectors from the shadow models to learn how to classify data points as members or non-members.&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/Training_attack_models.png&#34; alt=&#34;Main steps of training the attack models&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;experimental-evaluation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#experimental-evaluation&#34;&gt;#&lt;/a&gt; Experimental Evaluation&lt;/h1&gt;
+&lt;h2 id=&#34;datasets-and-target-models&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#datasets-and-target-models&#34;&gt;#&lt;/a&gt; Datasets and Target Models&lt;/h2&gt;
+&lt;p&gt;The datasets used for experiments are described, including the type, size, and nature of the data, includes: Public datasets such as image datasets (e.g., CIFAR-10), location datasets, and some sensitive data sets .&lt;/p&gt;
+&lt;p&gt;In this paper, the authorevaluated our inference attacks on three types of target models: two constructed by cloud-based “machine learning as a service” platforms and one implemented locally. all the attacks treat the models as black boxes, which means they do not know the type or structure of the models they create, nor the values of the hyper-parameters used during the training process.&lt;/p&gt;
+&lt;p&gt;The training set and the test set of each target and shadow model are randomly selected from the respective datasets, have the same size, and are disjoint. There is no overlap between the datasets of the target model and those of the shadow models, but the datasets used for different shadow models can overlap with each other.&lt;/p&gt;
+&lt;h2 id=&#34;accuracy-of-the-attack&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#accuracy-of-the-attack&#34;&gt;#&lt;/a&gt; Accuracy of the attack&lt;/h2&gt;
+&lt;p&gt;This paper evaluate the attack by executing it on randomly reshuffled records from the target’s training and test datasets. And use the standard precision and recall metric to evaluate the percision.&lt;/p&gt;
+&lt;p&gt;The test accuracy of the target neural-network models with the largest training datasets is low, which means the models are heavily overfitted on their training sets.&lt;/p&gt;
+&lt;p&gt;For different deep learning APIs from different companies, the paper trained the same datas for the models and make the evaluation attacks, the result shows that Models trained using Google Prediction API exhibit the biggest leakage.&lt;/p&gt;
+&lt;p&gt;For the Texas hospital-stay dataset and location adtaset, the paper evaluated the attack against a Google-trained model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The training accuracy of the Texas’s target model is 0.66 and its test accuracy is 0.51. Precision is mostly above 0.6, and for half of the classes, it is above 0.7. Precision is above 0.85 for more than 20 classes.
+
+The training accuracy of the location’s target model is 1 and its test accuracy is 0.66.Precision is between 0.6 and 0.8, with an almost constant recall of 1.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The attacks against the google trained models for location data sets shows that the paper’s attacks are robust even if the attacker’s assumptions about the distribution of the target model’s training data are not very accurate.&lt;/p&gt;
+&lt;p&gt;For the majority of the target model’s classes, the paper’s attack achieves high precision. This demonstrates that a membership inference attack can be trained with only black-box access to the target model, without any prior knowledge about the distribution of the target model’s training data if the attacker can efficiently generate inputs that are classified by the target model with high confidence.&lt;/p&gt;
+&lt;h1 id=&#34;factors-and-defenses&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#factors-and-defenses&#34;&gt;#&lt;/a&gt; Factors and Defenses&lt;/h1&gt;
+&lt;h2 id=&#34;factors-for-success-of-membership-inference&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#factors-for-success-of-membership-inference&#34;&gt;#&lt;/a&gt; Factors for Success of membership inference&lt;/h2&gt;
+&lt;p&gt;Based on the evaluation, this paper bring forward two factors for a success membership inference attack:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;generalizability of the target model&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;diversity of its training data&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If the model overfits and does not generalize well to inputs beyond its training data, or if the training data is not representative, the model leaks information about its training inputs.&lt;/p&gt;
+&lt;p&gt;This paper also point out that overfitting is not the only reason why our inference attacks work. Different machine learning models, due to their different structures, “remember” different amounts of information about their training datasets. This leads to different amounts of information leakage even if the models are overfitted to the same degree&lt;/p&gt;
+&lt;h2 id=&#34;mitigation-strategies&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mitigation-strategies&#34;&gt;#&lt;/a&gt; Mitigation strategies&lt;/h2&gt;
+&lt;p&gt;This paper indicates some strategies of mintigate the membership interface of the models:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Restrict the prediction vector to top k classes.&lt;/li&gt;
+&lt;li&gt;Coarsen（变粗糙） precision of the prediction vector.&lt;/li&gt;
+&lt;li&gt;Increase entropy of the prediction vector.&lt;/li&gt;
+&lt;li&gt;Use regularization.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;However, in this paper, they make evaluation about these mitigation strategies, and find that their attack method is still robust against these mitigation strategies&lt;/p&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#conclusion&#34;&gt;#&lt;/a&gt; Conclusion&lt;/h1&gt;
+&lt;p&gt;This paper have designed, implemented, and evaluated the first membership inference attack against machine learning models, notably black-box models trained in the commerical deep learning APIs.&lt;/p&gt;
+&lt;p&gt;This paper’s key technical innovation is the shadow training tech- nique that trains an attack model to distinguish the target model’s outputs on members versus non-members of its train- ing dataset.&lt;/p&gt;
+&lt;p&gt;Membership in hospital-stay and other health-care datasets is sensitive from the privacy perspective. Therefore, this method may have substantial practical privacy implications.&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</guid>
             <title>Introduction of Membership Interface Attack</title>
