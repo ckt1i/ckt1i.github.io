@@ -30,7 +30,7 @@
 
 
   <title>
-Membership Inference Attacks Against Recommender Systems - 阅读笔记 |
+Membership Inference Attacks Against Recommender Systems - 成员推断攻击 - 阅读笔记 |
 CKT1i's blog = 张前的小屋</title>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -115,12 +115,12 @@ CKT1i's blog = 张前的小屋</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic8.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic18.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic14.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic16.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic7.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic13.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic10.jpg"></li>
           <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic20.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic22.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic4.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic12.jpg"></li>
         </ul>
       </div>
     </header>
@@ -146,8 +146,11 @@ CKT1i's blog = 张前的小屋</title>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
 <meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/MIA/" itemprop="item" rel="index" title="In 成员推断攻击"><span itemprop="name">成员推断攻击</span></a>
+<meta itemprop="position" content="2" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -195,15 +198,9 @@ CKT1i's blog = 张前的小屋</title>
 <h2 id="data-preprocessing"><a class="markdownIt-Anchor" href="#data-preprocessing">#</a> Data Preprocessing</h2>
 <p>For each dataset, the paper divide it into three disjoint subsets: shadow dataset, a target dataset and a dataset for extracting item features. Then , the paper processes these to make the data suitable:</p>
 <ol>
-<li>
-<p>To generate feature vectors for users, the dataset for item feature should contain all items of the target and shadow recommenders.</p>
-</li>
-<li>
-<p>For the shadow or target dataset, the paper further divide it into two disjoint parts, which are used to conduct recommendations to members and non-members, respectively.</p>
-</li>
-<li>
-<p>The paper filtered out the users who have less than 20 interactions.</p>
-</li>
+<li>To generate feature vectors for users, the dataset for item feature should contain all items of the target and shadow recommenders.</li>
+<li>For the shadow or target dataset, the paper further divide it into two disjoint parts, which are used to conduct recommendations to members and non-members, respectively.</li>
+<li>The paper filtered out the users who have less than 20 interactions.</li>
 </ol>
 <h2 id="evaluation-metrics"><a class="markdownIt-Anchor" href="#evaluation-metrics">#</a> Evaluation Metrics</h2>
 <p>This paper use AUC (area under the ROC curve) as the metric to evaluate attack performances. Regarding members as positive data points and non-members as negative data points. AUC indicates the proportion of the prediction results being positive to negative.</p>
@@ -231,15 +228,9 @@ The paper filtered out the users who have less than 20 interactions.</p>
 <h3 id="hyperparameters"><a class="markdownIt-Anchor" href="#hyperparameters">#</a> HyperParameters</h3>
 <p>In this paper, the impact of hyperparameters on the success of the attack is reflected in the following aspects:</p>
 <ol>
-<li>
-<p><strong>Number of recommendations (k)</strong>: With more recommended items, the attack model gains more information, but performance improvements cease when the number is large enough.</p>
-</li>
-<li>
-<p><strong>Length of feature vectors (l)</strong>: Longer feature vectors provide more dimensional information to the model, but after a certain point, further increasing the length no longer significantly boosts performance.</p>
-</li>
-<li>
-<p><strong>Weights of recommended items</strong>: When considering the order of items in the recommendation list, attack performance significantly improves. Items at the front of the list are more likely to be accepted by users, and assigning higher weights to these items enhances the effectiveness of the attack.</p>
-</li>
+<li><strong>Number of recommendations (k)</strong>: With more recommended items, the attack model gains more information, but performance improvements cease when the number is large enough.</li>
+<li><strong>Length of feature vectors (l)</strong>: Longer feature vectors provide more dimensional information to the model, but after a certain point, further increasing the length no longer significantly boosts performance.</li>
+<li><strong>Weights of recommended items</strong>: When considering the order of items in the recommendation list, attack performance significantly improves. Items at the front of the list are more likely to be accepted by users, and assigning higher weights to these items enhances the effectiveness of the attack.</li>
 </ol>
 <h1 id="defence"><a class="markdownIt-Anchor" href="#defence">#</a> Defence</h1>
 <h2 id="popularity-randomization"><a class="markdownIt-Anchor" href="#popularity-randomization">#</a> Popularity Randomization</h2>
@@ -250,15 +241,9 @@ The paper filtered out the users who have less than 20 interactions.</p>
 <h1 id="discussion-and-conclusion"><a class="markdownIt-Anchor" href="#discussion-and-conclusion">#</a> Discussion and conclusion</h1>
 <h2 id="the-factors-for-effects-of-attacks"><a class="markdownIt-Anchor" href="#the-factors-for-effects-of-attacks">#</a> The Factors for effects of attacks</h2>
 <ol>
-<li>
-<p><strong>The Choice of Datasets</strong>: The dataset with a denser user-item matrix leads to better attack performances. Attack models works better in the datasets with rich informations.</p>
-</li>
-<li>
-<p><strong>The Selection of Recommendation Algorithms</strong>: The recommender system with simple model structure is easier to be attacked. Compare with more complex algorithm,LFM has higher model complexity, which makes it harder to attack.</p>
-</li>
-<li>
-<p><strong>Distributions of Generated User Features</strong>:  When the distribution of user feature vectors generated by the shadow recommender system closely matches the target system, attack performance improves. The similarity between target data and target data is crucial for boosting attack effectiveness.</p>
-</li>
+<li><strong>The Choice of Datasets</strong>: The dataset with a denser user-item matrix leads to better attack performances. Attack models works better in the datasets with rich informations.</li>
+<li><strong>The Selection of Recommendation Algorithms</strong>: The recommender system with simple model structure is easier to be attacked. Compare with more complex algorithm,LFM has higher model complexity, which makes it harder to attack.</li>
+<li><strong>Distributions of Generated User Features</strong>:  When the distribution of user feature vectors generated by the shadow recommender system closely matches the target system, attack performance improves. The similarity between target data and target data is crucial for boosting attack effectiveness.</li>
 </ol>
 <h2 id="conclusions"><a class="markdownIt-Anchor" href="#conclusions">#</a> Conclusions</h2>
 <h2 id="effectiveness-of-the-attack"><a class="markdownIt-Anchor" href="#effectiveness-of-the-attack">#</a> Effectiveness of the Attack:</h2>
@@ -278,7 +263,7 @@ The paper filtered out the users who have less than 20 interactions.</p>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2024-09-26 15:56:43" itemprop="dateModified" datetime="2024-09-26T15:56:43+08:00">2024-09-26</time>
+    <time title="Modified: 2024-09-28 21:52:52" itemprop="dateModified" datetime="2024-09-28T21:52:52+08:00">2024-09-28</time>
   </span>
   <span id="2024/09/26/MIA_2/" class="item leancloud_visitors" data-flag-title="Membership Inference Attacks Against Recommender Systems" title="Views">
       <span class="icon">
@@ -341,9 +326,9 @@ The paper filtered out the users who have less than 20 interactions.</p>
     <div class="item left">
       
 
-  <a href="/2024/09/26/MIA_1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic3.jpg" title="Membership Inference Attacks Against Machine Learning Models">
+  <a href="/2024/09/26/MIA_1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic6.jpg" title="Membership Inference Attacks Against Machine Learning Models">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> 阅读笔记</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
   <h3>Membership Inference Attacks Against Machine Learning Models</h3>
   </a>
 
@@ -389,7 +374,7 @@ The paper filtered out the users who have less than 20 interactions.</p>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">3</span>
+        <span class="count">4</span>
         <span class="name">categories</span>
       </a>
     </div>
@@ -454,10 +439,12 @@ The paper filtered out the users who have less than 20 interactions.</p>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/misc/" title="In 杂">杂</a>
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/01/About%20me/" title="About me">About me</a></span>
+    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
   </li>
 
       
@@ -465,16 +452,8 @@ The paper filtered out the users who have less than 20 interactions.</p>
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
-</div>
-
-    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
     <span><a href="/2024/09/26/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
@@ -494,6 +473,18 @@ The paper filtered out the users who have less than 20 interactions.</p>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/misc/" title="In 杂">杂</a>
 </div>
 
@@ -504,10 +495,10 @@ The paper filtered out the users who have less than 20 interactions.</p>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<a href="/categories/misc/" title="In 杂">杂</a>
 </div>
 
-    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
+    <span><a href="/2024/08/01/About%20me/" title="About me">About me</a></span>
   </li>
 
       
@@ -515,9 +506,11 @@ The paper filtered out the users who have less than 20 interactions.</p>
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
   </li>
 
   </ul>

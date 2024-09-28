@@ -30,7 +30,7 @@
 
 
   <title>
-成员推理攻击介绍 - 阅读笔记 |
+成员推理攻击介绍 - 成员推断攻击 - 阅读笔记 |
 CKT1i's blog = 张前的小屋</title>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -139,8 +139,11 @@ CKT1i's blog = 张前的小屋</title>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
 <meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/MIA/" itemprop="item" rel="index" title="In 成员推断攻击"><span itemprop="name">成员推断攻击</span></a>
+<meta itemprop="position" content="2" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -162,9 +165,6 @@ CKT1i's blog = 张前的小屋</title>
     <p><a href="/https://arxiv.org/abs/2103.07853">论文地址</a><br>
 标题: Membership Inference Attacks on Machine Learning: A Survey</p>
 <h1 id="mia-的前置知识和定义"><a class="markdownIt-Anchor" href="#mia-的前置知识和定义">#</a> MIA 的前置知识和定义</h1>
-<h2 id="前置知识"><a class="markdownIt-Anchor" href="#前置知识">#</a> 前置知识</h2>
-<h3 id="机器学习的定义"><a class="markdownIt-Anchor" href="#机器学习的定义">#</a> 机器学习的定义</h3>
-<h3 id="监督学习和无监督学习的区别"><a class="markdownIt-Anchor" href="#监督学习和无监督学习的区别">#</a> 监督学习和无监督学习的区别</h3>
 <h2 id="定义"><a class="markdownIt-Anchor" href="#定义">#</a> 定义</h2>
 <p>成员推理攻击 (Membership Inference Attacks) 是指对一个人工智能系统，通过猜测其中的数据并训练一个 shadow model 猜测对应数据是否在其中。</p>
 <h2 id="基本分类"><a class="markdownIt-Anchor" href="#基本分类">#</a> 基本分类</h2>
@@ -283,7 +283,7 @@ CKT1i's blog = 张前的小屋</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2024-08-18 13:48:45" itemprop="dateModified" datetime="2024-08-18T13:48:45+08:00">2024-08-18</time>
+    <time title="Modified: 2024-09-28 21:52:41" itemprop="dateModified" datetime="2024-09-28T21:52:41+08:00">2024-09-28</time>
   </span>
   <span id="2024/08/02/Introduction of MIA_CN/" class="item leancloud_visitors" data-flag-title="成员推理攻击介绍" title="Views">
       <span class="icon">
@@ -356,9 +356,9 @@ CKT1i's blog = 张前的小屋</title>
     <div class="item right">
       
 
-  <a href="/2024/08/04/Introduction%20of%20MIA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic20.jpg" title="Introduction of Membership Interface Attack">
+  <a href="/2024/08/04/Introduction%20of%20MIA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic21.jpg" title="Introduction of Membership Interface Attack">
   <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> 阅读笔记</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
   <h3>Introduction of Membership Interface Attack</h3>
   </a>
 
@@ -378,7 +378,7 @@ CKT1i's blog = 张前的小屋</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mia-%E7%9A%84%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%E5%92%8C%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text"> MIA 的前置知识和定义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text"> 前置知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 机器学习的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 监督学习和无监督学习的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.2.</span> <span class="toc-text"> 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text"> 基本分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mia%E7%9A%84%E6%94%BB%E5%87%BB%E7%89%B9%E7%82%B9%E5%92%8C%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6"><span class="toc-number">2.</span> <span class="toc-text"> MIA 的攻击特点和相关研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">2.1.</span> <span class="toc-text"> 攻击模型的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E4%BA%8C%E5%85%83%E5%88%86%E7%B1%BB%E5%99%A8%E7%9A%84mia-binary-classifier-based-membership-inference-attacks"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 基于二元分类器的 MIA （Binary Classifier Based Membership Inference Attacks.）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%8C%87%E6%A0%87%E7%9A%84mia-metric-based-membership-inference-attacks"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 基于指标的 MIA (Metric Based Membership Inference Attacks)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E7%9B%AE%E6%A0%87%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.</span> <span class="toc-text"> 根据目标模型的相关研究</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 在分类模型方面的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E4%B8%8A%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 在生成模型上的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B%E4%B8%8A%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 在嵌入模型上的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B%E4%B8%8A%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 在回归模型上的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.5.</span> <span class="toc-text"> 在联邦学习的研究</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mia-%E6%94%BB%E5%87%BB%E6%88%90%E5%8A%9F%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="toc-number">3.</span> <span class="toc-text"> MIA 攻击成功的因素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E6%A8%A1%E5%9E%8B%E5%AF%B9%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E8%BF%87%E6%8B%9F%E5%90%88"><span class="toc-number">3.1.</span> <span class="toc-text"> 目标模型对原始数据集的过拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E8%87%AA%E8%BA%AB%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-number">3.2.</span> <span class="toc-text"> 训练模型自身的特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%A4%9A%E6%A0%B7%E6%80%A7"><span class="toc-number">3.3.</span> <span class="toc-text"> 训练数据集的多样性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E8%80%85%E5%AF%B9%E7%9B%AE%E6%A0%87%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BA%86%E8%A7%A3%E7%A8%8B%E5%BA%A6"><span class="toc-number">3.4.</span> <span class="toc-text"> 攻击者对目标模型的了解程度</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mia-%E7%9A%84%E9%98%B2%E5%BE%A1%E7%A0%94%E7%A9%B6"><span class="toc-number">4.</span> <span class="toc-text"> MIA 的防御研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E4%BF%A1%E5%BE%97%E5%88%86%E6%8E%A9%E7%A0%81confidence-score-masking"><span class="toc-number">4.1.</span> <span class="toc-text"> 可信得分掩码 Confidence Score Masking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">4.2.</span> <span class="toc-text"> 正则化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8Fknowledge-distillation"><span class="toc-number">4.3.</span> <span class="toc-text"> 知识蒸馏 (Knowledge Distillation)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81differential-privacy"><span class="toc-number">4.4.</span> <span class="toc-text"> 差分隐私 (Differential Privacy)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%83%BD%E7%9A%84%E6%96%B9%E5%90%91%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text"> 可能的方向以及应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E6%94%BB%E5%87%BB%E6%96%B9%E5%90%91"><span class="toc-number">5.1.</span> <span class="toc-text"> 针对攻击方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E9%98%B2%E5%BE%A1%E6%96%B9%E5%90%91"><span class="toc-number">5.2.</span> <span class="toc-text"> 针对防御方向</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mia-%E7%9A%84%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%E5%92%8C%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text"> MIA 的前置知识和定义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.</span> <span class="toc-text"> 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text"> 基本分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mia%E7%9A%84%E6%94%BB%E5%87%BB%E7%89%B9%E7%82%B9%E5%92%8C%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6"><span class="toc-number">2.</span> <span class="toc-text"> MIA 的攻击特点和相关研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">2.1.</span> <span class="toc-text"> 攻击模型的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E4%BA%8C%E5%85%83%E5%88%86%E7%B1%BB%E5%99%A8%E7%9A%84mia-binary-classifier-based-membership-inference-attacks"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 基于二元分类器的 MIA （Binary Classifier Based Membership Inference Attacks.）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%8C%87%E6%A0%87%E7%9A%84mia-metric-based-membership-inference-attacks"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 基于指标的 MIA (Metric Based Membership Inference Attacks)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E7%9B%AE%E6%A0%87%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.</span> <span class="toc-text"> 根据目标模型的相关研究</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B%E6%96%B9%E9%9D%A2%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 在分类模型方面的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E4%B8%8A%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 在生成模型上的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B%E4%B8%8A%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 在嵌入模型上的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B%E4%B8%8A%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 在回归模型上的研究</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%A0%94%E7%A9%B6"><span class="toc-number">2.2.5.</span> <span class="toc-text"> 在联邦学习的研究</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mia-%E6%94%BB%E5%87%BB%E6%88%90%E5%8A%9F%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="toc-number">3.</span> <span class="toc-text"> MIA 攻击成功的因素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E6%A8%A1%E5%9E%8B%E5%AF%B9%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E8%BF%87%E6%8B%9F%E5%90%88"><span class="toc-number">3.1.</span> <span class="toc-text"> 目标模型对原始数据集的过拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E8%87%AA%E8%BA%AB%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-number">3.2.</span> <span class="toc-text"> 训练模型自身的特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%A4%9A%E6%A0%B7%E6%80%A7"><span class="toc-number">3.3.</span> <span class="toc-text"> 训练数据集的多样性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E8%80%85%E5%AF%B9%E7%9B%AE%E6%A0%87%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BA%86%E8%A7%A3%E7%A8%8B%E5%BA%A6"><span class="toc-number">3.4.</span> <span class="toc-text"> 攻击者对目标模型的了解程度</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mia-%E7%9A%84%E9%98%B2%E5%BE%A1%E7%A0%94%E7%A9%B6"><span class="toc-number">4.</span> <span class="toc-text"> MIA 的防御研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E4%BF%A1%E5%BE%97%E5%88%86%E6%8E%A9%E7%A0%81confidence-score-masking"><span class="toc-number">4.1.</span> <span class="toc-text"> 可信得分掩码 Confidence Score Masking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">4.2.</span> <span class="toc-text"> 正则化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8Fknowledge-distillation"><span class="toc-number">4.3.</span> <span class="toc-text"> 知识蒸馏 (Knowledge Distillation)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81differential-privacy"><span class="toc-number">4.4.</span> <span class="toc-text"> 差分隐私 (Differential Privacy)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%83%BD%E7%9A%84%E6%96%B9%E5%90%91%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text"> 可能的方向以及应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E6%94%BB%E5%87%BB%E6%96%B9%E5%90%91"><span class="toc-number">5.1.</span> <span class="toc-text"> 针对攻击方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%88%E5%AF%B9%E9%98%B2%E5%BE%A1%E6%96%B9%E5%90%91"><span class="toc-number">5.2.</span> <span class="toc-text"> 针对防御方向</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -402,7 +402,7 @@ CKT1i's blog = 张前的小屋</title>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">3</span>
+        <span class="count">4</span>
         <span class="name">categories</span>
       </a>
     </div>
@@ -470,39 +470,11 @@ CKT1i's blog = 张前的小屋</title>
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/09/26/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/misc/" title="In 杂">杂</a>
-</div>
-
-    <span><a href="/2024/08/01/About%20me/" title="About me">About me</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
-</div>
-
-    <span><a href="/2024/08/22/November/" title="November">November</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
-</div>
-
-    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
   </li>
 
       
@@ -519,10 +491,20 @@ CKT1i's blog = 张前的小屋</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
 </div>
 
-    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
+    <span><a href="/2024/08/22/November/" title="November">November</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/01/About%20me/" title="About me">About me</a></span>
   </li>
 
       
@@ -530,9 +512,35 @@ CKT1i's blog = 张前的小屋</title>
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/26/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
   </li>
 
   </ul>

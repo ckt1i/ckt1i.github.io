@@ -30,7 +30,7 @@
 
 
   <title>
-Introduction of Membership Interface Attack - 阅读笔记 |
+Introduction of Membership Interface Attack - 成员推断攻击 - 阅读笔记 |
 CKT1i's blog = 张前的小屋</title>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -115,11 +115,11 @@ CKT1i's blog = 张前的小屋</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic8.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic14.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic13.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic2.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic18.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic22.jpg"></li>
           <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic1.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic17.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic5.jpg"></li>
           <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic16.jpg"></li>
         </ul>
       </div>
@@ -146,8 +146,11 @@ CKT1i's blog = 张前的小屋</title>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
 <meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/MIA/" itemprop="item" rel="index" title="In 成员推断攻击"><span itemprop="name">成员推断攻击</span></a>
+<meta itemprop="position" content="2" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -242,15 +245,9 @@ CKT1i's blog = 张前的小屋</title>
 <h2 id="knowledge-distallation"><a class="markdownIt-Anchor" href="#knowledge-distallation">#</a> Knowledge Distallation</h2>
 <p>Knowledge distillation refers to the process of training a smaller student model using a larger teacher model to transfer knowledge from the large model to the small one, allowing the smaller model to achieve a similar level of approximation. Based on this, existing research has introduced methods such as DMP, CKD, and PCKD, they are generally called DMP (Distillation For Membership Privacy), whose steps are as followed:</p>
 <ol>
-<li>
-<p>Train an unprotected teacher model to record and label data in an unlabeled dataset.</p>
-</li>
-<li>
-<p>Select data with lower prediction entropy for training, which is used for classification.</p>
-</li>
-<li>
-<p>Train based on the labeled model.</p>
-</li>
+<li>Train an unprotected teacher model to record and label data in an unlabeled dataset.</li>
+<li>Select data with lower prediction entropy for training, which is used for classification.</li>
+<li>Train based on the labeled model.</li>
 </ol>
 <p>Additionally, There are also some research that proposes Complementary Knowledge Distillation (CKD) and Pseudo Complementary Knowledge Distillation (PCKD) methods. In these methods, the transfer data for knowledge distillation comes from a private training set. CKD and PCKD eliminate the need for public data, which may be difficult to obtain in some applications, making knowledge distillation a more practical defense method for mitigating MIA attacks on machine learning models.</p>
 <h2 id="differencial-privacy"><a class="markdownIt-Anchor" href="#differencial-privacy">#</a> Differencial Privacy</h2>
@@ -285,7 +282,7 @@ CKT1i's blog = 张前的小屋</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2024-08-22 09:54:16" itemprop="dateModified" datetime="2024-08-22T09:54:16+08:00">2024-08-22</time>
+    <time title="Modified: 2024-09-28 21:52:47" itemprop="dateModified" datetime="2024-09-28T21:52:47+08:00">2024-09-28</time>
   </span>
   <span id="2024/08/04/Introduction of MIA/" class="item leancloud_visitors" data-flag-title="Introduction of Membership Interface Attack" title="Views">
       <span class="icon">
@@ -350,7 +347,7 @@ CKT1i's blog = 张前的小屋</title>
 
   <a href="/2024/08/02/Introduction%20of%20MIA_CN/" itemprop="url" rel="prev" data-background-image="&#x2F;2024&#x2F;08&#x2F;02&#x2F;Introduction%20of%20MIA_CN&#x2F;assets&#x2F;4331Mashiro-Kurata-Power-ni2LcH.png" title="成员推理攻击介绍">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> 阅读笔记</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
   <h3>成员推理攻击介绍</h3>
   </a>
 
@@ -358,7 +355,7 @@ CKT1i's blog = 张前的小屋</title>
     <div class="item right">
       
 
-  <a href="/2024/08/11/resume/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic6.jpg" title="resume">
+  <a href="/2024/08/11/resume/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic5.jpg" title="resume">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> 杂</span>
   <h3>resume</h3>
@@ -404,7 +401,7 @@ CKT1i's blog = 张前的小屋</title>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">3</span>
+        <span class="count">4</span>
         <span class="name">categories</span>
       </a>
     </div>
@@ -471,16 +468,6 @@ CKT1i's blog = 张前的小屋</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
-</div>
-
-    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/misc/" title="In 杂">杂</a>
 </div>
 
@@ -491,17 +478,9 @@ CKT1i's blog = 张前的小屋</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
-</div>
-
-    <span><a href="/2024/08/22/November/" title="November">November</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
     <span><a href="/2024/09/26/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
@@ -512,9 +491,11 @@ CKT1i's blog = 张前的小屋</title>
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
   </li>
 
       
@@ -532,9 +513,33 @@ CKT1i's blog = 张前的小屋</title>
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
+</div>
+
+    <span><a href="/2024/08/22/November/" title="November">November</a></span>
   </li>
 
   </ul>

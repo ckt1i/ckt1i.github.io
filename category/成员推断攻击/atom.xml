@@ -1,19 +1,15 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>张前的小屋</title>
-        <link>https://ckti.github.io</link>
-        <description></description>
-        <language>en</language>
-        <pubDate>Thu, 26 Sep 2024 14:05:48 +0800</pubDate>
-        <lastBuildDate>Thu, 26 Sep 2024 14:05:48 +0800</lastBuildDate>
-        <category>未完成</category>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/09/26/MIA_2/</guid>
-            <title>Membership Inference Attacks Against Recommender Systems</title>
-            <link>https://ckti.github.io/2024/09/26/MIA_2/</link>
-            <pubDate>Thu, 26 Sep 2024 14:05:48 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;background-and-problem&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#background-and-problem&#34;&gt;#&lt;/a&gt; Background and Problem&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ckti.github.io</id>
+    <title>张前的小屋 • Posts by &#34;成员推断攻击&#34; category</title>
+    <link href="https://ckti.github.io" />
+    <updated>2024-09-26T06:05:48.230Z</updated>
+    <category term="未完成" />
+    <entry>
+        <id>https://ckti.github.io/2024/09/26/MIA_2/</id>
+        <title>Membership Inference Attacks Against Recommender Systems</title>
+        <link rel="alternate" href="https://ckti.github.io/2024/09/26/MIA_2/"/>
+        <content type="html">&lt;h1 id=&#34;background-and-problem&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#background-and-problem&#34;&gt;#&lt;/a&gt; Background and Problem&lt;/h1&gt;
 &lt;h2 id=&#34;backgrounds-of-recommend-system&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#backgrounds-of-recommend-system&#34;&gt;#&lt;/a&gt; Backgrounds of recommend system&lt;/h2&gt;
 &lt;p&gt;The recommender system is essentially an information filtering system, relying on machine learning algorithms to predict user preferences for items. There are two main methods in these realm:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;collaborative filtering&lt;/strong&gt;: using traditional methods, combining the history action and similar actions to make decisions&lt;/p&gt;
@@ -96,14 +92,14 @@ The paper filtered out the users who have less than 20 interactions.&lt;/p&gt;
 &lt;p&gt;To mitigate the attack, the authors introduce the “Popularity Randomization” defense mechanism. Experiments show that this defense significantly reduces the success rate of the attack, especially in complex models like Neural Collaborative Filtering (NCF).&lt;/p&gt;
 &lt;h2 id=&#34;future-work&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#future-work&#34;&gt;#&lt;/a&gt; Future Work&lt;/h2&gt;
 &lt;p&gt;The paper suggests further exploration of more effective defense mechanisms against such attacks and expanding the application of similar attacks and defenses to other machine learning models.&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/09/26/MIA_1/</guid>
-            <title>Membership Inference Attacks Against Machine Learning Models</title>
-            <link>https://ckti.github.io/2024/09/26/MIA_1/</link>
-            <pubDate>Thu, 26 Sep 2024 10:24:13 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;introduction-and-background&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-and-background&#34;&gt;#&lt;/a&gt; Introduction and Background&lt;/h1&gt;
+</content>
+        <updated>2024-09-26T06:05:48.230Z</updated>
+    </entry>
+    <entry>
+        <id>https://ckti.github.io/2024/09/26/MIA_1/</id>
+        <title>Membership Inference Attacks Against Machine Learning Models</title>
+        <link rel="alternate" href="https://ckti.github.io/2024/09/26/MIA_1/"/>
+        <content type="html">&lt;h1 id=&#34;introduction-and-background&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-and-background&#34;&gt;#&lt;/a&gt; Introduction and Background&lt;/h1&gt;
 &lt;h2 id=&#34;introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;#&lt;/a&gt; Introduction of the Privacy Problem in Machine Learning&lt;/h2&gt;
 &lt;p&gt;Machine learning is the foundation of popular Internet services such as image and speech recognition and natural language translation and recommend system, with many companies offering machine learning services via APIs (e.g., Google and Amazon).&lt;/p&gt;
 &lt;p&gt;However, these models often learn sensitive user data during training, leading to potential privacy risks. Specifically, machine learning models can inadvertently leak their training data, posing a threat to user privacy. This paper focuses on “membership inference attacks,” where an attacker can infer whether a specific data point was part of the model’s training set based on its outputs.&lt;/p&gt;
@@ -171,109 +167,14 @@ The attacks against the google trained models for location data sets shows that 
 &lt;p&gt;This paper have designed, implemented, and evaluated the first membership inference attack against machine learning models, notably black-box models trained in the commerical deep learning APIs.&lt;/p&gt;
 &lt;p&gt;This paper’s key technical innovation is the shadow training tech- nique that trains an attack model to distinguish the target model’s outputs on members versus non-members of its train- ing dataset.&lt;/p&gt;
 &lt;p&gt;Membership in hospital-stay and other health-care datasets is sensitive from the privacy perspective. Therefore, this method may have substantial practical privacy implications.&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/22/November/</guid>
-            <title>November</title>
-            <link>https://ckti.github.io/2024/08/22/November/</link>
-            <pubDate>Thu, 22 Aug 2024 08:57:17 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;之前乐队打的曲子，当时觉得不难就凭感觉打了，前一阵子心血来潮想说扒一下谱，发现细节还挺多的&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/November-3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/November-2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;https://raw.githubusercontent.com/ckt1i/blogimage/main/November-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/11/resume/</guid>
-            <title>resume</title>
-            <link>https://ckti.github.io/2024/08/11/resume/</link>
-            <category>未完成</category>
-            <pubDate>Sun, 11 Aug 2024 22:33:57 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;real-name-zheng-changqian-郑昌乾&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#real-name-zheng-changqian-郑昌乾&#34;&gt;#&lt;/a&gt; Real name: Zheng ChangQian （郑昌乾）&lt;/h2&gt;
-&lt;h2 id=&#34;contact-information&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#contact-information&#34;&gt;#&lt;/a&gt; Contact Information&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Mobile:&lt;/strong&gt; +86 188-1027-7303&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; [domestic] &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOjE3NzQzNDU4M0BxcS5jb20=&#34;&gt;177434583@qq.com&lt;/span&gt; / [international] &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmNoYW5ncWlhbi56aGVuZ0BnbWFpbC5jb20=&#34;&gt;changqian.zheng@gmail.com&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NrdDFp&#34;&gt;ckt1i&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;University:&lt;/strong&gt; Beijing Institute of Technology, School of Cyberspace Security&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Degree:&lt;/strong&gt; Undergraduate, 2nd Year&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;academic-achievements&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#academic-achievements&#34;&gt;#&lt;/a&gt; Academic Achievements&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Average Score:&lt;/strong&gt; 88&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GPA:&lt;/strong&gt; 3.6/4.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;skills-and-languages&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#skills-and-languages&#34;&gt;#&lt;/a&gt; Skills and Languages&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Operating Systems:&lt;/strong&gt; Linux (Ubuntu)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Programming Languages:&lt;/strong&gt; Python, C, Shell, Java&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tools and Environments:&lt;/strong&gt; MacOS, SSH, Git, Remote Linux / Windows VM&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Language Proficiency:&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;English:&lt;/strong&gt; Reading and Writing (Excellent), Speaking and Listening (Daily Communication)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;computer-related-skills&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#computer-related-skills&#34;&gt;#&lt;/a&gt; Computer-Related Skills&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Proficient in Python and C/C++ programming, with basic knowledge of Java.&lt;/li&gt;
-&lt;li&gt;Experienced in remote programming and project development using Git, with experience in SSH and remote project development.&lt;/li&gt;
-&lt;li&gt;Strong communication and teamwork skills, with good ability to read academic papers and original documents.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;research-and-projects&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-and-projects&#34;&gt;#&lt;/a&gt; Research and Projects&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;A weak-password checker based on collected malicious passwords&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Collecting weak-password from fake-ssh or the other password phisher, and using the thought of the Levinstein Distance and patterns to evaluate its strength and give user alerts.&lt;/li&gt;
-&lt;li&gt;Project paper: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NrdDFpL2Jsb2dpbWFnZS9tYWluL1Bhc3N3b3JkX1Byb3RlY3Rpb24ucGRm&#34;&gt;https://raw.githubusercontent.com/ckt1i/blogimage/main/Password_Protection.pdf&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH National Secret Modification Based on OpenSSL&lt;/strong&gt; (Ongoing Competition Project)
-&lt;ul&gt;
-&lt;li&gt;Utilized existing national secret SM series algorithms of OpenSSL to modify OpenSSH services. Acted as a team organizer and contributed significantly to project work and programming tasks. &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRsYWIuZWR1eGlqaS5uZXQvVDIwMjQxMDAwNzk5MzE3NC9wcm9qZWN0MjIxMDEzMi0yMzk2MzI=&#34;&gt;Project Link&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Research on Password Security Issues Based on Honeywords&lt;/strong&gt; (Innovation Project, Ongoing)
-&lt;ul&gt;
-&lt;li&gt;Participated in related paper study and other tasks as a team member.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI Backdoor Simulation Attack Based on Badnets&lt;/strong&gt; (Course Project, Completed)
-&lt;ul&gt;
-&lt;li&gt;Replicated image recognition simulation attacks using methods from the &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE3MDguMDY3MzM=&#34;&gt;Badnets paper&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI Voice Synthesis Implementation Based on DDSP-svc&lt;/strong&gt; (Course Project, Completed)
-&lt;ul&gt;
-&lt;li&gt;Configured and applied the DDSP-svc voice synthesis model to understand its principles and achieve voice simulation and synthesis.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Anonymous Electronic Voting Process Implementation Based on Paillier Algorithm&lt;/strong&gt; (Course Project, Completed)
-&lt;ul&gt;
-&lt;li&gt;Implemented the Paillier homomorphic encryption algorithm using Python to simulate an electronic voting system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;awards&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#awards&#34;&gt;#&lt;/a&gt; Awards&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;2023-2024 First Semester Excellent Academic Performance Scholarship&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2022-2023 Second Semester Excellent Academic Performance Scholarship&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Beijing Institute of Technology Outstanding Communist Youth League Member&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Second Prize in Beijing’s 34th University Mathematics Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Second Prize in the 20th Information Security and Countermeasure Technology Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Excellent Award in Beijing Institute of Technology Mathematical Modeling Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2022 Second Prize in Beijing Institute of Technology Mingli Cup Freshman Mathematics Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2022 Best Courage Award in Lianshan Control Programming Freshman Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</guid>
-            <title>Introduction of Membership Interface Attack</title>
-            <link>https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</link>
-            <pubDate>Sun, 04 Aug 2024 21:28:25 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
+</content>
+        <updated>2024-09-26T02:24:13.543Z</updated>
+    </entry>
+    <entry>
+        <id>https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</id>
+        <title>Introduction of Membership Interface Attack</title>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/"/>
+        <content type="html">&lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
 &lt;h1 id=&#34;prelimaries-defination-and-classification&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-defination-and-classification&#34;&gt;#&lt;/a&gt; Prelimaries ,Defination and classification&lt;/h1&gt;
 &lt;h2 id=&#34;prelimaries-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-machine-learning&#34;&gt;#&lt;/a&gt; Prelimaries-- Machine learning&lt;/h2&gt;
 &lt;p&gt;Machine learning (ML) is the study of computer algorithms that improve automatically through experience and by learning from data. Generally, it can be  be divided into these two categories&lt;/p&gt;
@@ -375,14 +276,14 @@ The attacks against the google trained models for location data sets shows that 
 &lt;p&gt;&lt;strong&gt;Defense Against Generative Models&lt;/strong&gt;: Possible defenses include methods such as knowledge distillation and reinforcemnt learning to avoid leakage of raw data through the outputs of generative models.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Balancing Privacy and Utility&lt;/strong&gt;: Existing differential privacy protections often add significant noise to classifier gradients, reducing prediction accuracy. Balancing privacy and utility remains an area for research.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Privacy Defenses in Federated Learning&lt;/strong&gt;: With increasing privacy attacks in federated learning, developing defensive technologies is crucial, with differential privacy being a potential future direction.&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</guid>
-            <title>成员推理攻击介绍</title>
-            <link>https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</link>
-            <pubDate>Fri, 02 Aug 2024 23:48:24 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
+</content>
+        <updated>2024-08-04T13:28:25.989Z</updated>
+    </entry>
+    <entry>
+        <id>https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</id>
+        <title>成员推理攻击介绍</title>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/"/>
+        <content type="html">&lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
 标题: Membership Inference Attacks on Machine Learning: A Survey&lt;/p&gt;
 &lt;h1 id=&#34;mia-的前置知识和定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的前置知识和定义&#34;&gt;#&lt;/a&gt; MIA 的前置知识和定义&lt;/h1&gt;
 &lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
@@ -492,20 +393,7 @@ The attacks against the google trained models for location data sets shows that 
 &lt;li&gt;&lt;strong&gt;针对联邦学习的隐私防御&lt;/strong&gt;： 目前联邦学习面临着越来越多的隐私攻击，需要开发相应的防御技术，差分隐私等技术在联邦学习上的应用是未来可能的一些方向&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;（未完，针对未来的方向目前有些想法，后面会单开一章简单介绍）&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/01/About%20me/</guid>
-            <title>About me</title>
-            <link>https://ckti.github.io/2024/08/01/About%20me/</link>
-            <category>未完成</category>
-            <pubDate>Thu, 01 Aug 2024 10:58:29 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; Hello!&lt;/h1&gt;
-&lt;p&gt;Hi! I’m CKTi. A college student. Here is my blog, you can find something I have done.&lt;/p&gt;
-&lt;p&gt;My major now is cyber security and I’m now intrested in privacy and deep learning and so on, here are some articles about some &lt;a href=&#34;/https://ckt1i.github.io/categories/Reading%20Notes/&#34;&gt;notes&lt;/a&gt; in learning.&lt;/p&gt;
-&lt;p&gt;I’m also an amartar drummer in a band playing J-Pop and anime songs, you can see our band’s live record in our &lt;a href=&#34;/https://space.bilibili.com/3493081542298207&#34;&gt;bilibili&lt;/a&gt; page. In the future, I will publish some drum tabs in my blog (If I have time).&lt;/p&gt;
-&lt;p&gt;If you have any suggestions or anything want to say to me, you can submit comments in each of the articles, or just contact me in email. Have a nice day!&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <updated>2024-08-02T15:48:24.123Z</updated>
+    </entry>
+</feed>

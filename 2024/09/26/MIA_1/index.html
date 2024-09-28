@@ -30,7 +30,7 @@
 
 
   <title>
-Membership Inference Attacks Against Machine Learning Models - 阅读笔记 |
+Membership Inference Attacks Against Machine Learning Models - 成员推断攻击 - 阅读笔记 |
 CKT1i's blog = 张前的小屋</title>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -115,12 +115,12 @@ CKT1i's blog = 张前的小屋</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic3.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic20.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic15.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic1.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic9.jpg"></li>
-          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic17.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic16.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic13.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic7.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic21.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic2.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic12.jpg"></li>
         </ul>
       </div>
     </header>
@@ -146,8 +146,11 @@ CKT1i's blog = 张前的小屋</title>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
 <meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/MIA/" itemprop="item" rel="index" title="In 成员推断攻击"><span itemprop="name">成员推断攻击</span></a>
+<meta itemprop="position" content="2" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -210,11 +213,9 @@ The attack relies on detecting subtle differences in how the model behaves with 
 <p>The test accuracy of the target neural-network models with the largest training datasets is low, which means the models are heavily overfitted on their training sets.</p>
 <p>For different deep learning APIs from different companies, the paper trained the same datas for the models and make the evaluation attacks, the result shows that Models trained using Google Prediction API exhibit the biggest leakage.</p>
 <p>For the Texas hospital-stay dataset and location adtaset, the paper evaluated the attack against a Google-trained model.</p>
-<pre><code>The training accuracy of the Texas’s target model is 0.66 and its test accuracy is 0.51. Precision is mostly above 0.6, and for half of the classes, it is above 0.7. Precision is above 0.85 for more than 20 classes.
-
-The training accuracy of the location’s target model is 1 and its test accuracy is 0.66.Precision is between 0.6 and 0.8, with an almost constant recall of 1.
-</code></pre>
-<p>The attacks against the google trained models for location data sets shows that the paper’s attacks are robust even if the attacker’s assumptions about the distribution of the target model’s training data are not very accurate.</p>
+<p>The training accuracy of the Texas’s target model is 0.66 and its test accuracy is 0.51. Precision is mostly above 0.6, and for half of the classes, it is above 0.7. Precision is above 0.85 for more than 20 classes.</p>
+<p>The training accuracy of the location’s target model is 1 and its test accuracy is 0.66.Precision is between 0.6 and 0.8, with an almost constant recall of 1.<br>
+The attacks against the google trained models for location data sets shows that the paper’s attacks are robust even if the attacker’s assumptions about the distribution of the target model’s training data are not very accurate.</p>
 <p>For the majority of the target model’s classes, the paper’s attack achieves high precision. This demonstrates that a membership inference attack can be trained with only black-box access to the target model, without any prior knowledge about the distribution of the target model’s training data if the attacker can efficiently generate inputs that are classified by the target model with high confidence.</p>
 <h1 id="factors-and-defenses"><a class="markdownIt-Anchor" href="#factors-and-defenses">#</a> Factors and Defenses</h1>
 <h2 id="factors-for-success-of-membership-inference"><a class="markdownIt-Anchor" href="#factors-for-success-of-membership-inference">#</a> Factors for Success of membership inference</h2>
@@ -247,7 +248,7 @@ The training accuracy of the location’s target model is 1 and its test accurac
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2024-09-26 11:18:41" itemprop="dateModified" datetime="2024-09-26T11:18:41+08:00">2024-09-26</time>
+    <time title="Modified: 2024-09-28 21:52:49" itemprop="dateModified" datetime="2024-09-28T21:52:49+08:00">2024-09-28</time>
   </span>
   <span id="2024/09/26/MIA_1/" class="item leancloud_visitors" data-flag-title="Membership Inference Attacks Against Machine Learning Models" title="Views">
       <span class="icon">
@@ -320,9 +321,9 @@ The training accuracy of the location’s target model is 1 and its test accurac
     <div class="item right">
       
 
-  <a href="/2024/09/26/MIA_2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic9.jpg" title="Membership Inference Attacks Against Recommender Systems">
+  <a href="/2024/09/26/MIA_2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic5.jpg" title="Membership Inference Attacks Against Recommender Systems">
   <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> 阅读笔记</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
   <h3>Membership Inference Attacks Against Recommender Systems</h3>
   </a>
 
@@ -366,7 +367,7 @@ The training accuracy of the location’s target model is 1 and its test accurac
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">3</span>
+        <span class="count">4</span>
         <span class="name">categories</span>
       </a>
     </div>
@@ -433,10 +434,10 @@ The training accuracy of the location’s target model is 1 and its test accurac
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
 </div>
 
-    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
+    <span><a href="/2024/08/22/November/" title="November">November</a></span>
   </li>
 
       
@@ -464,9 +465,11 @@ The training accuracy of the location’s target model is 1 and its test accurac
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
   </li>
 
       
@@ -474,6 +477,8 @@ The training accuracy of the location’s target model is 1 and its test accurac
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
     <span><a href="/2024/09/26/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
@@ -483,10 +488,12 @@ The training accuracy of the location’s target model is 1 and its test accurac
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/22/November/" title="November">November</a></span>
+    <span><a href="/2024/09/26/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
   </li>
 
       
@@ -494,9 +501,11 @@ The training accuracy of the location’s target model is 1 and its test accurac
     
 <div class="breadcrumb">
 <a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
 </div>
 
-    <span><a href="/2024/08/04/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+    <span><a href="/2024/08/02/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
   </li>
 
   </ul>
