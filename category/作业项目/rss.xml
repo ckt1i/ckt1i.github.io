@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ckti.github.io</id>
-    <title>张前的小屋 • Posts by &#34;-[作业项目]&#34; category</title>
-    <link href="https://ckti.github.io" />
-    <updated>2024-10-18T08:59:46.472Z</updated>
-    <category term="未完成" />
-    <entry>
-        <id>https://ckti.github.io/2024/10/18/Lab5_log/</id>
-        <title>xv6操作系统实验lab5</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/10/18/Lab5_log/"/>
-        <content type="html">&lt;h1 id=&#34;项目链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#项目链接&#34;&gt;#&lt;/a&gt; 项目链接&lt;/h1&gt;
+<rss version="2.0">
+    <channel>
+        <title>张前的小屋 • Posts by &#34;作业项目&#34; category</title>
+        <link>https://ckti.github.io</link>
+        <description></description>
+        <language>en</language>
+        <pubDate>Fri, 18 Oct 2024 16:59:46 +0800</pubDate>
+        <lastBuildDate>Fri, 18 Oct 2024 16:59:46 +0800</lastBuildDate>
+        <category>未完成</category>
+        <item>
+            <guid isPermalink="true">https://ckti.github.io/2024/10/18/Lab5_log/</guid>
+            <title>xv6操作系统实验lab5</title>
+            <link>https://ckti.github.io/2024/10/18/Lab5_log/</link>
+            <pubDate>Fri, 18 Oct 2024 16:59:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;项目链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#项目链接&#34;&gt;#&lt;/a&gt; 项目链接&lt;/h1&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NrdDFpL3h2Ni1wdWJsaWMvdHJlZS9sYWI1LWNrdGk=&#34;&gt;项目仓库&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;配置环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置环境&#34;&gt;#&lt;/a&gt; 配置环境&lt;/h1&gt;
 &lt;h2 id=&#34;实验环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实验环境&#34;&gt;#&lt;/a&gt; 实验环境&lt;/h2&gt;
@@ -124,7 +128,7 @@
 &lt;h3 id=&#34;测试堆与栈的冲突-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#测试堆与栈的冲突-2&#34;&gt;#&lt;/a&gt; 测试堆与栈的冲突&lt;/h3&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;=== Test: Stack-Heap Collision ===&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Starting stack-heap collision test...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Allocating 222MB of memory on the heap...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Making recursions .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7fffdf90 stack pos : 7fffe000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7fffd000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7fffcf90 stack pos : 7fffd000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7fffc000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7fffbf90 stack pos : 7fffc000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7fffb000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Recursion depth: 1, stack address: 0x7FFFBF80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Recursion depth: 2, stack address: 0x7FFFBF80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Recursion depth: 3, stack address: 0x7FFFBF80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7fffaf70 stack pos : 7fffb000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7fffa000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7fff9f70 stack pos : 7fffa000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7fff9000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7ffe2e70 stack pos : 7ffe3000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7ffe2000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7ffe1e70 stack pos : 7ffe2000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7ffe1000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7ffe0e70 stack pos : 7ffe1000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page 7ffe0000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Recursion depth: 28, stack address: 0x7FFE0E60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Recursion depth: 29, stack address: 0x7FFE0E60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Recursion depth: 30, stack address: 0x7FFE0E60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;page error 7ffdfe50 stack pos : 7ffe0000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;allocuvm out of memory&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;The stack has grown into the heap space.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;create a new page fffff000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;stack is allocated in wrong place, End the process!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;从输出中可以看出，当递归深度达到 28 时，此时栈已经进入堆空间。由于我们的程序在出现这种情况时选择重新分配栈空间，而在此时，由于无空间可分，最终栈被分入错误的地址，导致程序崩溃。&lt;/p&gt;
-</content>
-        <updated>2024-10-18T08:59:46.472Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>
