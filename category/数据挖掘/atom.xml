@@ -1,19 +1,15 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>张前的小屋 • Posts by &#34;-[作业项目 , 数据挖掘]&#34; category</title>
-        <link>https://ckti.github.io</link>
-        <description></description>
-        <language>en</language>
-        <pubDate>Fri, 01 Nov 2024 14:00:02 +0800</pubDate>
-        <lastBuildDate>Fri, 01 Nov 2024 14:00:02 +0800</lastBuildDate>
-        <category>未完成</category>
-        <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/11/01/Regression_Analyze/</guid>
-            <title>数据挖掘与安全治理大作业1——回归分析</title>
-            <link>https://ckti.github.io/2024/11/01/Regression_Analyze/</link>
-            <pubDate>Fri, 01 Nov 2024 14:00:02 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;摘要&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#摘要&#34;&gt;#&lt;/a&gt; 摘要&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ckti.github.io</id>
+    <title>张前的小屋 • Posts by &#34;数据挖掘&#34; category</title>
+    <link href="https://ckti.github.io" />
+    <updated>2024-11-01T06:00:02.043Z</updated>
+    <category term="未完成" />
+    <entry>
+        <id>https://ckti.github.io/2024/11/01/Regression_Analyze/</id>
+        <title>数据挖掘与安全治理大作业1——回归分析</title>
+        <link rel="alternate" href="https://ckti.github.io/2024/11/01/Regression_Analyze/"/>
+        <content type="html">&lt;h2 id=&#34;摘要&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#摘要&#34;&gt;#&lt;/a&gt; 摘要&lt;/h2&gt;
 &lt;p&gt;本文通过回归分析方法对不同数据集进行了建模与分析，旨在探究特征变量与目标变量之间的关系。主要采用了一元多项式回归和带正则化项的 Ridge 回归算法来处理两个不同的数据集。首先，针对人工生成的受扰动正弦函数数据集，通过多项式回归拟合不同阶数的多项式模型，分析了模型阶数与拟合精度的关系；其次，使用 Ridge 回归算法对 UCI 人脸红外热成像温度数据集进行建模，并通过调节正则化系数 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;λ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\lambda&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;λ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，获取最佳模型参数，验证其预测效果。实验结果表明，多项式回归能够较好地拟合复杂的非线性关系，但在数据样本较小时易导致过拟合现象；Ridge 回归在控制模型复杂度和防止过拟合方面表现优异。最终，通过评估不同模型的预测性能，本文总结了各算法在不同应用场景中的优劣，并为回归分析在数据挖掘领域中的实际应用提供了理论依据与实践参考。&lt;/p&gt;
 &lt;h1 id=&#34;引言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引言&#34;&gt;#&lt;/a&gt; 引言&lt;/h1&gt;
 &lt;p&gt;数据挖掘（Data Mining）作为现代信息技术与大数据处理领域的重要研究方向，主要通过分析和挖掘大量数据集中的隐藏模式和规律，为预测、决策和知识发现提供支持。在数据驱动的应用场景中，如何有效地从大量数据中提取有价值的信息，已成为各行各业关注的热点问题。本次数据挖掘课程作业的主题是对数据集进行回归分析，通过多种方法对不同数据集进行建模和分析，探索特征变量与目标变量之间的关系。在回归分析中，我们重点使用了一元多项式回归以及正则化回归中的 Ridge 回归对数据进行分析。这些回归方法能够处理复杂的函数关系，并通过引入正则化项有效地防止模型过拟合，提高模型的泛化能力。&lt;/p&gt;
@@ -184,7 +180,7 @@
 &lt;li&gt;Jeremy Rubin et al. “Ridge Regression for Functional Form Identification of Continuous Predictors of Clinical Outcomes in Glomerular Disease”. &lt;em&gt;Glomerular Diseases&lt;/em&gt; 3.1 (Dec. 2022), pp. 47–55. doi: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2kub3JnLzEwLjExNTkvMDAwNTI4ODQ3&#34;&gt;10.1159/000528847&lt;/span&gt;.&lt;/li&gt;
 &lt;li&gt;Quanzeng Wang et al. “Infrared Thermography for Measuring Elevated Body Temperature: Clinical Accuracy, Calibration, and Evaluation”. &lt;em&gt;Sensors (Basel, Switzerland)&lt;/em&gt; 22 (2021). url: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcGkuc2VtYW50aWNzY2hvbGFyLm9yZy9Db3JwdXNJRDoyNDU1ODUyMDg=&#34;&gt;https://api.semanticscholar.org/CorpusID:245585208&lt;/span&gt;.&lt;/li&gt;
 &lt;/ol&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <updated>2024-11-01T06:00:02.043Z</updated>
+    </entry>
+</feed>
