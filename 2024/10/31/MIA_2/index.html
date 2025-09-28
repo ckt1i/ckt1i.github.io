@@ -1,0 +1,628 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="张前的小屋" href="https://ckti.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="张前的小屋" href="https://ckti.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="张前的小屋" href="https://ckti.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://ckti.github.io/2024/10/31/MIA_2/">
+
+
+
+  <title>
+Membership Inference Attacks Against Recommender Systems - 成员推断攻击 - 阅读笔记 |
+CKT1i's blog = 张前的小屋</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Membership Inference Attacks Against Recommender Systems
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2024-10-31 13:54:17">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-10-31T13:54:17+08:00">2024-10-31</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>7.9k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>7 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">CKT1i's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic21.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic12.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic3.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic5.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic7.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic22.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/MIA/" itemprop="item" rel="index" title="In 成员推断攻击"><span itemprop="name">成员推断攻击</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://ckti.github.io/2024/10/31/MIA_2/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.png">
+    <meta itemprop="name" content="C.K. Tii">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="张前的小屋">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="background-and-problem"><a class="markdownIt-Anchor" href="#background-and-problem">#</a> Background and Problem</h1>
+<h2 id="backgrounds-of-recommend-system"><a class="markdownIt-Anchor" href="#backgrounds-of-recommend-system">#</a> Backgrounds of recommend system</h2>
+<p>The recommender system is essentially an information filtering system, relying on machine learning algorithms to predict user preferences for items. There are two main methods in these realm:</p>
+<p><strong>collaborative filtering</strong>: using traditional methods, combining the history action and similar actions to make decisions</p>
+<p><strong>content-based recommendation</strong>:  using meta-data to distinguish the user preferences.</p>
+<p>The success of recommender systems lies in the large- scale user data. However, the data in many cases contains sensitive information of individuals.</p>
+<h2 id="contribution-of-this-paper"><a class="markdownIt-Anchor" href="#contribution-of-this-paper">#</a> Contribution of this paper</h2>
+<p>First quantification of privacy risks in recommender systems through user-level membership inference attacks.</p>
+<p>Overcoming technical challenges by addressing limited access to ranked recommendations without posterior probabilities.</p>
+<p>Introducing a shadow recommender system to generate labeled data for attack models.</p>
+<p>Extensive experiments demonstrating strong attack performance across benchmark datasets.</p>
+<p>Proposing a defense mechanism called “Popularity Randomization” to reduce attack success by adding randomness.</p>
+<h1 id="methods"><a class="markdownIt-Anchor" href="#methods">#</a> Methods</h1>
+<h2 id="labeled-data-generation"><a class="markdownIt-Anchor" href="#labeled-data-generation">#</a> Labeled Data Generation</h2>
+<p>The adversary builds a shadow recommender system to mimic the target recommender system and generate training data. This involves factorizing a user-item rating matrix to project users and items into a shared latent space. The adversary then calculates the center vectors of user interactions and recommendations, and the difference between these vectors forms the user feature vector. Users are labeled as members (1) or non-members (0).</p>
+<h2 id="attack-model-establishment"><a class="markdownIt-Anchor" href="#attack-model-establishment">#</a> Attack Model Establishment</h2>
+<p>A multi-layer perceptron (MLP) with two hidden layers is used as the attack model to infer membership status. The MLP is trained on the feature vectors generated in the previous step, and outputs probabilities indicating membership.</p>
+<h2 id="parameter-optimization"><a class="markdownIt-Anchor" href="#parameter-optimization">#</a> Parameter Optimization</h2>
+<p>The MLP is trained using stochastic gradient descent, minimizing a cross-entropy loss function. After training, the attack model uses the test data to infer the membership status of users in the target recommender system.</p>
+<h2 id="framework"><a class="markdownIt-Anchor" href="#framework">#</a> Framework</h2>
+<p>This method leverages both user interactions and recommendation patterns, and captures the order information from the ranked lists of recommended items, a critical aspect that distinguishes it from previous membership inference attacks .</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/frameworkk_MIA4rec.png" alt="The framework of the proposed method"></p>
+<h1 id="experiments"><a class="markdownIt-Anchor" href="#experiments">#</a> Experiments</h1>
+<h2 id="experimental-target"><a class="markdownIt-Anchor" href="#experimental-target">#</a> Experimental target</h2>
+<p><strong>Target Models</strong>: The experiment use three Personalized recommendation algorithms  for members: Latent Factor Model (LFM) and Neural Collaborative Filtering (NCF) ; And use popularity recommendation algorithm for non-members due to the lack of non-members’ data.</p>
+<p><strong>Data Sets</strong>: This paper use three real-world datasets that is widely used for experiments of recommend systems, including Amazon Digital Music (ADM) , Lastfm-2k (lf-2k) , and Movielens-1m (ml-1m) .</p>
+<h2 id="data-preprocessing"><a class="markdownIt-Anchor" href="#data-preprocessing">#</a> Data Preprocessing</h2>
+<p>For each dataset, the paper divide it into three disjoint subsets: shadow dataset, a target dataset and a dataset for extracting item features. Then , the paper processes these to make the data suitable:</p>
+<ol>
+<li>To generate feature vectors for users, the dataset for item feature should contain all items of the target and shadow recommenders.</li>
+<li>For the shadow or target dataset, the paper further divide it into two disjoint parts, which are used to conduct recommendations to members and non-members, respectively.</li>
+<li>The paper filtered out the users who have less than 20 interactions.</li>
+</ol>
+<h2 id="evaluation-metrics"><a class="markdownIt-Anchor" href="#evaluation-metrics">#</a> Evaluation Metrics</h2>
+<p>This paper use AUC (area under the ROC curve) as the metric to evaluate attack performances. Regarding members as positive data points and non-members as negative data points. AUC indicates the proportion of the prediction results being positive to negative.</p>
+<h2 id="implementation"><a class="markdownIt-Anchor" href="#implementation">#</a> Implementation</h2>
+<p>The attack model is a multi-layer perceptron (MLP) with two hidden layers. The first layer has 32 units, and the second has 8 units. Stochastic Gradient Descent (SGD) is used as the optimizer, with a learning rate of 0.01 and a momentum of 0.7. The model is trained for 20 epochs.</p>
+<h2 id="data-preprocessing-2"><a class="markdownIt-Anchor" href="#data-preprocessing-2">#</a> Data Preprocessing</h2>
+<p>For each dataset, the paper divide it into three disjoint subsets: shadow dataset, a target dataset and a dataset for extracting item features. Then , the paper processes to make the data suitable:<br>
+To generate feature vectors for users, the dataset for item feature should contain all items of the target and shadow recommenders.<br>
+For the shadow or target dataset, the paper further divide it into two disjoint parts, which are used to conduct recommendations to members and non-members, respectively.<br>
+The paper filtered out the users who have less than 20 interactions.</p>
+<h2 id="recommendation-performance"><a class="markdownIt-Anchor" href="#recommendation-performance">#</a> Recommendation Performance</h2>
+<p>This paper use HR@100 (HR means hit rate)to evaluate the recommendation performance. The result shows that the Recommendation systems works better on Ml-1m data sets. When using Item methods , the HR is up to about 0.95</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_RecPerf.png" alt=""></p>
+<h2 id="attack-performance"><a class="markdownIt-Anchor" href="#attack-performance">#</a> Attack Performance</h2>
+<p>In this part, the paper evaluated three assumptions and evaluate the performance of the attack model for each assumption:</p>
+<h3 id="assumption-i"><a class="markdownIt-Anchor" href="#assumption-i">#</a> Assumption I</h3>
+<p>the attacker knows both the algorithm and the data distribution of the target recommender system. Under this assumption, the experimental results show very strong attack performance. As the figure in the paper,when the shadow recommender system mirrors the target recommender system’s algorithm and data, the AUC scores are highly accurate.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Assumption1.png" alt="The result for the attack performance under Assumption I"></p>
+<h3 id="assumption-ii"><a class="markdownIt-Anchor" href="#assumption-ii">#</a> Assumption II</h3>
+<p>The attacker only knows the data distribution used to train the target recommender system but does not know the specific recommendation algorithm. Under this assumption, the attack performance decreases but remains strong. For example, in the ADM dataset, when the target system uses the Item algorithm and the shadow system uses the LFM algorithm, the AUC drops from 0.926 to 0.843, showing the impact of data distribution similarity on the attack.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Assumption2.png" alt="The result for the attack performance under Assumption II"></p>
+<h3 id="assumption-iii"><a class="markdownIt-Anchor" href="#assumption-iii">#</a> Assumption III</h3>
+<p>The attacker only knows the data distribution used to train the target recommender system but does not know the specific recommendation algorithm. Under this assumption, the attack performance decreases but remains strong. For example, in the ADM dataset, when the target system uses the Item algorithm and the shadow system uses the LFM algorithm, the AUC drops from 0.926 to 0.843, showing the impact of data distribution similarity on the attack.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Assumption3.png" alt="The result for the attack performance under Assumption III"></p>
+<h3 id="hyperparameters"><a class="markdownIt-Anchor" href="#hyperparameters">#</a> HyperParameters</h3>
+<p>In this paper, the impact of hyperparameters on the success of the attack is reflected in the following aspects:</p>
+<ol>
+<li><strong>Number of recommendations (k)</strong>: With more recommended items, the attack model gains more information, but performance improvements cease when the number is large enough.</li>
+<li><strong>Length of feature vectors (l)</strong>: Longer feature vectors provide more dimensional information to the model, but after a certain point, further increasing the length no longer significantly boosts performance.</li>
+<li><strong>Weights of recommended items</strong>: When considering the order of items in the recommendation list, attack performance significantly improves. Items at the front of the list are more likely to be accepted by users, and assigning higher weights to these items enhances the effectiveness of the attack.</li>
+</ol>
+<h1 id="defence"><a class="markdownIt-Anchor" href="#defence">#</a> Defence</h1>
+<h2 id="popularity-randomization"><a class="markdownIt-Anchor" href="#popularity-randomization">#</a> Popularity Randomization</h2>
+<p>non-members are provided with the most popular items. As a result, feature vectors of non-members are extremely similar and easily distinguished from members.  To fix this problems, the paper bring forward the popularity randomization. By selecting candidates from the most popular items randomly to make the target vectors harder to be distinguished.</p>
+<h2 id="evaluation-results"><a class="markdownIt-Anchor" href="#evaluation-results">#</a> Evaluation results</h2>
+<p>The figure of the test result shows that when using the popularity randomization, the AUC rate was apparently downed for most of the data sets, and some of them even close to 0.5, which is nearly close to random guessing.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/MIA2_Defence.png" alt="The result of popularity randomization"></p>
+<h1 id="discussion-and-conclusion"><a class="markdownIt-Anchor" href="#discussion-and-conclusion">#</a> Discussion and conclusion</h1>
+<h2 id="the-factors-for-effects-of-attacks"><a class="markdownIt-Anchor" href="#the-factors-for-effects-of-attacks">#</a> The Factors for effects of attacks</h2>
+<ol>
+<li><strong>The Choice of Datasets</strong>: The dataset with a denser user-item matrix leads to better attack performances. Attack models works better in the datasets with rich informations.</li>
+<li><strong>The Selection of Recommendation Algorithms</strong>: The recommender system with simple model structure is easier to be attacked. Compare with more complex algorithm,LFM has higher model complexity, which makes it harder to attack.</li>
+<li><strong>Distributions of Generated User Features</strong>:  When the distribution of user feature vectors generated by the shadow recommender system closely matches the target system, attack performance improves. The similarity between target data and target data is crucial for boosting attack effectiveness.</li>
+</ol>
+<h2 id="conclusions"><a class="markdownIt-Anchor" href="#conclusions">#</a> Conclusions</h2>
+<h2 id="effectiveness-of-the-attack"><a class="markdownIt-Anchor" href="#effectiveness-of-the-attack">#</a> Effectiveness of the Attack:</h2>
+<p>The proposed membership inference attack model demonstrates strong performance across various recommender systems and datasets. Even with limited knowledge, the model can effectively infer user membership.</p>
+<h2 id="proposed-defense-mechanism"><a class="markdownIt-Anchor" href="#proposed-defense-mechanism">#</a> Proposed Defense Mechanism</h2>
+<p>To mitigate the attack, the authors introduce the “Popularity Randomization” defense mechanism. Experiments show that this defense significantly reduces the success rate of the attack, especially in complex models like Neural Collaborative Filtering (NCF).</p>
+<h2 id="future-work"><a class="markdownIt-Anchor" href="#future-work">#</a> Future Work</h2>
+<p>The paper suggests further exploration of more effective defense mechanisms against such attacks and expanding the application of similar attacks and defenses to other machine learning models.</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span id="2024/10/31/MIA_2/" class="item leancloud_visitors" data-flag-title="Membership Inference Attacks Against Recommender Systems" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="C.K. Tii WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="C.K. Tii Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="C.K. Tii PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>C.K. Tii <i class="ic i-at"><em>@</em></i>张前的小屋
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://ckti.github.io/2024/10/31/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">https://ckti.github.io/2024/10/31/MIA_2/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/09/28/MIA_1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic11.jpg" title="Membership Inference Attacks Against Machine Learning Models">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
+  <h3>Membership Inference Attacks Against Machine Learning Models</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/10/31/Lab5_log/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic13.jpg" title="xv6操作系统实验lab5">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 操作系统</span>
+  <h3>xv6操作系统实验lab5</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#background-and-problem"><span class="toc-number">1.</span> <span class="toc-text"> Background and Problem</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#backgrounds-of-recommend-system"><span class="toc-number">1.1.</span> <span class="toc-text"> Backgrounds of recommend system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#contribution-of-this-paper"><span class="toc-number">1.2.</span> <span class="toc-text"> Contribution of this paper</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#methods"><span class="toc-number">2.</span> <span class="toc-text"> Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#labeled-data-generation"><span class="toc-number">2.1.</span> <span class="toc-text"> Labeled Data Generation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#attack-model-establishment"><span class="toc-number">2.2.</span> <span class="toc-text"> Attack Model Establishment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#parameter-optimization"><span class="toc-number">2.3.</span> <span class="toc-text"> Parameter Optimization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#framework"><span class="toc-number">2.4.</span> <span class="toc-text"> Framework</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#experiments"><span class="toc-number">3.</span> <span class="toc-text"> Experiments</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#experimental-target"><span class="toc-number">3.1.</span> <span class="toc-text"> Experimental target</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#data-preprocessing"><span class="toc-number">3.2.</span> <span class="toc-text"> Data Preprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#evaluation-metrics"><span class="toc-number">3.3.</span> <span class="toc-text"> Evaluation Metrics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#implementation"><span class="toc-number">3.4.</span> <span class="toc-text"> Implementation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#data-preprocessing-2"><span class="toc-number">3.5.</span> <span class="toc-text"> Data Preprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#recommendation-performance"><span class="toc-number">3.6.</span> <span class="toc-text"> Recommendation Performance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#attack-performance"><span class="toc-number">3.7.</span> <span class="toc-text"> Attack Performance</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#assumption-i"><span class="toc-number">3.7.1.</span> <span class="toc-text"> Assumption I</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#assumption-ii"><span class="toc-number">3.7.2.</span> <span class="toc-text"> Assumption II</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#assumption-iii"><span class="toc-number">3.7.3.</span> <span class="toc-text"> Assumption III</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hyperparameters"><span class="toc-number">3.7.4.</span> <span class="toc-text"> HyperParameters</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#defence"><span class="toc-number">4.</span> <span class="toc-text"> Defence</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#popularity-randomization"><span class="toc-number">4.1.</span> <span class="toc-text"> Popularity Randomization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#evaluation-results"><span class="toc-number">4.2.</span> <span class="toc-text"> Evaluation results</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#discussion-and-conclusion"><span class="toc-number">5.</span> <span class="toc-text"> Discussion and conclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#the-factors-for-effects-of-attacks"><span class="toc-number">5.1.</span> <span class="toc-text"> The Factors for effects of attacks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#conclusions"><span class="toc-number">5.2.</span> <span class="toc-text"> Conclusions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#effectiveness-of-the-attack"><span class="toc-number">5.3.</span> <span class="toc-text"> Effectiveness of the Attack:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#proposed-defense-mechanism"><span class="toc-number">5.4.</span> <span class="toc-text"> Proposed Defense Mechanism</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#future-work"><span class="toc-number">5.5.</span> <span class="toc-text"> Future Work</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2024/09/28/Introduction%20of%20MIA_CN/" rel="bookmark" title="成员推理攻击介绍">成员推理攻击介绍</a></li><li><a href="/2024/09/28/Introduction%20of%20MIA/" rel="bookmark" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></li><li><a href="/2024/09/28/MIA_1/" rel="bookmark" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></li><li class="active"><a href="/2024/10/31/MIA_2/" rel="bookmark" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="C.K. Tii"
+      data-src="/images/avatar.png">
+  <p class="name" itemprop="name">C.K. Tii</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">7</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">1</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NLVDFp" title="https:&#x2F;&#x2F;github.com&#x2F;CKT1i"><i class="ic i-github"></i></span>
+      <a href="/changqian.zheng@gmail.com" title="changqian.zheng@gmail.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTg5OTk5NzQ2" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;189999746"><i class="ic i-bilibili"></i></span>
+      <a href="/hsource/_data/images/resume.pdf" title="hsource&#x2F;_data&#x2F;images&#x2F;resume.pdf" class="item about"><i class="ic i-address-card"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/09/28/MIA_1/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/10/31/Lab5_log/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/22/About%20me/" title="About me">About me</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/22/resume/" title="resume">resume</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
+</div>
+
+    <span><a href="/2024/08/24/November/" title="November">November</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/10/31/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/DataMining/" title="In 数据挖掘">数据挖掘</a>
+</div>
+
+    <span><a href="/2024/11/01/Classification/" title="数据挖掘与安全治理大作业2——分类问题">数据挖掘与安全治理大作业2——分类问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/DataMining/" title="In 数据挖掘">数据挖掘</a>
+</div>
+
+    <span><a href="/2024/11/01/RegressionAnalyze/" title="数据挖掘与安全治理大作业1——回归分析">数据挖掘与安全治理大作业1——回归分析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/OS/" title="In 操作系统">操作系统</a>
+</div>
+
+    <span><a href="/2024/10/31/Lab5_log/" title="xv6操作系统实验lab5">xv6操作系统实验lab5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">C.K. Tii @ CKT1i's blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">69k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">1:03</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/10/31/MIA_2/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="张前的小屋" href="https://ckti.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="张前的小屋" href="https://ckti.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="张前的小屋" href="https://ckti.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://ckti.github.io/2024/09/28/MIA_1/">
+
+
+
+  <title>
+Membership Inference Attacks Against Machine Learning Models - 成员推断攻击 - 阅读笔记 |
+CKT1i's blog = 张前的小屋</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Membership Inference Attacks Against Machine Learning Models
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2024-09-28 21:52:49">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-09-28T21:52:49+08:00">2024-09-28</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>7.2k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>7 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">CKT1i's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic9.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic12.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic14.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic5.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic4.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic10.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/" itemprop="item" rel="index" title="In 阅读笔记"><span itemprop="name">阅读笔记</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/ReadingNotes/MIA/" itemprop="item" rel="index" title="In 成员推断攻击"><span itemprop="name">成员推断攻击</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://ckti.github.io/2024/09/28/MIA_1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.png">
+    <meta itemprop="name" content="C.K. Tii">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="张前的小屋">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="introduction-and-background"><a class="markdownIt-Anchor" href="#introduction-and-background">#</a> Introduction and Background</h1>
+<h2 id="introduction-of-the-privacy-problem-in-machine-learning"><a class="markdownIt-Anchor" href="#introduction-of-the-privacy-problem-in-machine-learning">#</a> Introduction of the Privacy Problem in Machine Learning</h2>
+<p>Machine learning is the foundation of popular Internet services such as image and speech recognition and natural language translation and recommend system, with many companies offering machine learning services via APIs (e.g., Google and Amazon).</p>
+<p>However, these models often learn sensitive user data during training, leading to potential privacy risks. Specifically, machine learning models can inadvertently leak their training data, posing a threat to user privacy. This paper focuses on “membership inference attacks,” where an attacker can infer whether a specific data point was part of the model’s training set based on its outputs.</p>
+<h2 id="machine-learning-background"><a class="markdownIt-Anchor" href="#machine-learning-background">#</a> Machine Learning Background</h2>
+<p>Machine learning is categorized into supervised and unsupervised learning: Supervised learning uses labeled data to train models to predict outputs from inputs.</p>
+<p>A common issue in machine learning is overfitting, where the model performs well on training data but poorly on unseen data. Overfitted models are more likely to memorize training data, leading to privacy leaks, as they retain too much information about the data they trained on.</p>
+<p>Well-regularized models should avoid overfitting, generalizing well to new data without revealing sensitive information from the training data.</p>
+<h2 id="privacy-in-machine-learning"><a class="markdownIt-Anchor" href="#privacy-in-machine-learning">#</a> Privacy in Machine Learning</h2>
+<p>Machine learning models can unintentionally leak sensitive information about the data they were trained on.</p>
+<p>Two primary types of privacy risks are:</p>
+<p><strong>Population-level inference</strong>: Inferring general patterns about the population used to train the model, which can reveal sensitive characteristics.</p>
+<p><strong>Membership inference</strong>: Determining if a specific individual’s data was included in the training set.</p>
+<p>This paper focuses on membership inference attacks, as protecting the privacy of training set members is both practical and critical for users.</p>
+<p>The risk is higher for models trained on private or sensitive data, such as healthcare records.</p>
+<h2 id="problem-statements"><a class="markdownIt-Anchor" href="#problem-statements">#</a> Problem Statements</h2>
+<p>The core problem studied in this paper is membership inference attacks.<br>
+In a black-box setting, the attacker can query the model to get outputs but does not have access to the model’s structure or parameters.<br>
+The attacker’s goal is to determine if a specific data point was part of the model’s training set based on the model’s output.<br>
+The paper assumes that the attacker might have some background knowledge, such as understanding the input format or statistical distribution of the dataset.<br>
+The attack relies on detecting subtle differences in how the model behaves with data it has seen before (training data) versus new data (non-training data).</p>
+<h1 id="methods"><a class="markdownIt-Anchor" href="#methods">#</a> Methods</h1>
+<h2 id="main-steps"><a class="markdownIt-Anchor" href="#main-steps">#</a> Main steps:</h2>
+<p>The attacker queries the target model with a data record and obtains the model’s prediction on that record. The prediction is a vector of probabilities, one per class, that the record belongs to a certain class. This prediction vector, along with the label of the target record, is passed to the attack model, which infers whether the record was in or out of the target model’s training dataset.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/Main_step.png" alt="Main steps of MIA"></p>
+<h2 id="shadow-models"><a class="markdownIt-Anchor" href="#shadow-models">#</a> Shadow Models</h2>
+<p>The attacker uses the input and output data from shadow models to train the attack model. Specifically, the prediction results from the shadow models (confidence vectors or other outputs) are used as training data to train a binary classifier that can predict whether a particular data point was part of the shadow model’s training set.</p>
+<p>Since the behavior of the shadow model is similar to that of the target model, the attack model can learn from the shadow model’s training to infer which data points were used in the training of the target model.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/Shadow_Models.png" alt="Shadow Models"></p>
+<h2 id="training-the-attack-model"><a class="markdownIt-Anchor" href="#training-the-attack-model">#</a> Training the Attack Model</h2>
+<p>The inputs and outputs of the shadow models are used to train the attack model：</p>
+<p>The attack model is a binary classifier that learns to distinguish between “training data” (members) and“non-training data” (non-members).</p>
+<p>It uses the prediction vectors from the shadow models to learn how to classify data points as members or non-members.</p>
+<p><img data-src="https://raw.githubusercontent.com/ckt1i/blogimage/main/Training_attack_models.png" alt="Main steps of training the attack models"></p>
+<h1 id="experimental-evaluation"><a class="markdownIt-Anchor" href="#experimental-evaluation">#</a> Experimental Evaluation</h1>
+<h2 id="datasets-and-target-models"><a class="markdownIt-Anchor" href="#datasets-and-target-models">#</a> Datasets and Target Models</h2>
+<p>The datasets used for experiments are described, including the type, size, and nature of the data, includes: Public datasets such as image datasets (e.g., CIFAR-10), location datasets, and some sensitive data sets .</p>
+<p>In this paper, the authorevaluated our inference attacks on three types of target models: two constructed by cloud-based “machine learning as a service” platforms and one implemented locally. all the attacks treat the models as black boxes, which means they do not know the type or structure of the models they create, nor the values of the hyper-parameters used during the training process.</p>
+<p>The training set and the test set of each target and shadow model are randomly selected from the respective datasets, have the same size, and are disjoint. There is no overlap between the datasets of the target model and those of the shadow models, but the datasets used for different shadow models can overlap with each other.</p>
+<h2 id="accuracy-of-the-attack"><a class="markdownIt-Anchor" href="#accuracy-of-the-attack">#</a> Accuracy of the attack</h2>
+<p>This paper evaluate the attack by executing it on randomly reshuffled records from the target’s training and test datasets. And use the standard precision and recall metric to evaluate the percision.</p>
+<p>The test accuracy of the target neural-network models with the largest training datasets is low, which means the models are heavily overfitted on their training sets.</p>
+<p>For different deep learning APIs from different companies, the paper trained the same datas for the models and make the evaluation attacks, the result shows that Models trained using Google Prediction API exhibit the biggest leakage.</p>
+<p>For the Texas hospital-stay dataset and location adtaset, the paper evaluated the attack against a Google-trained model.</p>
+<p>The training accuracy of the Texas’s target model is 0.66 and its test accuracy is 0.51. Precision is mostly above 0.6, and for half of the classes, it is above 0.7. Precision is above 0.85 for more than 20 classes.</p>
+<p>The training accuracy of the location’s target model is 1 and its test accuracy is 0.66.Precision is between 0.6 and 0.8, with an almost constant recall of 1.<br>
+The attacks against the google trained models for location data sets shows that the paper’s attacks are robust even if the attacker’s assumptions about the distribution of the target model’s training data are not very accurate.</p>
+<p>For the majority of the target model’s classes, the paper’s attack achieves high precision. This demonstrates that a membership inference attack can be trained with only black-box access to the target model, without any prior knowledge about the distribution of the target model’s training data if the attacker can efficiently generate inputs that are classified by the target model with high confidence.</p>
+<h1 id="factors-and-defenses"><a class="markdownIt-Anchor" href="#factors-and-defenses">#</a> Factors and Defenses</h1>
+<h2 id="factors-for-success-of-membership-inference"><a class="markdownIt-Anchor" href="#factors-for-success-of-membership-inference">#</a> Factors for Success of membership inference</h2>
+<p>Based on the evaluation, this paper bring forward two factors for a success membership inference attack:</p>
+<p><strong>generalizability of the target model</strong></p>
+<p><strong>diversity of its training data</strong></p>
+<p>If the model overfits and does not generalize well to inputs beyond its training data, or if the training data is not representative, the model leaks information about its training inputs.</p>
+<p>This paper also point out that overfitting is not the only reason why our inference attacks work. Different machine learning models, due to their different structures, “remember” different amounts of information about their training datasets. This leads to different amounts of information leakage even if the models are overfitted to the same degree</p>
+<h2 id="mitigation-strategies"><a class="markdownIt-Anchor" href="#mitigation-strategies">#</a> Mitigation strategies</h2>
+<p>This paper indicates some strategies of mintigate the membership interface of the models:</p>
+<ol>
+<li>Restrict the prediction vector to top k classes.</li>
+<li>Coarsen（变粗糙） precision of the prediction vector.</li>
+<li>Increase entropy of the prediction vector.</li>
+<li>Use regularization.</li>
+</ol>
+<p>However, in this paper, they make evaluation about these mitigation strategies, and find that their attack method is still robust against these mitigation strategies</p>
+<h1 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion">#</a> Conclusion</h1>
+<p>This paper have designed, implemented, and evaluated the first membership inference attack against machine learning models, notably black-box models trained in the commerical deep learning APIs.</p>
+<p>This paper’s key technical innovation is the shadow training tech- nique that trains an attack model to distinguish the target model’s outputs on members versus non-members of its train- ing dataset.</p>
+<p>Membership in hospital-stay and other health-care datasets is sensitive from the privacy perspective. Therefore, this method may have substantial practical privacy implications.</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span id="2024/09/28/MIA_1/" class="item leancloud_visitors" data-flag-title="Membership Inference Attacks Against Machine Learning Models" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="C.K. Tii WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="C.K. Tii Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="C.K. Tii PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>C.K. Tii <i class="ic i-at"><em>@</em></i>张前的小屋
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://ckti.github.io/2024/09/28/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">https://ckti.github.io/2024/09/28/MIA_1/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/09/28/Introduction%20of%20MIA/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic21.jpg" title="Introduction of Membership Interface Attack">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
+  <h3>Introduction of Membership Interface Attack</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/10/31/MIA_2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic16.jpg" title="Membership Inference Attacks Against Recommender Systems">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
+  <h3>Membership Inference Attacks Against Recommender Systems</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#introduction-and-background"><span class="toc-number">1.</span> <span class="toc-text"> Introduction and Background</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#introduction-of-the-privacy-problem-in-machine-learning"><span class="toc-number">1.1.</span> <span class="toc-text"> Introduction of the Privacy Problem in Machine Learning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#machine-learning-background"><span class="toc-number">1.2.</span> <span class="toc-text"> Machine Learning Background</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#privacy-in-machine-learning"><span class="toc-number">1.3.</span> <span class="toc-text"> Privacy in Machine Learning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#problem-statements"><span class="toc-number">1.4.</span> <span class="toc-text"> Problem Statements</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#methods"><span class="toc-number">2.</span> <span class="toc-text"> Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#main-steps"><span class="toc-number">2.1.</span> <span class="toc-text"> Main steps:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shadow-models"><span class="toc-number">2.2.</span> <span class="toc-text"> Shadow Models</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#training-the-attack-model"><span class="toc-number">2.3.</span> <span class="toc-text"> Training the Attack Model</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#experimental-evaluation"><span class="toc-number">3.</span> <span class="toc-text"> Experimental Evaluation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#datasets-and-target-models"><span class="toc-number">3.1.</span> <span class="toc-text"> Datasets and Target Models</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#accuracy-of-the-attack"><span class="toc-number">3.2.</span> <span class="toc-text"> Accuracy of the attack</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#factors-and-defenses"><span class="toc-number">4.</span> <span class="toc-text"> Factors and Defenses</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#factors-for-success-of-membership-inference"><span class="toc-number">4.1.</span> <span class="toc-text"> Factors for Success of membership inference</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mitigation-strategies"><span class="toc-number">4.2.</span> <span class="toc-text"> Mitigation strategies</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#conclusion"><span class="toc-number">5.</span> <span class="toc-text"> Conclusion</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li><a href="/2024/09/28/Introduction%20of%20MIA_CN/" rel="bookmark" title="成员推理攻击介绍">成员推理攻击介绍</a></li><li><a href="/2024/09/28/Introduction%20of%20MIA/" rel="bookmark" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></li><li class="active"><a href="/2024/09/28/MIA_1/" rel="bookmark" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></li><li><a href="/2024/10/31/MIA_2/" rel="bookmark" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="C.K. Tii"
+      data-src="/images/avatar.png">
+  <p class="name" itemprop="name">C.K. Tii</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">7</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">1</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NLVDFp" title="https:&#x2F;&#x2F;github.com&#x2F;CKT1i"><i class="ic i-github"></i></span>
+      <a href="/changqian.zheng@gmail.com" title="changqian.zheng@gmail.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTg5OTk5NzQ2" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;189999746"><i class="ic i-bilibili"></i></span>
+      <a href="/hsource/_data/images/resume.pdf" title="hsource&#x2F;_data&#x2F;images&#x2F;resume.pdf" class="item about"><i class="ic i-address-card"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/09/28/Introduction%20of%20MIA/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/10/31/MIA_2/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/OS/" title="In 操作系统">操作系统</a>
+</div>
+
+    <span><a href="/2024/10/31/Lab5_log/" title="xv6操作系统实验lab5">xv6操作系统实验lab5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/DataMining/" title="In 数据挖掘">数据挖掘</a>
+</div>
+
+    <span><a href="/2024/11/01/RegressionAnalyze/" title="数据挖掘与安全治理大作业1——回归分析">数据挖掘与安全治理大作业1——回归分析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/22/About%20me/" title="About me">About me</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/22/resume/" title="resume">resume</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/DataMining/" title="In 数据挖掘">数据挖掘</a>
+</div>
+
+    <span><a href="/2024/11/01/Classification/" title="数据挖掘与安全治理大作业2——分类问题">数据挖掘与安全治理大作业2——分类问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
+</div>
+
+    <span><a href="/2024/08/24/November/" title="November">November</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/10/31/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">C.K. Tii @ CKT1i's blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">69k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">1:03</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/09/28/MIA_1/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

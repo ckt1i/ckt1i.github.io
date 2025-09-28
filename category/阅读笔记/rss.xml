@@ -5,14 +5,14 @@
         <link>https://ckti.github.io</link>
         <description></description>
         <language>en</language>
-        <pubDate>Thu, 26 Sep 2024 14:05:48 +0800</pubDate>
-        <lastBuildDate>Thu, 26 Sep 2024 14:05:48 +0800</lastBuildDate>
+        <pubDate>Thu, 31 Oct 2024 13:54:17 +0800</pubDate>
+        <lastBuildDate>Thu, 31 Oct 2024 13:54:17 +0800</lastBuildDate>
         <category>未完成</category>
         <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/09/26/MIA_2/</guid>
+            <guid isPermalink="true">https://ckti.github.io/2024/10/31/MIA_2/</guid>
             <title>Membership Inference Attacks Against Recommender Systems</title>
-            <link>https://ckti.github.io/2024/09/26/MIA_2/</link>
-            <pubDate>Thu, 26 Sep 2024 14:05:48 +0800</pubDate>
+            <link>https://ckti.github.io/2024/10/31/MIA_2/</link>
+            <pubDate>Thu, 31 Oct 2024 13:54:17 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;background-and-problem&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#background-and-problem&#34;&gt;#&lt;/a&gt; Background and Problem&lt;/h1&gt;
 &lt;h2 id=&#34;backgrounds-of-recommend-system&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#backgrounds-of-recommend-system&#34;&gt;#&lt;/a&gt; Backgrounds of recommend system&lt;/h2&gt;
 &lt;p&gt;The recommender system is essentially an information filtering system, relying on machine learning algorithms to predict user preferences for items. There are two main methods in these realm:&lt;/p&gt;
@@ -99,10 +99,10 @@ The paper filtered out the users who have less than 20 interactions.&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/09/26/MIA_1/</guid>
+            <guid isPermalink="true">https://ckti.github.io/2024/09/28/MIA_1/</guid>
             <title>Membership Inference Attacks Against Machine Learning Models</title>
-            <link>https://ckti.github.io/2024/09/26/MIA_1/</link>
-            <pubDate>Thu, 26 Sep 2024 10:24:13 +0800</pubDate>
+            <link>https://ckti.github.io/2024/09/28/MIA_1/</link>
+            <pubDate>Sat, 28 Sep 2024 21:52:49 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;introduction-and-background&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-and-background&#34;&gt;#&lt;/a&gt; Introduction and Background&lt;/h1&gt;
 &lt;h2 id=&#34;introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;#&lt;/a&gt; Introduction of the Privacy Problem in Machine Learning&lt;/h2&gt;
 &lt;p&gt;Machine learning is the foundation of popular Internet services such as image and speech recognition and natural language translation and recommend system, with many companies offering machine learning services via APIs (e.g., Google and Amazon).&lt;/p&gt;
@@ -174,10 +174,10 @@ The attacks against the google trained models for location data sets shows that 
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</guid>
+            <guid isPermalink="true">https://ckti.github.io/2024/09/28/Introduction%20of%20MIA/</guid>
             <title>Introduction of Membership Interface Attack</title>
-            <link>https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</link>
-            <pubDate>Sun, 04 Aug 2024 21:28:25 +0800</pubDate>
+            <link>https://ckti.github.io/2024/09/28/Introduction%20of%20MIA/</link>
+            <pubDate>Sat, 28 Sep 2024 21:52:47 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
 &lt;h1 id=&#34;prelimaries-defination-and-classification&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-defination-and-classification&#34;&gt;#&lt;/a&gt; Prelimaries ,Defination and classification&lt;/h1&gt;
 &lt;h2 id=&#34;prelimaries-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-machine-learning&#34;&gt;#&lt;/a&gt; Prelimaries-- Machine learning&lt;/h2&gt;
@@ -283,10 +283,10 @@ The attacks against the google trained models for location data sets shows that 
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</guid>
+            <guid isPermalink="true">https://ckti.github.io/2024/09/28/Introduction%20of%20MIA_CN/</guid>
             <title>成员推理攻击介绍</title>
-            <link>https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</link>
-            <pubDate>Fri, 02 Aug 2024 23:48:24 +0800</pubDate>
+            <link>https://ckti.github.io/2024/09/28/Introduction%20of%20MIA_CN/</link>
+            <pubDate>Sat, 28 Sep 2024 21:52:41 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
 标题: Membership Inference Attacks on Machine Learning: A Survey&lt;/p&gt;
 &lt;h1 id=&#34;mia-的前置知识和定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的前置知识和定义&#34;&gt;#&lt;/a&gt; MIA 的前置知识和定义&lt;/h1&gt;

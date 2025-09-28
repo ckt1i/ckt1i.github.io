@@ -3,12 +3,12 @@
     <id>https://ckti.github.io</id>
     <title>张前的小屋 • Posts by &#34;成员推断攻击&#34; category</title>
     <link href="https://ckti.github.io" />
-    <updated>2024-09-26T06:05:48.230Z</updated>
+    <updated>2024-10-31T05:54:17.000Z</updated>
     <category term="未完成" />
     <entry>
-        <id>https://ckti.github.io/2024/09/26/MIA_2/</id>
+        <id>https://ckti.github.io/2024/10/31/MIA_2/</id>
         <title>Membership Inference Attacks Against Recommender Systems</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/09/26/MIA_2/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/10/31/MIA_2/"/>
         <content type="html">&lt;h1 id=&#34;background-and-problem&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#background-and-problem&#34;&gt;#&lt;/a&gt; Background and Problem&lt;/h1&gt;
 &lt;h2 id=&#34;backgrounds-of-recommend-system&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#backgrounds-of-recommend-system&#34;&gt;#&lt;/a&gt; Backgrounds of recommend system&lt;/h2&gt;
 &lt;p&gt;The recommender system is essentially an information filtering system, relying on machine learning algorithms to predict user preferences for items. There are two main methods in these realm:&lt;/p&gt;
@@ -93,12 +93,12 @@ The paper filtered out the users who have less than 20 interactions.&lt;/p&gt;
 &lt;h2 id=&#34;future-work&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#future-work&#34;&gt;#&lt;/a&gt; Future Work&lt;/h2&gt;
 &lt;p&gt;The paper suggests further exploration of more effective defense mechanisms against such attacks and expanding the application of similar attacks and defenses to other machine learning models.&lt;/p&gt;
 </content>
-        <updated>2024-09-26T06:05:48.230Z</updated>
+        <updated>2024-10-31T05:54:17.000Z</updated>
     </entry>
     <entry>
-        <id>https://ckti.github.io/2024/09/26/MIA_1/</id>
+        <id>https://ckti.github.io/2024/09/28/MIA_1/</id>
         <title>Membership Inference Attacks Against Machine Learning Models</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/09/26/MIA_1/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/09/28/MIA_1/"/>
         <content type="html">&lt;h1 id=&#34;introduction-and-background&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-and-background&#34;&gt;#&lt;/a&gt; Introduction and Background&lt;/h1&gt;
 &lt;h2 id=&#34;introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduction-of-the-privacy-problem-in-machine-learning&#34;&gt;#&lt;/a&gt; Introduction of the Privacy Problem in Machine Learning&lt;/h2&gt;
 &lt;p&gt;Machine learning is the foundation of popular Internet services such as image and speech recognition and natural language translation and recommend system, with many companies offering machine learning services via APIs (e.g., Google and Amazon).&lt;/p&gt;
@@ -168,12 +168,12 @@ The attacks against the google trained models for location data sets shows that 
 &lt;p&gt;This paper’s key technical innovation is the shadow training tech- nique that trains an attack model to distinguish the target model’s outputs on members versus non-members of its train- ing dataset.&lt;/p&gt;
 &lt;p&gt;Membership in hospital-stay and other health-care datasets is sensitive from the privacy perspective. Therefore, this method may have substantial practical privacy implications.&lt;/p&gt;
 </content>
-        <updated>2024-09-26T02:24:13.543Z</updated>
+        <updated>2024-09-28T13:52:49.000Z</updated>
     </entry>
     <entry>
-        <id>https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/</id>
+        <id>https://ckti.github.io/2024/09/28/Introduction%20of%20MIA/</id>
         <title>Introduction of Membership Interface Attack</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/04/Introduction%20of%20MIA/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/09/28/Introduction%20of%20MIA/"/>
         <content type="html">&lt;p&gt;This is the English version of &lt;a href=&#34;/public/2024/08/02/Introduction%20of%20MIA_CN/index.html&#34;&gt;this&lt;/a&gt; blog. The translation may be not correct, if there are any mistakes, please contact me for delivering suggestions.&lt;/p&gt;
 &lt;h1 id=&#34;prelimaries-defination-and-classification&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-defination-and-classification&#34;&gt;#&lt;/a&gt; Prelimaries ,Defination and classification&lt;/h1&gt;
 &lt;h2 id=&#34;prelimaries-machine-learning&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#prelimaries-machine-learning&#34;&gt;#&lt;/a&gt; Prelimaries-- Machine learning&lt;/h2&gt;
@@ -277,12 +277,12 @@ The attacks against the google trained models for location data sets shows that 
 &lt;p&gt;&lt;strong&gt;Balancing Privacy and Utility&lt;/strong&gt;: Existing differential privacy protections often add significant noise to classifier gradients, reducing prediction accuracy. Balancing privacy and utility remains an area for research.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Privacy Defenses in Federated Learning&lt;/strong&gt;: With increasing privacy attacks in federated learning, developing defensive technologies is crucial, with differential privacy being a potential future direction.&lt;/p&gt;
 </content>
-        <updated>2024-08-04T13:28:25.989Z</updated>
+        <updated>2024-09-28T13:52:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/</id>
+        <id>https://ckti.github.io/2024/09/28/Introduction%20of%20MIA_CN/</id>
         <title>成员推理攻击介绍</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/02/Introduction%20of%20MIA_CN/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/09/28/Introduction%20of%20MIA_CN/"/>
         <content type="html">&lt;p&gt;&lt;a href=&#34;/https://arxiv.org/abs/2103.07853&#34;&gt;论文地址&lt;/a&gt;&lt;br&gt;
 标题: Membership Inference Attacks on Machine Learning: A Survey&lt;/p&gt;
 &lt;h1 id=&#34;mia-的前置知识和定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mia-的前置知识和定义&#34;&gt;#&lt;/a&gt; MIA 的前置知识和定义&lt;/h1&gt;
@@ -394,6 +394,6 @@ The attacks against the google trained models for location data sets shows that 
 &lt;/ol&gt;
 &lt;p&gt;（未完，针对未来的方向目前有些想法，后面会单开一章简单介绍）&lt;/p&gt;
 </content>
-        <updated>2024-08-02T15:48:24.123Z</updated>
+        <updated>2024-09-28T13:52:41.000Z</updated>
     </entry>
 </feed>

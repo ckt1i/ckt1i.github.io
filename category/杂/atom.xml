@@ -3,96 +3,12 @@
     <id>https://ckti.github.io</id>
     <title>张前的小屋 • Posts by &#34;杂&#34; category</title>
     <link href="https://ckti.github.io" />
-    <updated>2024-08-11T14:33:57.665Z</updated>
+    <updated>2024-08-22T02:50:16.000Z</updated>
     <category term="未完成" />
     <entry>
-        <id>https://ckti.github.io/2024/08/11/resume/</id>
-        <title>resume</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/11/resume/"/>
-        <content type="html">&lt;h2 id=&#34;real-name-zheng-changqian-郑昌乾&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#real-name-zheng-changqian-郑昌乾&#34;&gt;#&lt;/a&gt; Real name: Zheng ChangQian （郑昌乾）&lt;/h2&gt;
-&lt;h2 id=&#34;contact-information&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#contact-information&#34;&gt;#&lt;/a&gt; Contact Information&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Mobile:&lt;/strong&gt; +86 188-1027-7303&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; [domestic] &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOjE3NzQzNDU4M0BxcS5jb20=&#34;&gt;177434583@qq.com&lt;/span&gt; / [international] &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmNoYW5ncWlhbi56aGVuZ0BnbWFpbC5jb20=&#34;&gt;changqian.zheng@gmail.com&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NrdDFp&#34;&gt;ckt1i&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;University:&lt;/strong&gt; Beijing Institute of Technology, School of Cyberspace Security&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Degree:&lt;/strong&gt; Undergraduate, 2nd Year&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;academic-achievements&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#academic-achievements&#34;&gt;#&lt;/a&gt; Academic Achievements&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Average Score:&lt;/strong&gt; 88&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GPA:&lt;/strong&gt; 3.6/4.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;skills-and-languages&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#skills-and-languages&#34;&gt;#&lt;/a&gt; Skills and Languages&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Operating Systems:&lt;/strong&gt; Linux (Ubuntu)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Programming Languages:&lt;/strong&gt; Python, C, Shell, Java&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tools and Environments:&lt;/strong&gt; MacOS, SSH, Git, Remote Linux / Windows VM&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Language Proficiency:&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;English:&lt;/strong&gt; Reading and Writing (Excellent), Speaking and Listening (Daily Communication)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;computer-related-skills&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#computer-related-skills&#34;&gt;#&lt;/a&gt; Computer-Related Skills&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Proficient in Python and C/C++ programming, with basic knowledge of Java.&lt;/li&gt;
-&lt;li&gt;Experienced in remote programming and project development using Git, with experience in SSH and remote project development.&lt;/li&gt;
-&lt;li&gt;Strong communication and teamwork skills, with good ability to read academic papers and original documents.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;research-and-projects&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#research-and-projects&#34;&gt;#&lt;/a&gt; Research and Projects&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;A weak-password checker based on collected malicious passwords&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Collecting weak-password from fake-ssh or the other password phisher, and using the thought of the Levinstein Distance and patterns to evaluate its strength and give user alerts.&lt;/li&gt;
-&lt;li&gt;Project paper: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NrdDFpL2Jsb2dpbWFnZS9tYWluL1Bhc3N3b3JkX1Byb3RlY3Rpb24ucGRm&#34;&gt;https://raw.githubusercontent.com/ckt1i/blogimage/main/Password_Protection.pdf&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OpenSSH National Secret Modification Based on OpenSSL&lt;/strong&gt; (Ongoing Competition Project)
-&lt;ul&gt;
-&lt;li&gt;Utilized existing national secret SM series algorithms of OpenSSL to modify OpenSSH services. Acted as a team organizer and contributed significantly to project work and programming tasks. &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRsYWIuZWR1eGlqaS5uZXQvVDIwMjQxMDAwNzk5MzE3NC9wcm9qZWN0MjIxMDEzMi0yMzk2MzI=&#34;&gt;Project Link&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Research on Password Security Issues Based on Honeywords&lt;/strong&gt; (Innovation Project, Ongoing)
-&lt;ul&gt;
-&lt;li&gt;Participated in related paper study and other tasks as a team member.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI Backdoor Simulation Attack Based on Badnets&lt;/strong&gt; (Course Project, Completed)
-&lt;ul&gt;
-&lt;li&gt;Replicated image recognition simulation attacks using methods from the &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE3MDguMDY3MzM=&#34;&gt;Badnets paper&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI Voice Synthesis Implementation Based on DDSP-svc&lt;/strong&gt; (Course Project, Completed)
-&lt;ul&gt;
-&lt;li&gt;Configured and applied the DDSP-svc voice synthesis model to understand its principles and achieve voice simulation and synthesis.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Anonymous Electronic Voting Process Implementation Based on Paillier Algorithm&lt;/strong&gt; (Course Project, Completed)
-&lt;ul&gt;
-&lt;li&gt;Implemented the Paillier homomorphic encryption algorithm using Python to simulate an electronic voting system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;awards&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#awards&#34;&gt;#&lt;/a&gt; Awards&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;2023-2024 First Semester Excellent Academic Performance Scholarship&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2022-2023 Second Semester Excellent Academic Performance Scholarship&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Beijing Institute of Technology Outstanding Communist Youth League Member&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Second Prize in Beijing’s 34th University Mathematics Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Second Prize in the 20th Information Security and Countermeasure Technology Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2023 Excellent Award in Beijing Institute of Technology Mathematical Modeling Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2022 Second Prize in Beijing Institute of Technology Mingli Cup Freshman Mathematics Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2022 Best Courage Award in Lianshan Control Programming Freshman Competition&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="未完成" />
-        <updated>2024-08-11T14:33:57.665Z</updated>
-    </entry>
-    <entry>
-        <id>https://ckti.github.io/2024/08/01/About%20me/</id>
+        <id>https://ckti.github.io/2024/08/22/About%20me/</id>
         <title>About me</title>
-        <link rel="alternate" href="https://ckti.github.io/2024/08/01/About%20me/"/>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/22/About%20me/"/>
         <content type="html">&lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; Hello!&lt;/h1&gt;
 &lt;p&gt;Hi! I’m CKTi. A college student. Here is my blog, you can find something I have done.&lt;/p&gt;
 &lt;p&gt;My major now is cyber security and I’m now intrested in privacy and deep learning and so on, here are some articles about some &lt;a href=&#34;/https://ckt1i.github.io/categories/Reading%20Notes/&#34;&gt;notes&lt;/a&gt; in learning.&lt;/p&gt;
@@ -100,6 +16,15 @@
 &lt;p&gt;If you have any suggestions or anything want to say to me, you can submit comments in each of the articles, or just contact me in email. Have a nice day!&lt;/p&gt;
 </content>
         <category term="未完成" />
-        <updated>2024-08-01T02:58:29.176Z</updated>
+        <updated>2024-08-22T02:50:16.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ckti.github.io/2024/08/22/resume/</id>
+        <title>resume</title>
+        <link rel="alternate" href="https://ckti.github.io/2024/08/22/resume/"/>
+        <content type="html">&lt;h2 id=&#34;鉴于有群友翻到了我的文档为了避免被盒先不公开了喵&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#鉴于有群友翻到了我的文档为了避免被盒先不公开了喵&#34;&gt;#&lt;/a&gt; 鉴于有群友翻到了我的文档，为了避免被盒，先不公开了喵&lt;/h2&gt;
+</content>
+        <category term="未完成" />
+        <updated>2024-08-22T02:42:45.000Z</updated>
     </entry>
 </feed>

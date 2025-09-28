@@ -1,0 +1,660 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="张前的小屋" href="https://ckti.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="张前的小屋" href="https://ckti.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="张前的小屋" href="https://ckti.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://ckti.github.io/2024/10/31/Lab5_log/">
+
+
+
+  <title>
+xv6操作系统实验lab5 - 操作系统 - 作业项目 |
+CKT1i's blog = 张前的小屋</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">xv6操作系统实验lab5
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2024-10-31 13:54:21">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-10-31T13:54:21+08:00">2024-10-31</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>9.2k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>8 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">CKT1i's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic19.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic17.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic12.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic6.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic16.jpg"></li>
+          <li class="item" data-background-image="https://images.weserv.nl/?url=https://raw.github.com/ckt1i/blogimage/main/pic9.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Homeworks/" itemprop="item" rel="index" title="In 作业项目"><span itemprop="name">作业项目</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Homeworks/OS/" itemprop="item" rel="index" title="In 操作系统"><span itemprop="name">操作系统</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://ckti.github.io/2024/10/31/Lab5_log/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.png">
+    <meta itemprop="name" content="C.K. Tii">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="张前的小屋">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="项目链接"><a class="markdownIt-Anchor" href="#项目链接">#</a> 项目链接</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NrdDFpL3h2Ni1wdWJsaWMvdHJlZS9sYWI1LWNrdGk=">项目仓库</span></p>
+<h1 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境">#</a> 配置环境</h1>
+<h2 id="实验环境"><a class="markdownIt-Anchor" href="#实验环境">#</a> 实验环境</h2>
+<p>虚拟虚拟化平台：Unraid 6.12.13 远程运行</p>
+<p>操作系统：Ubuntu 22.04.4 LTS (GNU/Linux 6.8.0-40-generic x86_64)</p>
+<p>小型操作系统内核:xv6</p>
+<h2 id="gcc配置"><a class="markdownIt-Anchor" href="#gcc配置">#</a> gcc 配置</h2>
+<p>输入 <code>sudo apt update</code>  更新软件包列表</p>
+<p>输入 <code>sudo apt-get install -y build-essential git gcc-multilib </code> 配置 gcc</p>
+<p>输入 <code>objdump -i</code>  检查是否支持 64 位:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">user@Lab:~$ objdump -i</span><br><span class="line">BFD header file version (GNU Binutils for Ubuntu) 2.38</span><br><span class="line">elf64-x86-64</span><br></pre></td></tr></table></figure>
+<p>输入 <code>gcc -m32 -print-libgcc-file-name </code> 查看 32 位 gcc 库文件路径:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user:~$ gcc -m32 -print-libgcc-file-name </span><br><span class="line">/usr/lib/gcc/x86_64-linux-gnu/11/32/libgcc.a</span><br></pre></td></tr></table></figure>
+<p>出现上述输出，gcc 环境已配置好</p>
+<h2 id="安装qemu以及xv6"><a class="markdownIt-Anchor" href="#安装qemu以及xv6">#</a> 安装 qemu 以及 xv6</h2>
+<p>输入 <code>sudo apt-get install qemu-system</code>  安装 qemu</p>
+<p>输入 <code>qemu-system-i386 --version</code>  查看 qemu 版本:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">user@Lab:~$ qemu-system-i386 --version</span><br><span class="line">QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.22)</span><br><span class="line">Copyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers</span><br></pre></td></tr></table></figure>
+<p>出现上述输出，qemu 环境已配置好</p>
+<p>输入 <code>git clone https://github.com/mit-pdos/xv6-public.git</code>  下载 xv6 系统</p>
+<p>文件最后出现输出，说明操作系统镜像文件已准备好:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+0 records in</span><br><span class="line">+0 records out</span><br><span class="line">512 bytes (512 B) copied, 0.000543844 s, 938 kB/s</span><br><span class="line">dd if=kernal of=xf6.img seek=1 conv=notrunc</span><br><span class="line">393+1 records in</span><br><span class="line">393+1 records out</span><br></pre></td></tr></table></figure>
+<h2 id="启动qemu"><a class="markdownIt-Anchor" href="#启动qemu">#</a> 启动 qemu</h2>
+<p>输入 <code>~/xv6$ echo &quot;add-auto-load-safe-path $HOME/xv6/.gdbinit&quot; &gt; ~/.gdbinit</code>  配置 gdb</p>
+<p>输入 <code>make qemu</code>  启动 qemu, 出现如下报错:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-i386 -serial mon:stdio -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 2 -m 512</span><br><span class="line">gtk initialization failed</span><br><span class="line">make: *** [Makefile:225: qemu] Error 1</span><br></pre></td></tr></table></figure>
+<p>经查询，其原因通常与 QEMU 的 GTK 版本有关，这可能是由于缺少 GTK 库或没有正确配置显示环境引起的。在此处我们选择采用 VNC 后端启动 QEMU, 通过修改其中的 <code>QEMUOPTS</code>  变量如下，修改启动方式:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">QEMUOPTS = -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp $(CPUS) -m 512 -nographic $(QEMUEXTRA)</span><br></pre></td></tr></table></figure>
+<p>命令行中输入 <code>make qemu</code>  启动 qemu, 进入 qemu 界面:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SeaBIOS (version 1.15.0-1)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+1FF8B4A0+1FECB4A0 CA00</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Booting from Hard Disk..xv6...</span><br><span class="line">cpu0: starting 0</span><br><span class="line">sb: size 1000 nblocks 941 ninodes 200 nlog 30 logstart 2 inodestart 32 bmap sta8</span><br><span class="line">init: starting sh</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<h1 id="xv6功能分析"><a class="markdownIt-Anchor" href="#xv6功能分析">#</a> xv6 功能分析</h1>
+<h2 id="xv6的内存布局"><a class="markdownIt-Anchor" href="#xv6的内存布局">#</a> xv6 的内存布局</h2>
+<p>在 xv6 中，内存布局分为内核空间和用户空间，</p>
+<p>内核位于内存空间的高地址部分，从一个固定点 (KERNBASE, 通常是 0x80000000) 开始。包含内核代码和数据、I/O 内存映射、内核栈、物理内存映射</p>
+<p>用户空间位于地址空间的低地址部分 (低于 KERNBASE), 主要包括文本段、数据段、堆段和栈段。其中栈段由中间的某个地址开始向上增长，本次实验的目的就是讲栈的分配方式由从下往上修改为从上往下。具体的内存分布见下图:</p>
+<h2 id="相关函数"><a class="markdownIt-Anchor" href="#相关函数">#</a> 相关函数</h2>
+<p>以下是与 xv6 内存布局和管理相关的文件及其简要功能描述:</p>
+<h3 id="1-vmc"><a class="markdownIt-Anchor" href="#1-vmc">#</a> 1.  <code>vm.c</code></h3>
+<p>负责虚拟内存管理，包括设置内核页表、分配和释放用户内存、复制进程内存等。关键函数包括  <code>setupkvm()</code> 、 <code>allocuvm()</code> 、 <code>deallocuvm()</code>  和  <code>copyuvm()</code> 。</p>
+<h3 id="2-procc"><a class="markdownIt-Anchor" href="#2-procc">#</a> 2.  <code>proc.c</code></h3>
+<p>管理进程状态，包括创建新进程、扩展内存 ( <code>growproc()</code> )、执行新程序 ( <code>exec()</code> ) 等，使用  <code>copyuvm()</code>  复制父进程的内存布局。</p>
+<h3 id="3-trapc"><a class="markdownIt-Anchor" href="#3-trapc">#</a> 3.  <code>trap.c</code></h3>
+<p>处理异常和中断，包括页面错误 (Page Fault)。在  <code>trap()</code>  函数中处理用户栈不足时的错误，调用  <code>allocuvm()</code>  分配新页面。</p>
+<h3 id="4-execc"><a class="markdownIt-Anchor" href="#4-execc">#</a> 4.  <code>exec.c</code></h3>
+<p>加载可执行文件和初始化进程的内存布局，使用  <code>exec()</code>  加载 ELF 文件，分配代码段、数据段和用户栈。</p>
+<h3 id="5-syscallc"><a class="markdownIt-Anchor" href="#5-syscallc">#</a> 5.  <code>syscall.c</code></h3>
+<p>处理系统调用，调用相应的内存管理功能，如  <code>fork</code> 、 <code>exec</code> 、 <code>wait</code>  等，负责在用户空间和内核空间之间切换。</p>
+<h3 id="6-memlayouth"><a class="markdownIt-Anchor" href="#6-memlayouth">#</a> 6.  <code>memlayout.h</code></h3>
+<p>定义内存布局的常量，包括内核空间和用户空间的起始和结束地址，如  <code>KERNBASE</code> 、 <code>PHYSTOP</code>  和  <code>USERTOP</code> 。</p>
+<h3 id="7-mmuh"><a class="markdownIt-Anchor" href="#7-mmuh">#</a> 7.  <code>mmu.h</code></h3>
+<p>定义分页机制的宏和结构，描述页表项格式、页大小等，如  <code>PGSIZE</code>  和各种页表项标志 (PTE)。</p>
+<h3 id="8-kallocc"><a class="markdownIt-Anchor" href="#8-kallocc">#</a> 8.  <code>kalloc.c</code></h3>
+<p>实现物理内存分配，提供  <code>kalloc()</code>  和  <code>kfree()</code>  函数，负责从物理内存中分配和释放页面。</p>
+<h3 id="9-trapasms"><a class="markdownIt-Anchor" href="#9-trapasms">#</a> 9.  <code>trapasm.S</code></h3>
+<p>汇编代码，处理从用户态进入内核态时的上下文切换，设置陷阱帧并跳转到  <code>trap()</code>  函数。</p>
+<h3 id="10-kernelld"><a class="markdownIt-Anchor" href="#10-kernelld">#</a> 10.  <code>kernel.ld</code></h3>
+<p>链接脚本，定义内核的加载地址及各部分的内存布局，确保内核和用户进程的内存正确映射。</p>
+<p>这些文件和函数共同实现了 xv6 的内存管理和布局，确保系统在运行时能够有效地分配和使用内存。</p>
+<h1 id="代码修改"><a class="markdownIt-Anchor" href="#代码修改">#</a> 代码修改</h1>
+<h2 id="具体步骤"><a class="markdownIt-Anchor" href="#具体步骤">#</a> 具体步骤:</h2>
+<ol>
+<li>重新定义用户地址空间布局。</li>
+<li>修改  <code>exec.c</code>  以在高地址处分配栈。</li>
+<li>调整  <code>proc</code>  结构，以正确跟踪用户栈和堆的边界。</li>
+<li>修改与内存管理相关的函数，确保它们能正确处理栈和堆的分配及地址验证。</li>
+<li>实现栈增长的处理</li>
+</ol>
+<h2 id="调整用户地址空间布局"><a class="markdownIt-Anchor" href="#调整用户地址空间布局">#</a> 调整用户地址空间布局</h2>
+<p>核心文件是  <code>memlayout.h</code> , 它定义了内核和用户内存空间的布局。在  <code>memlayout.h</code>  中， <code>KERNBASE</code>  定义了用户地址空间的上限:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// Key addresses for address space layout (see kmap in vm.c for layout)</span><br><span class="line">#define KERNBASE 0x80000000         // First kernel virtual address</span><br></pre></td></tr></table></figure>
+<p>在这个空间内修改栈的位置。</p>
+<h2 id="修改execc中的栈分配逻辑"><a class="markdownIt-Anchor" href="#修改execc中的栈分配逻辑">#</a> 修改 <code>exec.c</code>  中的栈分配逻辑</h2>
+<p><code>exec.c</code>  负责加载用户程序并初始化用户地址空间。它使用  <code>allocuvm()</code>  为程序分配内存，加载代码段和数据段，并为栈分配一页内存。以下是栈分配的步骤</p>
+<p>在 <code>exec.c</code>  中，找到分配用户栈的代码，将栈分配到代码和堆的末尾，并分配两页 ( <code>2*PGSIZE</code> ) 大小的栈空间；<br>
+ 修改栈的位置到  <code>KERNBASE - *PGSIZE</code>  开始</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// Allocate user stack at the top of the address space.</span><br><span class="line">  uint stackbase = USERTOP - *PGSIZE;</span><br><span class="line">  if((allocuvm(pgdir, stackbase, USERTOP)) == 0)</span><br><span class="line">    goto bad;</span><br><span class="line">  clearpteu(pgdir, (char*)(stackbase));</span><br><span class="line">  sp = USERTOP;</span><br></pre></td></tr></table></figure>
+<h2 id="调整proc结构修改-proc-sz的管理"><a class="markdownIt-Anchor" href="#调整proc结构修改-proc-sz的管理">#</a> 调整 <code>proc</code>  结构修改  <code>proc-&gt;sz</code>  的管理</h2>
+<p>当前  <code>proc-&gt;sz</code>  跟踪整个用户地址空间的大小，包括代码段、堆和栈。在修改后， <code>proc-&gt;sz</code>  只用于跟踪代码段和堆的大小，需要额外的字段来跟踪栈的起始位置。<br>
+故在 <code>proc.h</code>  中对 proc 结构设置新的结构项:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// Per-process state</span><br><span class="line">struct proc &#123;</span><br><span class="line">  uint sz;                     // Size of process memory (bytes)</span><br><span class="line">  pde_t* pgdir;                // Page table</span><br><span class="line">  char *kstack;                // Bottom of kernel stack for this process</span><br><span class="line">  enum procstate state;        // Process state</span><br><span class="line">  int pid;                     // Process ID</span><br><span class="line">  struct proc *parent;         // Parent process</span><br><span class="line">  struct trapframe *tf;        // Trap frame for current syscall</span><br><span class="line">  struct context *context;     // swtch() here to run process</span><br><span class="line">  void *chan;                  // If non-zero, sleeping on chan</span><br><span class="line">  int killed;                  // If non-zero, have been killed</span><br><span class="line">  struct file *ofile[NOFILE];  // Open files</span><br><span class="line">  struct inode *cwd;           // Current directory</span><br><span class="line">  char name[16];               // Process name (debugging)</span><br><span class="line">  uint stackbase;              // Base of the stack</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="修改内存管理的相关函数"><a class="markdownIt-Anchor" href="#修改内存管理的相关函数">#</a> 修改内存管理的相关函数</h2>
+<p>在 <code>proc.c</code>  中，修改 <code>fork</code>  函数以传递  <code>stackbase</code>  参数给  <code>copyuvm</code>  函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if((np-&gt;pgdir = copyuvm(curproc-&gt;pgdir, curproc-&gt;sz, curproc-&gt;stackbase)) == 0)</span><br></pre></td></tr></table></figure>
+<p>在 <code>vm.c</code>  中修改  <code>copyuvm</code>  函数，以确保在 fork 时正确地拷贝栈。:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">copyuvm(pde_t *pgdir, uint sz, uint stackbase)</span><br><span class="line">&#123;</span><br><span class="line">   ...</span><br><span class="line">   // Copy the stack</span><br><span class="line">  for(i = USERTOP - PGSIZE; i &gt; stackbase  i -= PGSIZE)&#123;</span><br><span class="line">    if((pte = walkpgdir(pgdir, (void *) i, 0)) == 0)</span><br><span class="line">      panic(&quot;copyuvm: pte should exist&quot;);</span><br><span class="line">    if(!(*pte &amp; PTE_P))</span><br><span class="line">      panic(&quot;copyuvm: page not present&quot;);</span><br><span class="line">    pa = PTE_ADDR(*pte);</span><br><span class="line">    flags = PTE_FLAGS(*pte);</span><br><span class="line">    if((mem = kalloc()) == 0)</span><br><span class="line">      goto bad;</span><br><span class="line">    memmove(mem, (char*)P2V(pa), PGSIZE);</span><br><span class="line">    if(mappages(d, (void*)i, PGSIZE, V2P(mem), flags) &lt; 0) &#123;</span><br><span class="line">      kfree(mem);</span><br><span class="line">      goto bad;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return d;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实现栈增长后的处理"><a class="markdownIt-Anchor" href="#实现栈增长后的处理">#</a> 实现栈增长后的处理</h2>
+<p>在 <code>trap.c</code>  中，中处理页面错误，检测是否是栈溢出，并分配新的栈页:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// 新增触发页错误(Page Fault)的情况</span><br><span class="line">case T_PGFLT:</span><br><span class="line">  </span><br><span class="line">  if (rcr2() &lt; USERTOP)// 条件检查:确保页面错误地址在用户栈范围内。</span><br><span class="line">  &#123;</span><br><span class="line">    cprintf(&quot;page error %x &quot;,rcr2());</span><br><span class="line">    cprintf(&quot;stack pos : %x\n&quot;, myproc()-&gt;stackbase);</span><br><span class="line">    // 为用户栈分配新的页面</span><br><span class="line">    if ((myproc()-&gt;stackbase = allocuvm(myproc()-&gt;pgdir, myproc()-&gt;stackbase - 1 * PGSIZE,</span><br><span class="line">    myproc()-&gt;stackbase)) == 0)</span><br><span class="line">    &#123;</span><br><span class="line">      myproc()-&gt;killed = 1;</span><br><span class="line">    &#125;</span><br><span class="line">    myproc()-&gt;stackbase-=PGSIZE; // 更新用户栈的栈顶位置</span><br><span class="line">    cprintf(&quot;create a new page %x\n&quot;, myproc()-&gt;stackbase);</span><br><span class="line">      //clearpteu(myproc()-&gt;pgdir, (char *) (myproc()-&gt;stackbase - PGSIZE));</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  else</span><br><span class="line">  &#123;</span><br><span class="line">     myproc()-&gt;killed = 1;</span><br><span class="line">    break;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>在 <code>syscall.c</code>  中修改所有引用 sz 的地方，以反映新的栈位置。</p>
+<h1 id="进行实验"><a class="markdownIt-Anchor" href="#进行实验">#</a> 进行实验</h1>
+<h2 id="编写测试程序testcasec"><a class="markdownIt-Anchor" href="#编写测试程序testcasec">#</a> 编写测试程序 <code>testcase.c</code></h2>
+<h3 id="主要结构"><a class="markdownIt-Anchor" href="#主要结构">#</a> 主要结构</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;types.h&quot;</span><br><span class="line">#include &quot;stat.h&quot;</span><br><span class="line">#include &quot;user.h&quot;</span><br><span class="line"></span><br><span class="line">// 获取当前栈指针</span><br><span class="line">uint get_stack_pointer() &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 深度递归调用以测试更大规模的栈增长</span><br><span class="line">void recursion(int depth) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 测试深度递归引发栈增长</span><br><span class="line">void test_stack_growth() &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 测试堆与栈的冲突</span><br><span class="line">void test_stack_heap_collision() &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(int argc, char *argv[]) &#123;</span><br><span class="line">    test_stack_growth();</span><br><span class="line">    test_stack_heap_collision();</span><br><span class="line">    exit();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="测试栈的增长以及缺页分配"><a class="markdownIt-Anchor" href="#测试栈的增长以及缺页分配">#</a> 测试栈的增长以及缺页分配</h3>
+<p>编写如下程序:<br>
+ 其中， <code>get_stack_pointer</code>  用于获取栈指针， <code>recursion</code>  函数用于递归调用， <code>test_stack_growth</code>  函数用于测试栈的增长。对于每次递归调用，输出当前栈指针。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">// 获取当前栈指针</span><br><span class="line">uint get_stack_pointer() &#123;</span><br><span class="line">    uint sp;</span><br><span class="line">    asm volatile(&quot;movl %%esp, %0&quot; : &quot;=r&quot; (sp));</span><br><span class="line">    return sp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 深度递归调用以测试更大规模的栈增长</span><br><span class="line">void recursion(int depth) &#123;</span><br><span class="line">    char buffer[4096];  // 分配4KB的空间,确保每次递归占用整页</span><br><span class="line">    memset(buffer, 1 , 4096); // 进行操作避免被优化掉</span><br><span class="line">    uint sp = get_stack_pointer();</span><br><span class="line">    printf(1, &quot;Recursion depth: %d, stack address: 0x%x\n&quot;, depth , sp );</span><br><span class="line"></span><br><span class="line">    // 在深度达到一定值之前递归</span><br><span class="line">    if (depth &lt; 100) &#123;</span><br><span class="line">        recursion(depth + 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 测试深度递归引发栈增长</span><br><span class="line">void test_stack_growth() &#123;</span><br><span class="line">    printf(1, &quot;\n=== Test: Stack Growth ===\n&quot;);</span><br><span class="line">    printf(1, &quot;Starting recursion test...\n&quot;);</span><br><span class="line"></span><br><span class="line">    recursion(1);  // 初始递归调用,测试栈增长</span><br><span class="line"></span><br><span class="line">    printf(1, &quot;Stack recursion test completed.\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="测试堆与栈的冲突"><a class="markdownIt-Anchor" href="#测试堆与栈的冲突">#</a> 测试堆与栈的冲突</h2>
+<p>在测试栈增长的基础上，添加 test_stack_heap_collision 函数，通过分配大量堆内存，测试堆与栈的冲突。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 测试堆与栈的冲突</span><br><span class="line">void test_stack_heap_collision() &#123;</span><br><span class="line">    printf(1, &quot;\n=== Test: Stack-Heap Collision ===\n&quot;);</span><br><span class="line">    printf(1, &quot;Starting stack-heap collision test...\n&quot;);</span><br><span class="line">    printf(1, &quot;Allocating 222MB of memory on the heap...\n&quot;);</span><br><span class="line">    int * p = (int *)malloc(222*1024*1024 - 512*1024);</span><br><span class="line">    *p = 1;</span><br><span class="line"></span><br><span class="line">    printf(1, &quot;Making recursions .\n&quot;);</span><br><span class="line">    recursion(1);  // 初始递归调用,测试栈增长</span><br><span class="line">    printf(1, &quot;Stack recursion test completed.\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="运行测试程序"><a class="markdownIt-Anchor" href="#运行测试程序">#</a> 运行测试程序</h2>
+<p>编译并运行测试程序:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ make qemu-gdb</span><br></pre></td></tr></table></figure>
+<p>在 <code>Makefile</code>  中添加编译 <code>testcase.c</code>  的命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UPROGS=\</span><br><span class="line">  _testcase\</span><br></pre></td></tr></table></figure>
+<p>运行 <code>make qemu</code>  启动 QEMU, 并在 QEMU 中运行测试程序，观察输出，得出结论:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ testcase</span><br></pre></td></tr></table></figure>
+<h2 id="实验结果"><a class="markdownIt-Anchor" href="#实验结果">#</a> 实验结果</h2>
+<h3 id="测试栈的增长"><a class="markdownIt-Anchor" href="#测试栈的增长">#</a> 测试栈的增长</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">=== Test: Stack Growth ===</span><br><span class="line">Starting recursion test...</span><br><span class="line">page error 7fffdf90 stack pos : 7fffe000</span><br><span class="line">create a new page 7fffd000</span><br><span class="line">page error 7fffcf90 stack pos : 7fffd000</span><br><span class="line">create a new page 7fffc000</span><br><span class="line">page error 7fffbf90 stack pos : 7fffc000</span><br><span class="line">create a new page 7fffb000</span><br><span class="line">Recursion depth: 1, stack address: 0x7FFFBF90,buffer address: 0x7FFFBF90</span><br><span class="line">Recursion depth: 2, stack address: 0x7FFFBF90,buffer address: 0x7FFFCF90</span><br><span class="line">Recursion depth: 3, stack address: 0x7FFFBF90,buffer address: 0x7FFFDF90</span><br><span class="line">page error 7fffaf70 stack pos : 7fffb000</span><br><span class="line">...</span><br><span class="line">page error 7ff9ab70 stack pos : 7ff9b000</span><br><span class="line">create a new page 7ff9a000</span><br><span class="line">page error 7ff99b70 stack pos : 7ff9a000</span><br><span class="line">create a new page 7ff99000</span><br><span class="line">page error 7ff98b70 stack pos : 7ff99000</span><br><span class="line">create a new page 7ff98000</span><br><span class="line">Recursion depth: 100, stack address: 0x7FF98B70,buffer address: 0x7FF98B70</span><br><span class="line">Stack recursion test completed</span><br></pre></td></tr></table></figure>
+<p>从输出中可以看出，随着递归深度的增加，由于栈空间不足，系统会不断分配新的页，并且对于每次递归，系统都会输出栈帧地址和站上的数据，我们可以看到栈地址逐渐从高地址向低地址移动，说明我们的栈是向下增长的。</p>
+<h3 id="测试堆与栈的冲突-2"><a class="markdownIt-Anchor" href="#测试堆与栈的冲突-2">#</a> 测试堆与栈的冲突</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">=== Test: Stack-Heap Collision ===</span><br><span class="line">Starting stack-heap collision test...</span><br><span class="line">Allocating 222MB of memory on the heap...</span><br><span class="line">Making recursions .</span><br><span class="line">page error 7fffdf90 stack pos : 7fffe000</span><br><span class="line">create a new page 7fffd000</span><br><span class="line">page error 7fffcf90 stack pos : 7fffd000</span><br><span class="line">create a new page 7fffc000</span><br><span class="line">page error 7fffbf90 stack pos : 7fffc000</span><br><span class="line">create a new page 7fffb000</span><br><span class="line">Recursion depth: 1, stack address: 0x7FFFBF80</span><br><span class="line">Recursion depth: 2, stack address: 0x7FFFBF80</span><br><span class="line">Recursion depth: 3, stack address: 0x7FFFBF80</span><br><span class="line">page error 7fffaf70 stack pos : 7fffb000</span><br><span class="line">create a new page 7fffa000</span><br><span class="line">page error 7fff9f70 stack pos : 7fffa000</span><br><span class="line">create a new page 7fff9000</span><br><span class="line">...</span><br><span class="line">page error 7ffe2e70 stack pos : 7ffe3000</span><br><span class="line">create a new page 7ffe2000</span><br><span class="line">page error 7ffe1e70 stack pos : 7ffe2000</span><br><span class="line">create a new page 7ffe1000</span><br><span class="line">page error 7ffe0e70 stack pos : 7ffe1000</span><br><span class="line">create a new page 7ffe0000</span><br><span class="line">Recursion depth: 28, stack address: 0x7FFE0E60</span><br><span class="line">Recursion depth: 29, stack address: 0x7FFE0E60</span><br><span class="line">Recursion depth: 30, stack address: 0x7FFE0E60</span><br><span class="line">page error 7ffdfe50 stack pos : 7ffe0000</span><br><span class="line">allocuvm out of memory</span><br><span class="line">The stack has grown into the heap space.</span><br><span class="line">create a new page fffff000</span><br><span class="line">stack is allocated in wrong place, End the process!</span><br></pre></td></tr></table></figure>
+<p>从输出中可以看出，当递归深度达到 28 时，此时栈已经进入堆空间。由于我们的程序在出现这种情况时选择重新分配栈空间，而在此时，由于无空间可分，最终栈被分入错误的地址，导致程序崩溃。</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span id="2024/10/31/Lab5_log/" class="item leancloud_visitors" data-flag-title="xv6操作系统实验lab5" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="C.K. Tii WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="C.K. Tii Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="C.K. Tii PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>C.K. Tii <i class="ic i-at"><em>@</em></i>张前的小屋
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://ckti.github.io/2024/10/31/Lab5_log/" title="xv6操作系统实验lab5">https://ckti.github.io/2024/10/31/Lab5_log/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/10/31/MIA_2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic10.jpg" title="Membership Inference Attacks Against Recommender Systems">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> 成员推断攻击</span>
+  <h3>Membership Inference Attacks Against Recommender Systems</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/11/01/RegressionAnalyze/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.weserv.nl&#x2F;?url&#x3D;https:&#x2F;&#x2F;raw.github.com&#x2F;ckt1i&#x2F;blogimage&#x2F;main&#x2F;pic21.jpg" title="数据挖掘与安全治理大作业1——回归分析">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 数据挖掘</span>
+  <h3>数据挖掘与安全治理大作业1——回归分析</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text"> 项目链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text"> 配置环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">2.1.</span> <span class="toc-text"> 实验环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gcc%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text"> gcc 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85qemu%E4%BB%A5%E5%8F%8Axv6"><span class="toc-number">2.3.</span> <span class="toc-text"> 安装 qemu 以及 xv6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8qemu"><span class="toc-number">2.4.</span> <span class="toc-text"> 启动 qemu</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xv6%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text"> xv6 功能分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#xv6%E7%9A%84%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80"><span class="toc-number">3.1.</span> <span class="toc-text"> xv6 的内存布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="toc-number">3.2.</span> <span class="toc-text"> 相关函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-vmc"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 1.  vm.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-procc"><span class="toc-number">3.2.2.</span> <span class="toc-text"> 2.  proc.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-trapc"><span class="toc-number">3.2.3.</span> <span class="toc-text"> 3.  trap.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-execc"><span class="toc-number">3.2.4.</span> <span class="toc-text"> 4.  exec.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-syscallc"><span class="toc-number">3.2.5.</span> <span class="toc-text"> 5.  syscall.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-memlayouth"><span class="toc-number">3.2.6.</span> <span class="toc-text"> 6.  memlayout.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-mmuh"><span class="toc-number">3.2.7.</span> <span class="toc-text"> 7.  mmu.h</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-kallocc"><span class="toc-number">3.2.8.</span> <span class="toc-text"> 8.  kalloc.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-trapasms"><span class="toc-number">3.2.9.</span> <span class="toc-text"> 9.  trapasm.S</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-kernelld"><span class="toc-number">3.2.10.</span> <span class="toc-text"> 10.  kernel.ld</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%BF%AE%E6%94%B9"><span class="toc-number">4.</span> <span class="toc-text"> 代码修改</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.1.</span> <span class="toc-text"> 具体步骤:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E6%95%B4%E7%94%A8%E6%88%B7%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80"><span class="toc-number">4.2.</span> <span class="toc-text"> 调整用户地址空间布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9execc%E4%B8%AD%E7%9A%84%E6%A0%88%E5%88%86%E9%85%8D%E9%80%BB%E8%BE%91"><span class="toc-number">4.3.</span> <span class="toc-text"> 修改 exec.c  中的栈分配逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E6%95%B4proc%E7%BB%93%E6%9E%84%E4%BF%AE%E6%94%B9-proc-sz%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-number">4.4.</span> <span class="toc-text"> 调整 proc  结构修改  proc-&gt;sz  的管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="toc-number">4.5.</span> <span class="toc-text"> 修改内存管理的相关函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%A0%88%E5%A2%9E%E9%95%BF%E5%90%8E%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">4.6.</span> <span class="toc-text"> 实现栈增长后的处理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E5%AE%9E%E9%AA%8C"><span class="toc-number">5.</span> <span class="toc-text"> 进行实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95%E7%A8%8B%E5%BA%8Ftestcasec"><span class="toc-number">5.1.</span> <span class="toc-text"> 编写测试程序 testcase.c</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%93%E6%9E%84"><span class="toc-number">5.1.1.</span> <span class="toc-text"> 主要结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%88%E7%9A%84%E5%A2%9E%E9%95%BF%E4%BB%A5%E5%8F%8A%E7%BC%BA%E9%A1%B5%E5%88%86%E9%85%8D"><span class="toc-number">5.1.2.</span> <span class="toc-text"> 测试栈的增长以及缺页分配</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E5%A0%86%E4%B8%8E%E6%A0%88%E7%9A%84%E5%86%B2%E7%AA%81"><span class="toc-number">5.2.</span> <span class="toc-text"> 测试堆与栈的冲突</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95%E7%A8%8B%E5%BA%8F"><span class="toc-number">5.3.</span> <span class="toc-text"> 运行测试程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">5.4.</span> <span class="toc-text"> 实验结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%A0%88%E7%9A%84%E5%A2%9E%E9%95%BF"><span class="toc-number">5.4.1.</span> <span class="toc-text"> 测试栈的增长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E5%A0%86%E4%B8%8E%E6%A0%88%E7%9A%84%E5%86%B2%E7%AA%81-2"><span class="toc-number">5.4.2.</span> <span class="toc-text"> 测试堆与栈的冲突</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2024/10/31/Lab5_log/" rel="bookmark" title="xv6操作系统实验lab5">xv6操作系统实验lab5</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="C.K. Tii"
+      data-src="/images/avatar.png">
+  <p class="name" itemprop="name">C.K. Tii</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">7</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">1</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NLVDFp" title="https:&#x2F;&#x2F;github.com&#x2F;CKT1i"><i class="ic i-github"></i></span>
+      <a href="/changqian.zheng@gmail.com" title="changqian.zheng@gmail.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTg5OTk5NzQ2" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;189999746"><i class="ic i-bilibili"></i></span>
+      <a href="/hsource/_data/images/resume.pdf" title="hsource&#x2F;_data&#x2F;images&#x2F;resume.pdf" class="item about"><i class="ic i-address-card"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/10/31/MIA_2/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/11/01/RegressionAnalyze/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/MIA_1/" title="Membership Inference Attacks Against Machine Learning Models">Membership Inference Attacks Against Machine Learning Models</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/DataMining/" title="In 数据挖掘">数据挖掘</a>
+</div>
+
+    <span><a href="/2024/11/01/Classification/" title="数据挖掘与安全治理大作业2——分类问题">数据挖掘与安全治理大作业2——分类问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/DataMining/" title="In 数据挖掘">数据挖掘</a>
+</div>
+
+    <span><a href="/2024/11/01/RegressionAnalyze/" title="数据挖掘与安全治理大作业1——回归分析">数据挖掘与安全治理大作业1——回归分析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Homeworks/" title="In 作业项目">作业项目</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Homeworks/OS/" title="In 操作系统">操作系统</a>
+</div>
+
+    <span><a href="/2024/10/31/Lab5_log/" title="xv6操作系统实验lab5">xv6操作系统实验lab5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/10/31/MIA_2/" title="Membership Inference Attacks Against Recommender Systems">Membership Inference Attacks Against Recommender Systems</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/DrumTabs/" title="In 鼓谱">鼓谱</a>
+</div>
+
+    <span><a href="/2024/08/24/November/" title="November">November</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/22/resume/" title="resume">resume</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/misc/" title="In 杂">杂</a>
+</div>
+
+    <span><a href="/2024/08/22/About%20me/" title="About me">About me</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/Introduction%20of%20MIA/" title="Introduction of Membership Interface Attack">Introduction of Membership Interface Attack</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ReadingNotes/" title="In 阅读笔记">阅读笔记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/ReadingNotes/MIA/" title="In 成员推断攻击">成员推断攻击</a>
+</div>
+
+    <span><a href="/2024/09/28/Introduction%20of%20MIA_CN/" title="成员推理攻击介绍">成员推理攻击介绍</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">C.K. Tii @ CKT1i's blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">69k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">1:03</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/10/31/Lab5_log/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
